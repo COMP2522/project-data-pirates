@@ -1,31 +1,17 @@
-*Introduction: Summarize the purpose and goals of the project in a clear and concise manner.
-    We are plan to develop a solo video game. The user will play one player and vserus multiple enmeies who played by the PC. Each side will have varity of weapons, and shot out different types of bullets.
+Introduction: Our project aims to create an exciting single-player video game where the player must survive against multiple enemies and defend themselves in a limited time. The player will have the opportunity to collect random weapons scattered throughout the map to help them in their survival journey.
 
-*Problem statement: Clearly articulate the problem the project is trying to solve.
-    Orgnize and cooperate different objects from different classes is a challeange for this project.
+Problem Statement: The challenge in this project lies in efficiently organizing and coordinating different objects and classes.
 
-*Solution: Describe the proposed solution to the problem and why it is the best approach.
-    We plan the whole structure by UML and try to orgnize different objects.
+Solution: To overcome this challenge, we will use UML to design the structure of the game and effectively organize the objects and classes using Java Object Oriented programming.
 
-*Benefits: Outline the benefits the project will bring to the organization and its stakeholders.
-    This project is a integrative practice of Java programming. The design and develop process will enhance members'
-    understanding concepts of class.
+Benefits: This project will provide an opportunity for an integrative practice of Java programming, improving the members' understanding of class concepts.
 
-*Methodology: Explain the approach and methodologies that will be used to deliver the project.
-    This project is designed by UML, and Java Object Oriented programming.
+Methodology: We will use UML and Java Object Oriented programming to design and develop the game.
 
-*Timeline: Provide a rough timeline for the project, including key milestones and deadlines.
-    ?
+Timeline: A detailed timeline with key milestones and deadlines will be created after careful planning and analysis.
 
-*Budget: Estimate the total cost of the project and provide a breakdown of the expenses.
-    This is a practice project, so the budget is not involve any commercial purposes. The total budget is zero.
+Budget: As this is a practice project, there will be no commercial budget involved, and the estimated cost is zero.
 
-*Risks and Challenges: Identify any potential risks and challenges that may impact the project and outline strategies for mitigating them.
-    Any similarity of design is purely coincidental.
+Risks and Challenges: Potential risks include the possibility of design similarity, which we will mitigate by ensuring originality in our approach.
 
-*Conclusion: Summarize the key points of the pitch and restate the value proposition of the project.
-    The key features of our project:
-    *
-    *
-    *
-
+Conclusion: Our project will provide an exciting and challenging experience for players and an integrative practice of Java programming for the members involved. The key features of the game include survival against multiple enemies, a limited time frame, and the ability to collect weapons for defense.
