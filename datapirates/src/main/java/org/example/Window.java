@@ -12,6 +12,9 @@ public class Window extends PApplet {
 
   private int numEnemies;
 
+  private GameCharacter character;
+
+
   /* Min size of entities. */
   private int minSize;
 
@@ -26,6 +29,8 @@ public class Window extends PApplet {
   public void setup() {
     settings();
     this.init();
+    character = new GameCharacter(this);
+    character.setup();
   }
 
   public void init() {
@@ -50,4 +55,8 @@ public class Window extends PApplet {
   public void remove(Sprite s) {}
 
   public void removeBullet(Sprite b) {}
+
+  public static void main(String[] args) {
+    PApplet.runSketch(new String[] {"Window"}, new Window());
+  }
 }

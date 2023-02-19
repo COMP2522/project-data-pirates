@@ -19,11 +19,54 @@ public class Sprite implements Comparable<Sprite> {
 
   protected Window window;
 
-  public Sprite(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {
-
+  public Sprite(PVector position, PVector direction, float size, float speed, Color color, Window window) {
+    this.position = position;
+    this.direction = direction;
+    this.size = size;
+    this.speed = speed;
+    this.color = color;
+    this.window = window;
   }
 
-  
+  public float getSize() {
+    return size;
+  }
+
+  public PVector getPosition() {
+    return position;
+  }
+
+  public PVector getDirection() {
+    return direction;
+  }
+
+  public float getSpeed() {
+    return speed;
+  }
+
+  public Color getColor() {
+    return color;
+  }
+
+  public void setPosition(PVector position) {
+    this.position = position;
+  }
+
+  public void setDirection(PVector direction) {
+    this.direction = direction;
+  }
+
+  public void setSize(float size) {
+    this.size = size;
+  }
+
+  public void setSpeed(float speed) {
+    this.speed = speed;
+  }
+
+  public void hit() {
+
+  }
   /**
    * Compares this object with the specified object for order.  Returns a
    * negative integer, zero, or a positive integer as this object is less
