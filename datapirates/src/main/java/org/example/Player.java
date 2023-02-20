@@ -13,6 +13,10 @@ public class Player extends Sprite {
 
   private static Player player;
 
+  private static int coin;
+
+  private int health;
+
   private Player(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {
     super(pos, direction, size, speed, clr, scene);
   }
@@ -29,6 +33,15 @@ public class Player extends Sprite {
       player.setWindow(window);
     }
     return player;
+  }
+
+  public void setHealth(int health) {
+    this.health = health;
+  }
+
+
+  public int getHealth() {
+    return health;
   }
 
   @Override

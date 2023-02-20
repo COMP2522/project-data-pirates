@@ -4,9 +4,9 @@ import java.awt.*;
 
 public class Weapon {
 
-  private Color bulletColor;
+  private final Color bulletColor;
 
-  private int ammoCapacity;
+  private final int ammoCapacity;
 
   private String model;
 

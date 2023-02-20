@@ -10,9 +10,10 @@ public class Window extends PApplet {
 
   protected Player player;
 
-  private Timer timer;
+  private Timer clock;
 
   private int numEnemies = 1;
+  private final int numEnemiesUnChanged = numEnemies;
 
   /* Min size of entities. */
   private int minSize = 9;
@@ -25,35 +26,25 @@ public class Window extends PApplet {
   Score score;
 
 
+  private boolean travelBoolean = false;
+
+
   public void settings() {
     size(width, height);
   }
 
   public void setup() {
 //    settings();
+    numEnemies = numEnemiesUnChanged;
     dpC = DataPiratesCollection.getInstance();
     score = Score.getInstance();
     EntityColor.setColors();
+    clock = new Timer();
     this.init();
+    clock.start();
   }
 
-  public void init() {
-    Player p = Player.getInstance(
-            new PVector(this.width / 2,this.height / 2),
-            new PVector(0,1),
-            40,
-            10,
-            EntityColor.getSpriteColors().get("Player"),
-            this);
-//    dpC.getEnemies().add(e);
-    player = p;
-    Weapon basic = new Weapon("Basic", EntityColor.getSpriteColors().get("Bullet"), 100);
-    player.setWeapon(basic);
-    dpC.getSprites().add(p);
-
-//    PVector plyer = new PVector(player.getPosition().x, player.getPosition().y);
-
-
+  public void setUpEnemies() {
     for (int i = 0; i < numEnemies; i++) {
       PVector enemy = new PVector(random(0, this.width), random(0, this.height));
       PVector enemyDirection = SpriteManager.calculateDirection(enemy, player.getPosition());
@@ -69,6 +60,26 @@ public class Window extends PApplet {
     }
 
     dpC.getSprites().addAll(dpC.getEnemies());
+  }
+
+  public void init() {
+    Player p = Player.getInstance(
+            new PVector(this.width / 2,this.height / 2),
+            new PVector(0,1),
+            40,
+            10,
+            EntityColor.getSpriteColors().get("Player"),
+            this);
+//    dpC.getEnemies().add(e);
+    player = p;
+    Weapon basic = new Weapon("Basic", EntityColor.getSpriteColors().get("Bullet"), 100);
+    player.setWeapon(basic);
+    player.setHealth(100);
+    dpC.getSprites().add(p);
+
+//    PVector plyer = new PVector(player.getPosition().x, player.getPosition().y);
+    setUpEnemies();
+
   }
 
   @Override
@@ -102,13 +113,46 @@ public class Window extends PApplet {
   /**
    * Make this function only available to certain
    * weapons.
+   * REASON: ITS TOO OVERPOWERED
    */
-  public void mouseDragged() {
-    mousePressed();
-  }
+//  public void mouseDragged() {
+//    mousePressed();
+//  }
 
   public void draw() {
-    background(0);
+    if (player.getPosition().x >= this.width) {
+      travelBoolean = true;
+//      clock.reset();
+      clock.stop();
+      player.getPosition().set(10, player.getPosition().y);
+    } else if (player.getPosition().x < 5 && travelBoolean) {
+      clock.start();
+      player.getPosition().set(this.width - 10, player.getPosition().y);
+      setUpEnemies();
+      travelBoolean = false;
+    }
+    if (travelBoolean) {
+      background(255);
+      for (Sprite s : dpC.getSprites()) {
+        if (s instanceof Enemy)
+          dpC.getTrash().add(s);
+      }
+
+      for (Sprite s : dpC.getTrash()) {
+        removeEnemies(s);
+      }
+    } else {
+      background(0);
+      if (clock.stop()) {
+        numEnemies+=5;
+        setUpEnemies();
+        clock.start();
+      }
+
+    }
+//    if (!clock.flippySwitch) {
+
+//    }
 
     // example texts
 
@@ -116,13 +160,18 @@ public class Window extends PApplet {
     fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
     text("Score: " + score.getValue(), 40, 120);
 
+    textSize(20);
+    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
+    text("Health: " + player.getHealth(), this.width / 3, 120);
+
     textSize(30);
     fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
     text("Ammo: " + player.getWeapon().getCurrentAmmo() + " / " + player.getWeapon().getAmmoCapacity() + "", 40, 100);
 
-//    textSize(30);
-//    text("Ammo: ", 40, 80);
-//    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
+    textSize(30);
+    text("Clock " + (int) clock.getEstimated() + "s", 40, 80);
+    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
+
     dpC.getSprites().get(0).update();
     dpC.getSprites().get(0).draw();
 //    while (true) {
@@ -145,14 +194,19 @@ public class Window extends PApplet {
           dpC.getRemove().put((Projectile) bullet, (Enemy) enemy);
           score.setValue(score.getValue() + 1);
         } else if (bullet.getPosition().x >= this.width || bullet.getPosition().y >= this.height) {
-          dpC.getOutOfBondsBullets().add((Projectile) bullet);
+          dpC.getTrash().add(bullet);
         }
       }
     }
 
     // player vs enemy
     for (Sprite enemy : dpC.getEnemies()) {
-      if (player.collided(enemy)) {
+      if (!(player.getHealth() <= 0)) {
+        if (player.collided(enemy)) {
+          player.setHealth(player.getHealth() - 2);
+          dpC.getTrash().add(enemy);
+        }
+      } else {
         setup();
       }
     }
@@ -163,9 +217,12 @@ public class Window extends PApplet {
         removeEnemies(mapElement.getValue());
     }
 
-    // remove bullets that are out of bounds.
-    for (Projectile b : dpC.getOutOfBondsBullets()) {
-      removeBullet(b);
+    // remove bullets that are out of bounds
+    // and enemies that have touched the player.
+    for (Sprite s : dpC.getTrash()) {
+      if (s instanceof Projectile)
+        removeBullet(s);
+        removeEnemies(s);
     }
   }
 

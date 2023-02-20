@@ -11,7 +11,7 @@ public class DataPiratesCollection {
 
   private  HashMap<Projectile, Enemy> remove;
 
-  private ArrayList<Projectile> outOfBondsBullets;
+  private ArrayList<Sprite> trash;
 
   private static DataPiratesCollection dpCollection;
 
@@ -24,7 +24,7 @@ public class DataPiratesCollection {
       dpCollection.setSprites(new ArrayList<Sprite>());
       dpCollection.setBullets(new ArrayList<Sprite>());
       dpCollection.setRemove(new HashMap<Projectile, Enemy>());
-      dpCollection.setOutOfBondsBullets(new ArrayList<Projectile>());
+      dpCollection.setTrash(new ArrayList<Sprite>());
 //      sprites = new ArrayList<Sprite>();
 //      bullets = new ArrayList<Sprite>();
 //      remove = new HashMap<Projectile, Enemy>();
@@ -47,8 +47,8 @@ public class DataPiratesCollection {
     return remove;
   }
 
-  public ArrayList<Projectile> getOutOfBondsBullets() {
-    return outOfBondsBullets;
+  public ArrayList<Sprite> getTrash() {
+    return trash;
   }
 
   public void setSprites(ArrayList<Sprite> sprites) {
@@ -67,7 +67,7 @@ public class DataPiratesCollection {
     this.remove = remove;
   }
 
-  public void setOutOfBondsBullets(ArrayList<Projectile> outOfBondsBullets) {
-    this.outOfBondsBullets = outOfBondsBullets;
+  public void setTrash(ArrayList<Sprite> trash) {
+    this.trash = trash;
   }
 }
