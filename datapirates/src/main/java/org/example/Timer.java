@@ -3,7 +3,7 @@ package org.example;
 public class Timer {
 
   long currTime;
-  long endTime = 30;
+  long endTime = 5;
 
   double estimated;
   boolean flippySwitch = false;

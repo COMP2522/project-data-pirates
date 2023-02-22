@@ -4,6 +4,8 @@ import processing.core.PApplet;
 import processing.core.PVector;
 import processing.event.KeyEvent;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Window extends PApplet {
@@ -25,6 +27,7 @@ public class Window extends PApplet {
   DataPiratesCollection dpC;
   Score score;
 
+  private int appendNum = 1;
 
   private boolean travelBoolean = false;
 
@@ -74,7 +77,7 @@ public class Window extends PApplet {
     player = p;
     Weapon basic = new Weapon("Basic", EntityColor.getSpriteColors().get("Bullet"), 100);
     player.setWeapon(basic);
-    player.setHealth(100);
+//    player.setHealth(100);
     dpC.getSprites().add(p);
 
 //    PVector plyer = new PVector(player.getPosition().x, player.getPosition().y);
@@ -119,7 +122,32 @@ public class Window extends PApplet {
 //    mousePressed();
 //  }
 
+  void printDisplayText() {
+    // example texts
+
+    textSize(10);
+    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
+    text("Score: " + score.getValue(), 40, 120);
+
+    textSize(20);
+    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
+    text("Health: " + player.getHealth(), this.width / 3, 120);
+
+    textSize(30);
+    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
+    text("Ammo: " + player.getWeapon().getCurrentAmmo() + " / " + player.getWeapon().getAmmoCapacity() + "", 40, 100);
+
+    textSize(30);
+    text("Clock " + (int) clock.getEstimated() + "s", 40, 80);
+    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
+
+  }
+
+  /**
+   * Updates and gets called everytime.
+   */
   public void draw() {
+    // used to move to shop
     if (player.getPosition().x >= this.width) {
       travelBoolean = true;
 //      clock.reset();
@@ -144,34 +172,17 @@ public class Window extends PApplet {
     } else {
       background(0);
       if (clock.stop()) {
-        numEnemies+=5;
+        // cleans the trash collection every 10 seconds idk
+        dpC.setTrash(new ArrayList<Sprite>());
+        dpC.setRemove(new HashMap<Projectile, Enemy>());
+        numEnemies+= appendNum;
         setUpEnemies();
         clock.start();
       }
 
     }
-//    if (!clock.flippySwitch) {
 
-//    }
-
-    // example texts
-
-    textSize(10);
-    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
-    text("Score: " + score.getValue(), 40, 120);
-
-    textSize(20);
-    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
-    text("Health: " + player.getHealth(), this.width / 3, 120);
-
-    textSize(30);
-    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
-    text("Ammo: " + player.getWeapon().getCurrentAmmo() + " / " + player.getWeapon().getAmmoCapacity() + "", 40, 100);
-
-    textSize(30);
-    text("Clock " + (int) clock.getEstimated() + "s", 40, 80);
-    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
-
+    printDisplayText();
     dpC.getSprites().get(0).update();
     dpC.getSprites().get(0).draw();
 //    while (true) {
@@ -180,6 +191,9 @@ public class Window extends PApplet {
         if (s instanceof Enemy) {
           PVector dir = SpriteManager.calculateDirection(s.getPosition(), player.getPosition());
           s.setDirection(dir);
+          textSize(10);
+          fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
+          text("health: " + ((Enemy) s).getHealth(), s.getPosition().x - 10, s.getPosition().y + 20);
         }
         s.update();
         s.draw();
@@ -190,9 +204,15 @@ public class Window extends PApplet {
     for (Sprite bullet : dpC.getBullets()) {
       for (Sprite enemy : dpC.getEnemies()) {
         if (bullet.collided(enemy)) {
-          System.out.println("Killed an enemy!");
-          dpC.getRemove().put((Projectile) bullet, (Enemy) enemy);
-          score.setValue(score.getValue() + 1);
+//          if ((Enemy) enemy.)
+          ((Enemy) enemy).setHealth(((Enemy) enemy).getHealth() - 10);
+          if (((Enemy) enemy).getHealth() <= 0) {
+            System.out.println("Killed an enemy!");
+            dpC.getRemove().put((Projectile) bullet, (Enemy) enemy);
+            score.setValue(score.getValue() + 2);
+          } else {
+            dpC.getTrash().add(bullet);
+          }
         } else if (bullet.getPosition().x >= this.width || bullet.getPosition().y >= this.height) {
           dpC.getTrash().add(bullet);
         }
@@ -204,7 +224,9 @@ public class Window extends PApplet {
       if (!(player.getHealth() <= 0)) {
         if (player.collided(enemy)) {
           player.setHealth(player.getHealth() - 2);
+          score.setValue(score.getValue() + 1);
           dpC.getTrash().add(enemy);
+          System.out.println("collided with enemy");
         }
       } else {
         setup();
@@ -216,7 +238,6 @@ public class Window extends PApplet {
         removeBullet(mapElement.getKey());
         removeEnemies(mapElement.getValue());
     }
-
     // remove bullets that are out of bounds
     // and enemies that have touched the player.
     for (Sprite s : dpC.getTrash()) {
@@ -224,6 +245,11 @@ public class Window extends PApplet {
         removeBullet(s);
         removeEnemies(s);
     }
+
+    // boost performance by resetting the garbage
+    // collection
+//    dpC.setTrash(new ArrayList<Sprite>());
+//    dpC.setRemove(new HashMap<Projectile, Enemy>());
   }
 
   /**

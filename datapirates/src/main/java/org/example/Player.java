@@ -17,6 +17,8 @@ public class Player extends Sprite {
 
   private int health;
 
+  private int defense;
+
   private Player(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {
     super(pos, direction, size, speed, clr, scene);
   }
@@ -24,6 +26,7 @@ public class Player extends Sprite {
   public static Player getInstance(PVector position, PVector direction, float size, float speed, Color color, Window window) {
     if (player == null) {
       player = new Player(position, direction, size, speed, color, window);
+
     } else {
       player.setPosition(position);
       player.setDirection(direction);
@@ -32,16 +35,28 @@ public class Player extends Sprite {
       player.setColor(color);
       player.setWindow(window);
     }
+
+    player.setHealth(100);
+    player.setDefense(50);
+
     return player;
+  }
+
+
+  public int getHealth() {
+    return health;
+  }
+
+  public int getDefense() {
+    return defense;
   }
 
   public void setHealth(int health) {
     this.health = health;
   }
 
-
-  public int getHealth() {
-    return health;
+  public void setDefense(int def) {
+    defense = def;
   }
 
   @Override
