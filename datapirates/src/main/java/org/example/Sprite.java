@@ -19,54 +19,91 @@ public class Sprite implements Comparable<Sprite> {
 
   protected Window window;
 
-  public Sprite(PVector position, PVector direction, float size, float speed, Color color, Window window) {
-    this.position = position;
+  public Sprite(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {
+    position = pos;
     this.direction = direction;
     this.size = size;
     this.speed = speed;
-    this.color = color;
-    this.window = window;
+    color = clr;
+    this.window = scene;
   }
 
-  public float getSize() {
-    return size;
+  public void draw() {
+    window.pushStyle();
+    window.fill(this.color.getRed(), this.color.getGreen(), this.color.getBlue());
+    window.ellipse(this.position.x, this.position.y, size, size);
+    window.popStyle();
   }
 
+  public void bounce() {
+    if (this.position.x <= 0 ||
+            this.position.x >= window.width ||
+            this.position.y <= 0 ||
+            this.position.y >= window.height) {
+      this.direction.rotate(window.HALF_PI);
+    }
+  }
+
+  public boolean collided(Sprite obj) {
+    float distance = PVector.dist(this.getPosition(), obj.getPosition());
+    if (distance <= (this.getSize() + obj.getSize())) {
+      return true;
+    }
+    return false;
+  }
+
+  public void update() {
+//    this.bounce();
+    this.position = this.getPosition().add(this.direction.copy().mult(speed));
+  }
   public PVector getPosition() {
     return position;
-  }
-
-  public PVector getDirection() {
-    return direction;
-  }
-
-  public float getSpeed() {
-    return speed;
   }
 
   public Color getColor() {
     return color;
   }
 
+  public Window getWindow() {
+    return window;
+  }
+
+  public float getSize() {
+    return size;
+  }
+
+  public float getSpeed() {
+    return speed;
+  }
+
+  public PVector getDirection() {
+    return direction;
+  }
+
+  public void setWindow(Window window) {
+    this.window = window;
+  }
+
   public void setPosition(PVector position) {
     this.position = position;
   }
 
-  public void setDirection(PVector direction) {
-    this.direction = direction;
-  }
-
-  public void setSize(float size) {
-    this.size = size;
+  public void setColor(Color color) {
+    this.color = color;
   }
 
   public void setSpeed(float speed) {
     this.speed = speed;
   }
 
-  public void hit() {
-
+  public void setSize(float size) {
+    this.size = size;
   }
+
+  public void setDirection(PVector direction) {
+    this.direction = direction;
+  }
+
   /**
    * Compares this object with the specified object for order.  Returns a
    * negative integer, zero, or a positive integer as this object is less

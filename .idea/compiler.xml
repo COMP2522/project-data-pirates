@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="18">
-      <module name="code" target="18" />
-      <module name="code.main" target="18" />
-      <module name="code.test" target="18" />
-      <module name="javs.main" target="18" />
-      <module name="javs.test" target="18" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="18" />
   </component>
 </project>
