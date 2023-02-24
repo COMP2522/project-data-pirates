@@ -1,16 +1,19 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import processing.core.PApplet;
 import processing.core.PVector;
 import processing.event.KeyEvent;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
+/**
+ *
+ */
 public class Window extends PApplet {
 
-  protected Player player;
+  /** Only one player allowed. Single player. */
+  protected static Player player;
 
   private Timer clock;
 
@@ -18,16 +21,16 @@ public class Window extends PApplet {
   private final int numEnemiesUnChanged = numEnemies;
 
   /* Min size of entities. */
-  private int minSize = 9;
+  private final static int MINSIZE = 9;
 
   /* Max size of entities. */
-  private int maxSize = 20;
+  private final static int MAXSIZE = 20;
   int width = 1080;
   int height = 520;
   DataPiratesCollection dpC;
   Score score;
 
-  private int appendNum = 1;
+  private final int appendNum = 1;
 
   private boolean travelBoolean = false;
 
@@ -54,7 +57,7 @@ public class Window extends PApplet {
       Sprite e = new Enemy(
               enemy,
               enemyDirection,
-              random(minSize, maxSize),
+              random(MINSIZE, MAXSIZE),
               random(0,2),
               EntityColor.getSpriteColors().get("Enemy"),
               this
@@ -67,7 +70,7 @@ public class Window extends PApplet {
 
   public void init() {
     Player p = Player.getInstance(
-            new PVector(this.width / 2,this.height / 2),
+            new PVector( this.width / 2,this.height / 2),
             new PVector(0,1),
             40,
             10,
@@ -116,11 +119,11 @@ public class Window extends PApplet {
   /**
    * Make this function only available to certain
    * weapons.
-   * REASON: ITS TOO OVERPOWERED
+   * REASON: IT IS TOO OVERPOWERED
    */
-//  public void mouseDragged() {
-//    mousePressed();
-//  }
+  public void mouseDragged() {
+    mousePressed();
+  }
 
   void printDisplayText() {
     // example texts
@@ -172,7 +175,9 @@ public class Window extends PApplet {
     } else {
       background(0);
       if (clock.stop()) {
-        // cleans the trash collection every 10 seconds idk
+        // cleans the trash collection every 10 seconds IDK
+        // boost performance by resetting the garbage
+        // collection
         dpC.setTrash(new ArrayList<Sprite>());
         dpC.setRemove(new HashMap<Projectile, Enemy>());
         numEnemies+= appendNum;
@@ -243,13 +248,10 @@ public class Window extends PApplet {
     for (Sprite s : dpC.getTrash()) {
       if (s instanceof Projectile)
         removeBullet(s);
-        removeEnemies(s);
+      removeEnemies(s);
     }
 
-    // boost performance by resetting the garbage
-    // collection
-//    dpC.setTrash(new ArrayList<Sprite>());
-//    dpC.setRemove(new HashMap<Projectile, Enemy>());
+
   }
 
   /**
@@ -276,7 +278,7 @@ public class Window extends PApplet {
 
   /**
    * Drives the program.
-   * @param args
+   * @param args unused
    */
   public static void main(String[] args) {
     String[] appletArgs = new String[]{"eatBubbles"};
