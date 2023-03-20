@@ -1,5 +1,6 @@
 package org.example;
 
+import processing.core.PShape;
 import processing.core.PVector;
 
 import java.awt.*;
@@ -15,10 +16,15 @@ public class Sprite implements Comparable<Sprite> {
   /* Might include a speed buff thingy. */
   private float speed;
 
-  private Color color;
+  public Color color;
 
   protected Window window;
 
+  private PShape shape;
+
+  private Window scene;
+
+  private PShape[] enemyShapes = new PShape[3]; // Array of three different shapes
   public Sprite(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {
     position = pos;
     this.direction = direction;
@@ -26,12 +32,18 @@ public class Sprite implements Comparable<Sprite> {
     this.speed = speed;
     color = clr;
     this.window = scene;
+    this.scene = scene;
+    // Populate the array with different shapes
+    enemyShapes[0] = createTriangleShape(size);
+    enemyShapes[1] = createCircleShape(size);
+    enemyShapes[2] = createSquareShape(size);
+    this.shape = enemyShapes[(int) scene.random(enemyShapes.length)];
   }
 
   public void draw() {
     window.pushStyle();
     window.fill(this.color.getRed(), this.color.getGreen(), this.color.getBlue());
-    window.ellipse(this.position.x, this.position.y, size, size);
+    window.shape(this.shape, this.position.x, this.position.y);
     window.popStyle();
   }
 
@@ -102,6 +114,29 @@ public class Sprite implements Comparable<Sprite> {
 
   public void setDirection(PVector direction) {
     this.direction = direction;
+  }
+
+  private PShape createTriangleShape(float size) {
+    PShape shape = scene.createShape();
+    shape.beginShape();
+    shape.fill(255, 0, 0);
+    shape.vertex(0, -size / 2);
+    shape.vertex(size / 2, size / 2);
+    shape.vertex(-size / 2, size / 2);
+    shape.endShape(PShape.CLOSE);
+    return shape;
+  }
+
+  private PShape createCircleShape(float size) {
+    PShape shape = scene.createShape(PShape.ELLIPSE, 0, 0, size, size);
+    //shape.fill(0, 255, 0);
+    return shape;
+  }
+
+  private PShape createSquareShape(float size) {
+    PShape shape = scene.createShape(PShape.RECT, -size / 2, -size / 2, size, size);
+    //shape.fill(0, 0, 255);
+    return shape;
   }
 
   /**

@@ -1,11 +1,14 @@
 package org.example;
 
+import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import processing.core.PApplet;
 import processing.core.PVector;
 import processing.event.KeyEvent;
+import javax.sound.sampled.*;
 
 /**
  *
@@ -98,6 +101,16 @@ public class Window extends PApplet {
   @Override
   public void mousePressed() {
     if (player.getWeapon().hasAmmo()) {
+      // Play sound effect
+//      try {
+//        File soundFile = new File("sound/shoot.wav");
+//        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(soundFile);
+//        Clip clip = AudioSystem.getClip();
+//        clip.open(audioInputStream);
+//        clip.start();
+//      } catch (Exception ex) {
+//        System.err.println("Error playing sound effect: " + ex.getMessage());
+//      }
       player.getWeapon().shoot();
       // Direction Calculation
       // src: https://processing.org/tutorials/pvector/#vectors-interactivity
@@ -275,6 +288,18 @@ public class Window extends PApplet {
     dpC.getBullets().remove(b);
     dpC.getSprites().remove(b);
   }
+
+//  public void shoot() {
+//    try {
+//      File soundFile = new File("src/main/resources/sounds/shoot.wav");
+//        AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
+//        Clip clip = AudioSystem.getClip();
+//        clip.open(audioIn);
+//        clip.start();
+//    } catch (Exception e) {
+//      e.printStackTrace();
+//    }
+//  }
 
   /**
    * Drives the program.
