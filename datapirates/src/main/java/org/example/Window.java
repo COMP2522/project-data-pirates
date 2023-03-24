@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import processing.core.PApplet;
+import processing.core.PImage;
 import processing.core.PVector;
 import processing.event.KeyEvent;
 
@@ -34,13 +35,15 @@ public class Window extends PApplet {
 
   private boolean travelBoolean = false;
 
-
+  PImage maps;
   public void settings() {
     size(width, height);
   }
 
   public void setup() {
 //    settings();
+    maps = loadImage("datapirates/map/galaxy.jpg");
+    background(maps);
     numEnemies = numEnemiesUnChanged;
     dpC = DataPiratesCollection.getInstance();
     score = Score.getInstance();
@@ -163,7 +166,7 @@ public class Window extends PApplet {
       travelBoolean = false;
     }
     if (travelBoolean) {
-      background(255);
+      background(maps);
       for (Sprite s : dpC.getSprites()) {
         if (s instanceof Enemy)
           dpC.getTrash().add(s);
@@ -173,7 +176,7 @@ public class Window extends PApplet {
         removeEnemies(s);
       }
     } else {
-      background(0);
+      background(maps);
       if (clock.stop()) {
         // cleans the trash collection every 10 seconds IDK
         // boost performance by resetting the garbage
