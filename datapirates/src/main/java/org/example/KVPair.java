@@ -8,4 +8,8 @@ public class KVPair<T> {
     this.key = key;
     this.value = value;
   }
+
+  public T getValue() {
+    return value;
+  }
 }
