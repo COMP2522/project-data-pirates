@@ -24,12 +24,16 @@ public class JSONWriter {
             return false;
         }
 
+        JSONObject obj = new JSONObject();
+        obj.put("records", theList);
+
         try{
             FileWriter output = new FileWriter("./" + fileName);
 
-            for(int i = 0; i < theList.size(); i++){
-                output.write(theList.get(i).toString());
-            }
+//            for(int i = 0; i < theList.size(); i++){
+//                output.write(theList.get(i).toString());
+//            }
+            output.write(obj.toString());
 
             output.close();
         }

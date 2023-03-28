@@ -40,13 +40,22 @@ public class TopPlayerList {
     writeToFile();
   }
 
+  public void addRecord(KVPair p){
+    arlist.add(p);
+    sortList();
+    while (arlist.size() > MAX_SIZE){
+      arlist.remove(arlist.size()-1);
+    }
+    writeToFile();
+  }
+
   public void sortList(){
     Collections.sort(arlist, new Comparator<KVPair>() {
       @Override
       public int compare(KVPair o1, KVPair o2) {
         Integer int1 = Integer.valueOf(o1.getValue().toString());
         Integer int2 = Integer.valueOf(o2.getValue().toString());
-        return int1.compareTo(int2);
+        return int2.compareTo(int1);
       }
     });
   }
