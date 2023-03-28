@@ -1,10 +1,12 @@
 package org.example;
 
 import java.io.File;
-import java.net.URL;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+
 import processing.core.PApplet;
 import processing.core.PVector;
 import processing.event.KeyEvent;
@@ -37,6 +39,12 @@ public class Window extends PApplet {
 
   private boolean travelBoolean = false;
 
+  private Menu menu;
+
+  private boolean gameRunning = false;
+
+  Weapon weapon;
+
 
   public void settings() {
     size(width, height);
@@ -48,6 +56,9 @@ public class Window extends PApplet {
     dpC = DataPiratesCollection.getInstance();
     score = Score.getInstance();
     EntityColor.setColors();
+    fetchGameDataAsync();
+    menu = new Menu(this);
+    weapon = new Weapon("Basic", EntityColor.getSpriteColors().get("Bullet"), 100);
     clock = new Timer();
     this.init();
     clock.start();
@@ -96,35 +107,57 @@ public class Window extends PApplet {
     if (e.getKey() == 'r')
       player.getWeapon().reload();
     player.move(e);
+
+    if (key == 'f' || key == 'F') {
+      player.fireProjectile();
+    } else {
+      player.move(keyEvent);
+    }
   }
 
   @Override
   public void mousePressed() {
-    if (player.getWeapon().hasAmmo()) {
-      // Play sound effect
-//      try {
-//        File soundFile = new File("sound/shoot.wav");
-//        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(soundFile);
-//        Clip clip = AudioSystem.getClip();
-//        clip.open(audioInputStream);
-//        clip.start();
-//      } catch (Exception ex) {
-//        System.err.println("Error playing sound effect: " + ex.getMessage());
-//      }
-      player.getWeapon().shoot();
-      // Direction Calculation
-      // src: https://processing.org/tutorials/pvector/#vectors-interactivity
-      PVector mouse = new PVector(mouseX, mouseY);
-      PVector dir = SpriteManager.calculateDirection(player.getPosition(), mouse);
+    if (!gameRunning) {
+      for (Map.Entry<String, PVector> entry : menu.buttons.entrySet()) {
+        String button = entry.getKey();
+        PVector position = entry.getValue();
+        float halfWidth = 200 / 2; // Half of the button width
+        float halfHeight = 75 / 2; // Half of the button height
+        if (mouseButton == LEFT && mouseX >= position.x - halfWidth && mouseX <= position.x + halfWidth && mouseY >= position.y - halfHeight && mouseY <= position.y + halfHeight) {
+          switch (button) {
+            case "start":
+              gameRunning = true;
+              break;
+            case "highScore":
+              // Show high score
+              break;
+            case "credits":
+              // Show credits
+              break;
+            case "quit":
+              exit();
+              break;
+          }
+        }
+      }
+    } else {
 
-      Projectile projectile = new Projectile(player.getPosition().copy(), dir, 10, 5, EntityColor.getSpriteColors().get("Bullet"), this);
-      dpC.getSprites().add(projectile);
-      dpC.getBullets().add(projectile);
-    }
-    else {
-      textSize(60);
-      fill(EntityColor.getSpriteColors().get("Reload").getRed(), EntityColor.getSpriteColors().get("Reload").getGreen(), EntityColor.getSpriteColors().get("Reload").getBlue());
-      text("Reload!", player.getPosition().x + player.getSize(), player.getPosition().y + player.getSize());
+      if (player.getWeapon().hasAmmo()) {
+        player.getWeapon().shoot();
+        playSound("datapirates\\src\\main\\shoot.wav");
+        // Direction Calculation
+        // src: https://processing.org/tutorials/pvector/#vectors-interactivity
+        PVector mouse = new PVector(mouseX, mouseY);
+        PVector dir = SpriteManager.calculateDirection(player.getPosition(), mouse);
+
+        Projectile projectile = new Projectile(player.getPosition().copy(), dir, 10, 5, EntityColor.getSpriteColors().get("Bullet"), this);
+        dpC.getSprites().add(projectile);
+        dpC.getBullets().add(projectile);
+      } else {
+        textSize(60);
+        fill(EntityColor.getSpriteColors().get("Reload").getRed(), EntityColor.getSpriteColors().get("Reload").getGreen(), EntityColor.getSpriteColors().get("Reload").getBlue());
+        text("Reload!", player.getPosition().x + player.getSize(), player.getPosition().y + player.getSize());
+      }
     }
   }
 
@@ -163,108 +196,129 @@ public class Window extends PApplet {
    * Updates and gets called everytime.
    */
   public void draw() {
-    // used to move to shop
-    if (player.getPosition().x >= this.width) {
-      travelBoolean = true;
-//      clock.reset();
-      clock.stop();
-      player.getPosition().set(10, player.getPosition().y);
-    } else if (player.getPosition().x < 5 && travelBoolean) {
-      clock.start();
-      player.getPosition().set(this.width - 10, player.getPosition().y);
-      setUpEnemies();
-      travelBoolean = false;
-    }
-    if (travelBoolean) {
-      background(255);
-      for (Sprite s : dpC.getSprites()) {
-        if (s instanceof Enemy)
-          dpC.getTrash().add(s);
-      }
-
-      for (Sprite s : dpC.getTrash()) {
-        removeEnemies(s);
-      }
-    } else {
+    if (!gameRunning) {
       background(0);
-      if (clock.stop()) {
-        // cleans the trash collection every 10 seconds IDK
-        // boost performance by resetting the garbage
-        // collection
-        dpC.setTrash(new ArrayList<Sprite>());
-        dpC.setRemove(new HashMap<Projectile, Enemy>());
-        numEnemies+= appendNum;
-        setUpEnemies();
+        menu.show();
+        menu.draw();
+    } else {
+      menu.hide();
+
+      // used to move to shop
+      if (player.getPosition().x >= this.width) {
+        travelBoolean = true;
+//      clock.reset();
+        clock.stop();
+        player.getPosition().set(10, player.getPosition().y);
+      } else if (player.getPosition().x < 5 && travelBoolean) {
         clock.start();
+        player.getPosition().set(this.width - 10, player.getPosition().y);
+        setUpEnemies();
+        travelBoolean = false;
       }
-
-    }
-
-    printDisplayText();
-    dpC.getSprites().get(0).update();
-    dpC.getSprites().get(0).draw();
-//    while (true) {
-    for (Sprite s : dpC.getSprites()) {
-      if (!(s instanceof Player)) {
-        if (s instanceof Enemy) {
-          PVector dir = SpriteManager.calculateDirection(s.getPosition(), player.getPosition());
-          s.setDirection(dir);
-          textSize(10);
-          fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
-          text("health: " + ((Enemy) s).getHealth(), s.getPosition().x - 10, s.getPosition().y + 20);
+      if (travelBoolean) {
+        background(255);
+        for (Sprite s : dpC.getSprites()) {
+          if (s instanceof Enemy)
+            dpC.getTrash().add(s);
         }
-        s.update();
-        s.draw();
-      }
-    }
 
-    // bullet vs enemy
-    for (Sprite bullet : dpC.getBullets()) {
-      for (Sprite enemy : dpC.getEnemies()) {
-        if (bullet.collided(enemy)) {
-//          if ((Enemy) enemy.)
-          ((Enemy) enemy).setHealth(((Enemy) enemy).getHealth() - 10);
-          if (((Enemy) enemy).getHealth() <= 0) {
-            System.out.println("Killed an enemy!");
-            dpC.getRemove().put((Projectile) bullet, (Enemy) enemy);
-            score.setValue(score.getValue() + 2);
-          } else {
-            dpC.getTrash().add(bullet);
-          }
-        } else if (bullet.getPosition().x >= this.width || bullet.getPosition().y >= this.height) {
-          dpC.getTrash().add(bullet);
-        }
-      }
-    }
-
-    // player vs enemy
-    for (Sprite enemy : dpC.getEnemies()) {
-      if (!(player.getHealth() <= 0)) {
-        if (player.collided(enemy)) {
-          player.setHealth(player.getHealth() - 2);
-          score.setValue(score.getValue() + 1);
-          dpC.getTrash().add(enemy);
-          System.out.println("collided with enemy");
+        for (Sprite s : dpC.getTrash()) {
+          removeEnemies(s);
         }
       } else {
-        setup();
-      }
-    }
+        background(0);
+        if (clock.stop()) {
+          // cleans the trash collection every 10 seconds IDK
+          // boost performance by resetting the garbage
+          // collection
+          dpC.setTrash(new ArrayList<Sprite>());
+          dpC.setRemove(new HashMap<Projectile, Enemy>());
+          numEnemies += appendNum;
+          setUpEnemies();
+          clock.start();
+        }
 
-    // remove the collision between bullets and enemies
-    for (Map.Entry<Projectile, Enemy> mapElement: dpC.getRemove().entrySet()) {
+      }
+
+      printDisplayText();
+      dpC.getSprites().get(0).update();
+      dpC.getSprites().get(0).draw();
+//    while (true) {
+      for (Sprite s : dpC.getSprites()) {
+        if (!(s instanceof Player)) {
+          if (s instanceof Enemy) {
+            PVector dir = SpriteManager.calculateDirection(s.getPosition(), player.getPosition());
+            s.setDirection(dir);
+            textSize(10);
+            fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
+            text("health: " + ((Enemy) s).getHealth(), s.getPosition().x - 10, s.getPosition().y + 20);
+          }
+          s.update();
+          s.draw();
+        }
+      }
+
+      // bullet vs enemy
+      for (Sprite bullet : dpC.getBullets()) {
+        for (Sprite enemy : dpC.getEnemies()) {
+          if (bullet.collided(enemy)) {
+//          if ((Enemy) enemy.)
+            ((Enemy) enemy).setHealth(((Enemy) enemy).getHealth() - 10);
+            if (((Enemy) enemy).getHealth() <= 0) {
+              System.out.println("Killed an enemy!");
+              dpC.getRemove().put((Projectile) bullet, (Enemy) enemy);
+              score.setValue(score.getValue() + 2);
+            } else {
+              dpC.getTrash().add(bullet);
+            }
+          } else if (bullet.getPosition().x >= this.width || bullet.getPosition().y >= this.height) {
+            dpC.getTrash().add(bullet);
+          }
+        }
+      }
+
+      // player vs enemy
+      for (Sprite enemy : dpC.getEnemies()) {
+        if (!(player.getHealth() <= 0)) {
+          if (player.collided(enemy)) {
+            player.setHealth(player.getHealth() - 2);
+            score.setValue(score.getValue() + 1);
+            dpC.getTrash().add(enemy);
+            System.out.println("collided with enemy");
+          }
+        } else {
+          setup();
+        }
+      }
+
+      // remove the collision between bullets and enemies
+      for (Map.Entry<Projectile, Enemy> mapElement : dpC.getRemove().entrySet()) {
         removeBullet(mapElement.getKey());
         removeEnemies(mapElement.getValue());
+      }
+      // remove bullets that are out of bounds
+      // and enemies that have touched the player.
+      for (Sprite s : dpC.getTrash()) {
+        if (s instanceof Projectile)
+          removeBullet(s);
+        removeEnemies(s);
+      }
     }
-    // remove bullets that are out of bounds
-    // and enemies that have touched the player.
-    for (Sprite s : dpC.getTrash()) {
-      if (s instanceof Projectile)
-        removeBullet(s);
-      removeEnemies(s);
+      weapon.update();
+        weapon.draw();
+
+  }
+
+  public void playSound(String soundFileName) {
+    try {
+      File soundFile = new File(soundFileName);
+      AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
+      Clip clip = AudioSystem.getClip();
+      clip.open(audioIn);
+      clip.start();
+    } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+      e.printStackTrace();
     }
-
-
   }
 
   /**
@@ -289,17 +343,28 @@ public class Window extends PApplet {
     dpC.getSprites().remove(b);
   }
 
-//  public void shoot() {
-//    try {
-//      File soundFile = new File("src/main/resources/sounds/shoot.wav");
-//        AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
-//        Clip clip = AudioSystem.getClip();
-//        clip.open(audioIn);
-//        clip.start();
-//    } catch (Exception e) {
-//      e.printStackTrace();
-//    }
-//  }
+  private String fetchGameData() {
+    // Simulate a delay in fetching the data (e.g., 2 seconds)
+    try {
+      Thread.sleep(2000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+
+    // Simulate the game data
+    return "Fetched game data";
+  }
+
+  public void fetchGameDataAsync() {
+    CompletableFuture.supplyAsync(() -> fetchGameData())
+            .thenAccept(gameData -> {
+              // This block will be executed once the game data is fetched
+              System.out.println("Fetched game data: " + gameData);
+            });
+  }
+
+
+
 
   /**
    * Drives the program.

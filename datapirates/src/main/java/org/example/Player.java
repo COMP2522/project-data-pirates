@@ -120,4 +120,18 @@ public class Player extends Sprite {
   public Weapon getWeapon() {
     return weapon;
   }
+
+  public void fireProjectile() {
+    if (this.weapon != null) {
+      PVector projectilePos = this.position.copy();
+      PVector projectileDirection = this.direction.copy();
+      float projectileSize = 10; // Set the size of the projectile
+      float projectileSpeed = 5; // Set the speed of the projectile
+      Color projectileColor = new Color(255, 255, 0); // Set the color of the projectile
+
+      Projectile projectile = new Projectile(projectilePos, projectileDirection, projectileSize, projectileSpeed, projectileColor, this.window);
+      this.weapon.addProjectile(projectile);
+    }
+  }
+
 }

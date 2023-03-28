@@ -9,7 +9,7 @@ public class Sprite implements Comparable<Sprite> {
 
   protected PVector position;
 
-  private PVector direction;
+  public PVector direction;
 
   private float size;
 

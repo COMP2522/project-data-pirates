@@ -5,90 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="Fixed conflicts from main.">
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-aarch64/libgluegen_rt.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-aarch64/libjogl_desktop.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-aarch64/libjogl_mobile.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-aarch64/libnativewindow_awt.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-aarch64/libnativewindow_drm.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-aarch64/libnativewindow_x11.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-aarch64/libnewt_drm.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-aarch64/libnewt_head.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-amd64/libgluegen_rt.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-amd64/libjogl_desktop.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-amd64/libjogl_mobile.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-amd64/libnativewindow_awt.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-amd64/libnativewindow_drm.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-amd64/libnativewindow_x11.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-amd64/libnewt_drm.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-amd64/libnewt_head.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-arm/libgluegen_rt.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-arm/libjogl_desktop.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-arm/libjogl_mobile.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-arm/libnativewindow_awt.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-arm/libnativewindow_drm.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-arm/libnativewindow_x11.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-arm/libnewt_drm.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/linux-arm/libnewt_head.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/macos-aarch64/libgluegen_rt.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/macos-aarch64/libjogl_desktop.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/macos-aarch64/libjogl_mobile.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/macos-aarch64/libnativewindow_awt.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/macos-aarch64/libnativewindow_macosx.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/macos-aarch64/libnewt_head.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/macos-x86_64/libgluegen_rt.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/macos-x86_64/libjogl_desktop.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/macos-x86_64/libjogl_mobile.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/macos-x86_64/libnativewindow_awt.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/macos-x86_64/libnativewindow_macosx.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/macos-x86_64/libnewt_head.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/windows-amd64/fenster.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/windows-amd64/gluegen_rt.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/windows-amd64/jogl_desktop.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/windows-amd64/jogl_mobile.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/windows-amd64/nativewindow_awt.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/windows-amd64/nativewindow_win32.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/gradle/library/windows-amd64/newt_head.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vijaykiran_processing_org_processing_core_2_0b8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/credits0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/highscore0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/back0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/back1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/back2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/credits1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/credits2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/highscore1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/highscore2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/innerbuttons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/play1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/play2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/quit1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/quit2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/creatures/bluealien.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/creatures/greenalien.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/play0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/quit0.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectPitch.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectPitch.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/gc.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/SimpleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/SimpleGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Damageable.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Damageable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/DataPiratesCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/DataPiratesCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/EntityColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/EntityColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/GameCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Projectile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Score.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Sprite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/SpriteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/SpriteManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Timer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Weapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Window.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/sound/shoot.wav" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/shoot.wav" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +85,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="56b86d10-f15d-4ae4-87df-0785b0eb31ea" />
+        <option name="url" value="https://github.com/COMP2522/project-data-pirates" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -143,7 +114,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/adj37/Desktop/como2522/project-data-pirates",
+    "last_opened_file_path": "C:/Users/adj37/Desktop/como2522/java-shooter-game-project",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -155,9 +126,14 @@
       <recent name="org.example" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adj37\Desktop\como2522\project-data-pirates\datapirates\src\main\java\org\example" />
       <recent name="C:\Users\adj37\Desktop\project-data-pirates\datapirates\src\main\java\org\example" />
       <recent name="C:\Users\adj37\Desktop\project-data-pirates\datapirates\src\main\java\sound" />
       <recent name="C:\Users\adj37\Desktop\project-data-pirates\datapirates\src\main\java\org\example\sound" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adj37\Desktop\como2522\project-data-pirates\datapirates\src\main" />
+      <recent name="C:\Users\adj37\Desktop\como2522\project-data-pirates\datapirates\src\main\java" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example" />
@@ -189,7 +165,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6f02db49-7d93-49e8-b515-d3fd1cf1ad55" name="Changes" comment="" />
+      <changelist id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="Fixed conflicts from main." />
       <created>1677916347616</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
