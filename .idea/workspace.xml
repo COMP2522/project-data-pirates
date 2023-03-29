@@ -5,35 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="Fixed conflicts from main.">
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/credits0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/highscore0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/back0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/back1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/back2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/credits1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/credits2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/highscore1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/highscore2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/innerbuttons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/play1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/play2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/quit1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/buttons/quit2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/creatures/bluealien.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/images/creatures/greenalien.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/play0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/quit0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/ProjectileType1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/ProjectileType2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/plane.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/rocket.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/gc.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -42,11 +18,9 @@
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Sprite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Weapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/sound/shoot.wav" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/shoot.wav" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +88,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/adj37/Desktop/como2522/java-shooter-game-project",
+    "last_opened_file_path": "C:/Users/adj37/Desktop/como2522/project-data-pirates/datapirates/src/main",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -126,6 +100,7 @@
       <recent name="org.example" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adj37\Desktop\como2522\project-data-pirates\datapirates\src\main" />
       <recent name="C:\Users\adj37\Desktop\como2522\project-data-pirates\datapirates\src\main\java\org\example" />
       <recent name="C:\Users\adj37\Desktop\project-data-pirates\datapirates\src\main\java\org\example" />
       <recent name="C:\Users\adj37\Desktop\project-data-pirates\datapirates\src\main\java\sound" />

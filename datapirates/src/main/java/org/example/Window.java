@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 import processing.core.PVector;
 import processing.event.KeyEvent;
 import javax.sound.sampled.*;
@@ -45,6 +46,9 @@ public class Window extends PApplet {
 
   Weapon weapon;
 
+  private PImage playerImage;
+  private PImage enemyImage;
+
 
   public void settings() {
     size(width, height);
@@ -57,6 +61,7 @@ public class Window extends PApplet {
     score = Score.getInstance();
     EntityColor.setColors();
     fetchGameDataAsync();
+    loadImages();
     menu = new Menu(this);
     weapon = new Weapon("Basic", EntityColor.getSpriteColors().get("Bullet"), 100);
     clock = new Timer();
@@ -74,7 +79,8 @@ public class Window extends PApplet {
               random(MINSIZE, MAXSIZE),
               random(0,2),
               EntityColor.getSpriteColors().get("Enemy"),
-              this
+              this,
+                enemyImage
       );
       dpC.getEnemies().add(e);
     }
@@ -89,7 +95,7 @@ public class Window extends PApplet {
             40,
             10,
             EntityColor.getSpriteColors().get("Player"),
-            this);
+            this, playerImage);
 //    dpC.getEnemies().add(e);
     player = p;
     Weapon basic = new Weapon("Basic", EntityColor.getSpriteColors().get("Bullet"), 100);
@@ -109,7 +115,17 @@ public class Window extends PApplet {
     player.move(e);
 
     if (key == 'f' || key == 'F') {
-      player.fireProjectile();
+      if (player.getWeapon().hasAmmo()) {
+        player.getWeapon().shoot();
+        playSound("datapirates\\src\\main\\shoot.wav");
+        PVector mouse = new PVector(mouseX, mouseY);
+        PVector dir = SpriteManager.calculateDirection(player.getPosition(), mouse);
+
+        // Shoot ProjectileType1
+        ProjectileType1 projectile = new ProjectileType1(player.getPosition().copy(), dir, 10, 5, EntityColor.getSpriteColors().get("Bullet"), this);
+        dpC.getSprites().add(projectile);
+        dpC.getBullets().add(projectile);
+      }
     } else {
       player.move(keyEvent);
     }
@@ -145,12 +161,11 @@ public class Window extends PApplet {
       if (player.getWeapon().hasAmmo()) {
         player.getWeapon().shoot();
         playSound("datapirates\\src\\main\\shoot.wav");
-        // Direction Calculation
-        // src: https://processing.org/tutorials/pvector/#vectors-interactivity
         PVector mouse = new PVector(mouseX, mouseY);
         PVector dir = SpriteManager.calculateDirection(player.getPosition(), mouse);
 
-        Projectile projectile = new Projectile(player.getPosition().copy(), dir, 10, 5, EntityColor.getSpriteColors().get("Bullet"), this);
+        // Shoot ProjectileType2
+        ProjectileType2 projectile = new ProjectileType2(player.getPosition().copy(), dir, 10, 5, EntityColor.getSpriteColors().get("Bullet"), this);
         dpC.getSprites().add(projectile);
         dpC.getBullets().add(projectile);
       } else {
@@ -363,7 +378,10 @@ public class Window extends PApplet {
             });
   }
 
-
+  public void loadImages() {
+    playerImage = loadImage("datapirates\\src\\main\\plane.png");
+    enemyImage = loadImage("datapirates\\src\\main\\rocket.png");
+  }
 
 
   /**

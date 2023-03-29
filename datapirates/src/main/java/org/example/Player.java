@@ -1,8 +1,9 @@
 package org.example;
 
+import processing.core.PApplet;
+import processing.core.PImage;
 import processing.core.PVector;
 
-import processing.core.PApplet;
 import processing.event.KeyEvent;
 
 import java.awt.*;
@@ -19,13 +20,16 @@ public class Player extends Sprite {
 
   private int defense;
 
-  private Player(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {
+  private PImage image;
+
+  private Player(PVector pos, PVector direction, float size, float speed, Color clr, Window scene, PImage image) {
     super(pos, direction, size, speed, clr, scene);
+    this.image = image;
   }
 
-  public static Player getInstance(PVector position, PVector direction, float size, float speed, Color color, Window window) {
+  public static Player getInstance(PVector position, PVector direction, float size, float speed, Color color, Window window, PImage playerImage) {
     if (player == null) {
-      player = new Player(position, direction, size, speed, color, window);
+      player = new Player(position, direction, size, speed, color, window, playerImage);
 
     } else {
       player.setPosition(position);
@@ -65,21 +69,16 @@ public class Player extends Sprite {
   }
 
   public void draw() {
-    player.getWindow().pushStyle();
-    player.getWindow().fill(player.getColor().getRed(), player.getColor().getGreen(), player.getColor().getBlue());
-    float startx = player.getPosition().x - (player.getSize() / 2 * Math.abs(player.getDirection().y));
-    float starty = player.getPosition().y + (player.getDirection().x * -1 * player.getSize() / 2);
+    player.getWindow().pushMatrix(); // Save the current transformation matrix
+    player.getWindow().translate(player.getPosition().x, player.getPosition().y); // Move the origin to the player's position
 
-    float midx = player.getPosition().x + (player.getDirection().x * player.getSize() / 1);
-    float midy = player.getPosition().y + (player.getDirection().y * player.getSize() / 1);
+    // Calculate the angle between the player's direction and the positive X-axis
+    float angle = PApplet.atan2(player.getDirection().y, player.getDirection().x);
+    player.getWindow().rotate(angle); // Rotate the image by the calculated angle
 
-    float finalx = player.getPosition().x + (player.getSize() / 2 * Math.abs(player.getDirection().y));
-    float finaly = player.getPosition().y - (player.getDirection().x * -1 * player.getSize() / 2);
-
-    player.getWindow().triangle(
-            startx,starty,
-            midx,midy,finalx,finaly);
-    player.getWindow().popStyle();
+    player.getWindow().imageMode(PApplet.CENTER); // Set the image mode so that the image is drawn centered at the origin
+    player.getWindow().image(image, 0, 0); // Draw the image at the origin
+    player.getWindow().popMatrix(); // Restore the previous transformation matrix
   }
 
   public void move(float x, float y) {
