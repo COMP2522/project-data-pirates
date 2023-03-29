@@ -1,5 +1,14 @@
 package org.example;
 
+/**
+ * Score program for the player.
+ * Eventually will be renamed to be the player's
+ * stats for the shop feature we will add.
+ *
+ * @author Teddy Dumam-Ag
+ *
+ * @version JDK 18
+ */
 public class Score {
 
   private int value;
@@ -10,6 +19,11 @@ public class Score {
     value = val;
   }
 
+  /**
+   * Sets the only Score object.
+   *
+   * @return the only Score object.
+   */
   public static Score getInstance() {
     if (score == null)
       score = new Score(0);

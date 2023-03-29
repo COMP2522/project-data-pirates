@@ -1,5 +1,8 @@
 package org.example;
 
+/**
+ * this is gone.
+ */
 public interface Damageable {
 
   int health = 100;

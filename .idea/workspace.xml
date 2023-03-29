@@ -5,46 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="Fixed conflicts from main.">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vijaykiran_processing_org_processing_core_2_0b8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectPitch.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UML1.0.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/md5-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/sha1-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/dependencies-accessors/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/sha1-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/dependencies-accessors/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/GameCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-data-pirates.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/video1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/datapirates.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/DoG.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Items.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/DeathGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/GuiManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Hud.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/SecretManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/KeyLocationManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/chestroom/Chest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/chestroom/ChestRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/shop/Market.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/shop/Shop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/startArea/SafeRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/music/Devourer.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/music/MusicManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/DailyC.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/Testtyy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/god.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/lambyconcerned.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/map1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/map2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/map3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/DiagonalMove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/GifManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/SpriteMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/SpriteStat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/player/sprite1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/sprite.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vijaykiran_processing_org_processing_core_2_0b8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/documents/TD_pitch.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/documents/TD_pitch.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Damageable.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Damageable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/DataPiratesCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/DataPiratesCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/EntityColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/EntityColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Projectile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/SceneManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/SpriteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/SpriteManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Timer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Weapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/Shop.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,10 +87,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -123,22 +136,63 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Owner/IdeaProjects/project-data-pirates/datapirates/src/main/java/org/example/spriteClasses/sprites/player&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;module&quot;,
+      &quot;directory&quot;
+    ],
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
       &quot;TEXT&quot;
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\spriteClasses\sprites\player" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\spriteClasses\sprites" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\pictures" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\library" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\library\linux-amd64" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\pictures" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\music" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Window" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Window" />
+      <module name="datapirates.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.spriteClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Window" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Created the basic structure and gameplay of the game.">
@@ -164,7 +218,44 @@
       <workItem from="1677036429540" duration="102000" />
       <workItem from="1677089746958" duration="187000" />
       <workItem from="1677176934369" duration="169000" />
-      <workItem from="1677255350943" duration="1950000" />
+      <workItem from="1677255350943" duration="2817000" />
+      <workItem from="1677258513998" duration="2450000" />
+      <workItem from="1677860707910" duration="1060000" />
+      <workItem from="1677867867167" duration="76000" />
+      <workItem from="1677881847483" duration="6000" />
+      <workItem from="1678381711837" duration="159000" />
+      <workItem from="1678419001034" duration="47000" />
+      <workItem from="1678470370603" duration="2020000" />
+      <workItem from="1678490824103" duration="68000" />
+      <workItem from="1678490990286" duration="1366000" />
+      <workItem from="1679265722524" duration="6011000" />
+      <workItem from="1679337026609" duration="51000" />
+      <workItem from="1679415139675" duration="19000" />
+      <workItem from="1679421308120" duration="57000" />
+      <workItem from="1679423097776" duration="172000" />
+      <workItem from="1679498652196" duration="1897000" />
+      <workItem from="1679500593374" duration="9047000" />
+      <workItem from="1679511051740" duration="674000" />
+      <workItem from="1679512190268" duration="72000" />
+      <workItem from="1679512695995" duration="647000" />
+      <workItem from="1679526408959" duration="3329000" />
+      <workItem from="1679671211719" duration="230000" />
+      <workItem from="1679673297249" duration="387000" />
+      <workItem from="1679675636862" duration="2793000" />
+      <workItem from="1679693811501" duration="930000" />
+      <workItem from="1679694853164" duration="291000" />
+      <workItem from="1679696986161" duration="118000" />
+      <workItem from="1679701851292" duration="1490000" />
+      <workItem from="1679720902351" duration="7000" />
+      <workItem from="1679806547979" duration="10000" />
+      <workItem from="1679939875651" duration="4567000" />
+      <workItem from="1679946135838" duration="6000" />
+      <workItem from="1679946472557" duration="11025000" />
+      <workItem from="1679962992494" duration="376000" />
+      <workItem from="1680018491575" duration="84000" />
+      <workItem from="1680023604552" duration="65000" />
+      <workItem from="1680034376016" duration="9385000" />
+      <workItem from="1680047741742" duration="6371000" />
     </task>
     <task id="LOCAL-00002" summary="Implemented Timer functions, entrance to a next scene, and a basic health system for the Player.">
       <created>1676857005285</created>
@@ -187,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677256201970</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed conflicts from main.">
+      <created>1677257338478</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677257338478</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +327,21 @@
     <MESSAGE value="Fixed conflicts from main." />
     <option name="LAST_COMMIT_MESSAGE" value="Fixed conflicts from main." />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/SpriteManager.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,5 +1,7 @@
 package org.example;
 
+import javax.print.DocFlavor;
+
 public class Timer {
 
   long currTime;
@@ -33,6 +35,9 @@ public class Timer {
 //      System.out.println(estimated);
   }
 
+  public boolean isStopped() {
+    return !flippySwitch;
+  }
   public void reset() {
     currTime = 0;
     estimated = 0;

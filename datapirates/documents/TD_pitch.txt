@@ -1,1 +1,3 @@
-test.
+Building the base functionality of the game mechanics.
+- Such as character building
+- The base gameplay

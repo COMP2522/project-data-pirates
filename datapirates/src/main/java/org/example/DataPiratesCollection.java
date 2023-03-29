@@ -1,8 +1,20 @@
 package org.example;
 
+import org.example.spriteClasses.Enemy;
+import org.example.spriteClasses.Projectile;
+import org.example.spriteClasses.Sprite;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * A program that contains all the collections used
+ * for data pirates.
+ *
+ * @author Teddy Dumam-Ag
+ *
+ * @version JDK 18
+ */
 public class DataPiratesCollection {
 
   private ArrayList<Sprite> enemies;
@@ -15,22 +27,30 @@ public class DataPiratesCollection {
 
   private static DataPiratesCollection dpCollection;
 
+  /**
+   * Gets the instance for the Singleton. Only one
+   * collection may be allowed.
+   *
+   * @return the dpCollection
+   */
   public static DataPiratesCollection getInstance() {
     if (dpCollection == null) {
       dpCollection = new DataPiratesCollection();
     }
-//    if (dpCollection.getEnemies() == null && dpCollection.getSprites() == null && dpCollection.getBullets() == null && dpCollection.getRemove() == null) {
-      dpCollection.setEnemies(new ArrayList<Sprite>());
-      dpCollection.setSprites(new ArrayList<Sprite>());
-      dpCollection.setBullets(new ArrayList<Sprite>());
-      dpCollection.setRemove(new HashMap<Projectile, Enemy>());
-      dpCollection.setTrash(new ArrayList<Sprite>());
-//      sprites = new ArrayList<Sprite>();
-//      bullets = new ArrayList<Sprite>();
-//      remove = new HashMap<Projectile, Enemy>();
-//    }
+    //    if (dpCollection.getEnemies() == null && dpCollection.getSprites() == null
+    //    && dpCollection.getBullets() == null && dpCollection.getRemove() == null) {
+    dpCollection.setEnemies(new ArrayList<Sprite>());
+    dpCollection.setSprites(new ArrayList<Sprite>());
+    dpCollection.setBullets(new ArrayList<Sprite>());
+    dpCollection.setRemove(new HashMap<Projectile, Enemy>());
+    dpCollection.setTrash(new ArrayList<Sprite>());
+    //      sprites = new ArrayList<Sprite>();
+    //      bullets = new ArrayList<Sprite>();
+    //      remove = new HashMap<Projectile, Enemy>();
+    //    }
     return dpCollection;
   }
+
   public ArrayList<Sprite> getBullets() {
     return bullets;
   }

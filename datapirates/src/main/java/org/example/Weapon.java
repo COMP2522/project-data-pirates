@@ -12,11 +12,15 @@ public class Weapon {
 
   private int currentAmmo;
 
-  public Weapon(String name, Color bulletColor, int maxAmmo) {
+  // turn dmg, health, enemy health to double
+  private final int dmg;
+
+  public Weapon(String name, Color bulletColor, int maxAmmo, int dmg) {
     model = name;
     this.bulletColor = bulletColor;
     ammoCapacity = maxAmmo;
     currentAmmo = maxAmmo;
+    this.dmg = dmg;
   }
   public void levelUp() {
 
@@ -34,6 +38,10 @@ public class Weapon {
     return true;
   }
 
+  public String getModel() {
+    return model;
+  }
+
   public void reload() {
     currentAmmo = ammoCapacity;
   }
@@ -44,5 +52,13 @@ public class Weapon {
 
   public int getCurrentAmmo() {
     return currentAmmo;
+  }
+
+  public int getDmg() {
+    return dmg;
+  }
+
+  public Color getBulletColor() {
+    return bulletColor;
   }
 }
