@@ -4,73 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="Current State of the game. Next final steps, finalize the usage of JSON ideas, make some rooms cleaner, get the correct sprites, cleanse the text and format them nicely. Basically, just do the design phase and clean code.">
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Preloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Timer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Weapon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Window.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/loading.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/DatabaseManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/JSONData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/KVPair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/datapirates.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/datapirates.test.iml" beforeDir="false" />
+    <list default="true" id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="Game Demo. Not entirely having all documentary but it works.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Damageable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/DataPiratesCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/DataPiratesCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/EntityColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/EntityColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/GameCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Items.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Timer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Weapon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Window.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/DeathGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/DeathGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/GuiManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/GuiManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Hud.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Hud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/KeyLocationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/KeyLocationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/chestroom/Chest.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/chestroom/Chest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/chestroom/ChestRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/chestroom/ChestRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/shop/Market.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/shop/Market.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/shop/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/shop/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/startArea/SafeRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/startArea/SafeRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/music/MusicManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/music/MusicManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/GifManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/GifManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Projectile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Sprite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/SpriteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/SpriteManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/player/sprite1.gif" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,7 +239,7 @@
       <workItem from="1680206934567" duration="95000" />
       <workItem from="1680211471858" duration="406000" />
       <workItem from="1680214717928" duration="14391000" />
-      <workItem from="1680275419229" duration="1214000" />
+      <workItem from="1680275419229" duration="3289000" />
     </task>
     <task id="LOCAL-00002" summary="Implemented Timer functions, entrance to a next scene, and a basic health system for the Player.">
       <created>1676857005285</created>
@@ -343,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680068915799</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Game Demo. Not entirely having all documentary but it works.">
+      <created>1680276783221</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680276783221</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +331,8 @@
     <MESSAGE value="Pushed to main." />
     <MESSAGE value="Fixed conflicts from main." />
     <MESSAGE value="Current State of the game. Next final steps, finalize the usage of JSON ideas, make some rooms cleaner, get the correct sprites, cleanse the text and format them nicely. Basically, just do the design phase and clean code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Current State of the game. Next final steps, finalize the usage of JSON ideas, make some rooms cleaner, get the correct sprites, cleanse the text and format them nicely. Basically, just do the design phase and clean code." />
+    <MESSAGE value="Game Demo. Not entirely having all documentary but it works." />
+    <option name="LAST_COMMIT_MESSAGE" value="Game Demo. Not entirely having all documentary but it works." />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="XDebuggerManager">

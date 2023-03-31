@@ -1,0 +1,1089 @@
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"RemoteRepositoriesConfiguration\">\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"central\" />\r\n      <option name=\"name\" value=\"Maven Central repository\" />\r\n      <option name=\"url\" value=\"https://repo1.maven.org/maven2\" />\r\n    </remote-repository>\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"jboss.community\" />\r\n      <option name=\"name\" value=\"JBoss Community repository\" />\r\n      <option name=\"url\" value=\"https://repository.jboss.org/nexus/content/repositories/public/\" />\r\n    </remote-repository>\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"MavenRepo\" />\r\n      <option name=\"name\" value=\"MavenRepo\" />\r\n      <option name=\"url\" value=\"https://repo.maven.apache.org/maven2/\" />\r\n    </remote-repository>\r\n<<<<<<< HEAD\r\n=======\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"Clojars\" />\r\n      <option name=\"name\" value=\"Clojars\" />\r\n      <option name=\"url\" value=\"https://repo.clojars.org\" />\r\n    </remote-repository>\r\n>>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+--- a/.idea/jarRepositories.xml	
++++ b/.idea/jarRepositories.xml	
+@@ -16,13 +16,10 @@
+       <option name="name" value="MavenRepo" />
+       <option name="url" value="https://repo.maven.apache.org/maven2/" />
+     </remote-repository>
+-<<<<<<< HEAD
+-=======
+     <remote-repository>
+       <option name="id" value="Clojars" />
+       <option name="name" value="Clojars" />
+       <option name="url" value="https://repo.clojars.org" />
+     </remote-repository>
+->>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n<<<<<<< HEAD\r\n    <list default=\"true\" id=\"d29d71a3-bad0-4dc4-b938-a5f79cdeb01a\" name=\"Changes\" comment=\"\" />\r\n=======\r\n    <list default=\"true\" id=\"c753191b-9473-41e2-8a59-fafa6b28520f\" name=\"Changes\" comment=\"Fixed the error where PApplet dependency did not show.\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/.name\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/checkstyle-idea.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/compiler.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/gradle.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/jarRepositories.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n    </list>\r\n>>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n<<<<<<< HEAD\r\n    <projectState path=\"$PROJECT_DIR$/javs\">\r\n=======\r\n    <projectState path=\"$PROJECT_DIR$/datapirates\">\r\n      <ProjectState />\r\n    </projectState>\r\n    <projectState path=\"$PROJECT_DIR$/pirates\">\r\n>>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n<<<<<<< HEAD\r\n                <item name=\"javs\" type=\"f1a62948:ProjectNode\" />\r\n=======\r\n                <item name=\"pirates\" type=\"f1a62948:ProjectNode\" />\r\n>>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad\r\n              </path>\r\n            </expand>\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n<<<<<<< HEAD\r\n  <component name=\"ProjectId\" id=\"2Kv9nJ2Z4TLzekXTw0YGGd9dmFY\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;/home/neal/JetBrains/project-data-pirates&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <module name=\"javs\" />\r\n=======\r\n  <component name=\"ProjectId\" id=\"2Kv7ljblJxeN8629NXWEUNaaAl0\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"autoscrollToSource\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n    <option name=\"showVisibilityIcons\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"jdk.selected.JAVA_MODULE\": \"18\",\r\n    \"last_opened_file_path\": \"C:/Users/Owner/IdeaProjects/project-data-pirates\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"settings.editor.selected.configurable\": \"configurable.group.build\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <module name=\"project-data-pirates\" />\r\n>>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n<<<<<<< HEAD\r\n      <module name=\"javs\" />\r\n=======\r\n      <module name=\"project-data-pirates\" />\r\n>>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n<<<<<<< HEAD\r\n      <changelist id=\"d29d71a3-bad0-4dc4-b938-a5f79cdeb01a\" name=\"Changes\" comment=\"\" />\r\n      <created>1674844354876</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1674844354876</updated>\r\n      <workItem from=\"1674844356237\" duration=\"169000\" />\r\n      <workItem from=\"1674844575414\" duration=\"432000\" />\r\n      <workItem from=\"1674845350797\" duration=\"172000\" />\r\n      <workItem from=\"1674845773487\" duration=\"24000\" />\r\n    </task>\r\n=======\r\n      <changelist id=\"c753191b-9473-41e2-8a59-fafa6b28520f\" name=\"Changes\" comment=\"\" />\r\n      <created>1674843356195</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1674843356195</updated>\r\n      <workItem from=\"1674843359941\" duration=\"248000\" />\r\n      <workItem from=\"1674844033176\" duration=\"771000\" />\r\n      <workItem from=\"1674844807457\" duration=\"892000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Fixed error.\">\r\n      <created>1674843410999</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1674843410999</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Fixed the error where PApplet dependency did not show.\">\r\n      <created>1674845037397</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1674845037397</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n>>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n<<<<<<< HEAD\r\n=======\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"Fixed error.\" />\r\n    <MESSAGE value=\"Fixed the error where PApplet dependency did not show.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Fixed the error where PApplet dependency did not show.\" />\r\n  </component>\r\n>>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad\r\n</project>
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,33 +4,97 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-<<<<<<< HEAD
+-    <list default="true" id="d29d71a3-bad0-4dc4-b938-a5f79cdeb01a" name="Changes" comment="" />
+-=======
+-    <list default="true" id="c753191b-9473-41e2-8a59-fafa6b28520f" name="Changes" comment="Fixed the error where PApplet dependency did not show.">
+-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++    <list default="true" id="c753191b-9473-41e2-8a59-fafa6b28520f" name="Changes" comment="Added the new files.">
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-aarch64/libgluegen_rt.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-aarch64/libjogl_desktop.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-aarch64/libjogl_mobile.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-aarch64/libnativewindow_awt.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-aarch64/libnativewindow_drm.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-aarch64/libnativewindow_x11.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-aarch64/libnewt_drm.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-aarch64/libnewt_head.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-amd64/libgluegen_rt.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-amd64/libjogl_desktop.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-amd64/libjogl_mobile.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-amd64/libnativewindow_awt.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-amd64/libnativewindow_drm.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-amd64/libnativewindow_x11.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-amd64/libnewt_drm.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-amd64/libnewt_head.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-arm/libgluegen_rt.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-arm/libjogl_desktop.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-arm/libjogl_mobile.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-arm/libnativewindow_awt.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-arm/libnativewindow_drm.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-arm/libnativewindow_x11.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-arm/libnewt_drm.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/linux-arm/libnewt_head.so" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/macos-aarch64/libgluegen_rt.dylib" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/macos-aarch64/libjogl_desktop.dylib" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/macos-aarch64/libjogl_mobile.dylib" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/macos-aarch64/libnativewindow_awt.dylib" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/macos-aarch64/libnativewindow_macosx.dylib" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/macos-aarch64/libnewt_head.dylib" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/macos-x86_64/libgluegen_rt.dylib" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/macos-x86_64/libjogl_desktop.dylib" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/macos-x86_64/libjogl_mobile.dylib" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/macos-x86_64/libnativewindow_awt.dylib" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/macos-x86_64/libnativewindow_macosx.dylib" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/macos-x86_64/libnewt_head.dylib" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/windows-amd64/fenster.exe" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/windows-amd64/gluegen_rt.dll" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/windows-amd64/jogl_desktop.dll" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/windows-amd64/jogl_mobile.dll" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/windows-amd64/nativewindow_awt.dll" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/windows-amd64/nativewindow_win32.dll" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/library/windows-amd64/newt_head.dll" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/EntityColor.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/SpriteManager.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/checksums.lock" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/md5-checksums.bin" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/checksums/sha1-checksums.bin" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/dependencies-accessors/gc.properties" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/executionHistory/executionHistory.lock" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/fileChanges/last-build.bin" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/fileHashes/fileHashes.lock" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.4.2/gc.properties" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build.gradle" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/DataPiratesCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/DataPiratesCollection.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Enemy.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Player.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Projectile.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Score.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Sprite.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Timer.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Weapon.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Window.java" afterDir="false" />
+     </list>
+->>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+   <component name="ExternalProjectsData">
+-<<<<<<< HEAD
+-    <projectState path="$PROJECT_DIR$/javs">
+-=======
+     <projectState path="$PROJECT_DIR$/datapirates">
+       <ProjectState />
+     </projectState>
+     <projectState path="$PROJECT_DIR$/pirates">
+->>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad
+       <ProjectState />
+     </projectState>
+   </component>
+@@ -42,11 +106,7 @@
+             <expand>
+               <path>
+                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+-<<<<<<< HEAD
+-                <item name="javs" type="f1a62948:ProjectNode" />
+-=======
+                 <item name="pirates" type="f1a62948:ProjectNode" />
+->>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad
+               </path>
+             </expand>
+             <select />
+@@ -54,6 +114,13 @@
+         </projects_view>
+       </state>
+     </system>
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -61,81 +128,54 @@
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+-<<<<<<< HEAD
+-  <component name="ProjectId" id="2Kv9nJ2Z4TLzekXTw0YGGd9dmFY" />
++  <component name="ProjectId" id="2Kv7ljblJxeN8629NXWEUNaaAl0" />
++  <component name="ProjectLevelVcsManager">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
+   <component name="ProjectViewState">
++    <option name="autoscrollToSource" value="true" />
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
++    <option name="showMembers" value="true" />
++    <option name="showVisibilityIcons" value="true" />
+   </component>
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/home/neal/JetBrains/project-data-pirates&quot;,
++    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/Owner/IdeaProjects/project-data-pirates/datapirates/library/core.jar&quot;,
+     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+ }</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+-      <recent name="$PROJECT_DIR$" />
++      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates" />
+     </key>
+-  </component>
+-  <component name="RunManager">
+-    <configuration default="true" type="JetRunConfigurationType">
+-      <module name="javs" />
+-=======
+-  <component name="ProjectId" id="2Kv7ljblJxeN8629NXWEUNaaAl0" />
+-  <component name="ProjectLevelVcsManager">
+-    <ConfirmationsSetting value="2" id="Add" />
++    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
++      <recent name="" />
++    </key>
+   </component>
+-  <component name="ProjectViewState">
+-    <option name="autoscrollToSource" value="true" />
+-    <option name="hideEmptyMiddlePackages" value="true" />
+-    <option name="showLibraryContents" value="true" />
+-    <option name="showMembers" value="true" />
+-    <option name="showVisibilityIcons" value="true" />
+-  </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ASKED_ADD_EXTERNAL_FILES": "true",
+-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "jdk.selected.JAVA_MODULE": "18",
+-    "last_opened_file_path": "C:/Users/Owner/IdeaProjects/project-data-pirates",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "settings.editor.selected.configurable": "configurable.group.build",
+-    "vue.rearranger.settings.migration": "true"
+-  }
+-}]]></component>
+   <component name="RunManager">
+     <configuration default="true" type="JetRunConfigurationType">
+       <module name="project-data-pirates" />
+->>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+-<<<<<<< HEAD
+-      <module name="javs" />
+-=======
+       <module name="project-data-pirates" />
+->>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad
+       <option name="filePath" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+@@ -145,18 +185,6 @@
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-<<<<<<< HEAD
+-      <changelist id="d29d71a3-bad0-4dc4-b938-a5f79cdeb01a" name="Changes" comment="" />
+-      <created>1674844354876</created>
+-      <option name="number" value="Default" />
+-      <option name="presentableId" value="Default" />
+-      <updated>1674844354876</updated>
+-      <workItem from="1674844356237" duration="169000" />
+-      <workItem from="1674844575414" duration="432000" />
+-      <workItem from="1674845350797" duration="172000" />
+-      <workItem from="1674845773487" duration="24000" />
+-    </task>
+-=======
+       <changelist id="c753191b-9473-41e2-8a59-fafa6b28520f" name="Changes" comment="" />
+       <created>1674843356195</created>
+       <option name="number" value="Default" />
+@@ -164,7 +192,12 @@
+       <updated>1674843356195</updated>
+       <workItem from="1674843359941" duration="248000" />
+       <workItem from="1674844033176" duration="771000" />
+-      <workItem from="1674844807457" duration="892000" />
++      <workItem from="1674844807457" duration="1528000" />
++      <workItem from="1674862071224" duration="30000" />
++      <workItem from="1676000652692" duration="2596000" />
++      <workItem from="1676052417376" duration="774000" />
++      <workItem from="1676687464052" duration="5732000" />
++      <workItem from="1676839181712" duration="10162000" />
+     </task>
+     <task id="LOCAL-00001" summary="Fixed error.">
+       <created>1674843410999</created>
+@@ -180,15 +213,19 @@
+       <option name="project" value="LOCAL" />
+       <updated>1674845037397</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
+->>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad
++    <task id="LOCAL-00003" summary="Added the new files.">
++      <created>1674845748767</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1674845748767</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
+-<<<<<<< HEAD
+-=======
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
+       <map>
+@@ -204,7 +241,17 @@
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <MESSAGE value="Fixed error." />
+     <MESSAGE value="Fixed the error where PApplet dependency did not show." />
+-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the error where PApplet dependency did not show." />
++    <MESSAGE value="Added the new files." />
++    <option name="LAST_COMMIT_MESSAGE" value="Added the new files." />
+   </component>
+->>>>>>> ee2a8a0639cd9eee46ebe4ee1f91f3b3842e68ad
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <breakpoint enabled="true" type="java-exception">
++          <properties class="java.lang.NullPointerException" package="java.lang" />
++          <option name="timeStamp" value="1" />
++        </breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
++  </component>
+ </project>
+\ No newline at end of file
+Index: datapirates/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'java'\r\n}\r\n\r\ngroup 'org.example'\r\nversion '1.0-SNAPSHOT'\r\n\r\nrepositories {\r\n    mavenCentral()\r\n    maven {\r\n        url 'https://repo.clojars.org'\r\n        name 'Clojars'\r\n    }\r\n}\r\n\r\ndependencies {\r\n    implementation 'com.vijaykiran.processing:org.processing.core:2.0b8'\r\n    implementation 'org.processing:processing-complete:3.3.7'\r\n    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'\r\n    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'\r\n}\r\n\r\ntest {\r\n    useJUnitPlatform()\r\n}
+===================================================================
+diff --git a/datapirates/build.gradle b/datapirates/build.gradle
+--- a/datapirates/build.gradle	
++++ b/datapirates/build.gradle	
+@@ -14,8 +14,7 @@
+ }
+ 
+ dependencies {
+-    implementation 'com.vijaykiran.processing:org.processing.core:2.0b8'
+-    implementation 'org.processing:processing-complete:3.3.7'
++    implementation 'org.processing:core:3.3.7'
+     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+ }
+Index: datapirates/.gradle/buildOutputCleanup/cache.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Thu Feb 02 19:32:09 PST 2023\r\ngradle.version=7.4.2\r\n
+===================================================================
+diff --git a/datapirates/.gradle/buildOutputCleanup/cache.properties b/datapirates/.gradle/buildOutputCleanup/cache.properties
+--- a/datapirates/.gradle/buildOutputCleanup/cache.properties	
++++ b/datapirates/.gradle/buildOutputCleanup/cache.properties	
+@@ -1,2 +1,2 @@
+-#Thu Feb 02 19:32:09 PST 2023
+-gradle.version=7.4.2
++#Fri Feb 17 18:32:01 PST 2023
++gradle.version=7.5.1
+Index: datapirates/src/main/java/org/example/Enemy.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\nimport processing.core.PVector;\r\n\r\nimport java.awt.*;\r\n\r\npublic class Enemy extends Sprite {\r\n  public Enemy(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {\r\n    super(pos, direction, size, speed, clr, scene);\r\n  }\r\n\r\n  public void init(Enemy enemy) {}\r\n\r\n  public void remove(Enemy enemy) {}\r\n\r\n  public void update() {}\r\n\r\n}\r\n
+===================================================================
+diff --git a/datapirates/src/main/java/org/example/Enemy.java b/datapirates/src/main/java/org/example/Enemy.java
+--- a/datapirates/src/main/java/org/example/Enemy.java	
++++ b/datapirates/src/main/java/org/example/Enemy.java	
+@@ -13,6 +13,8 @@
+ 
+   public void remove(Enemy enemy) {}
+ 
+-  public void update() {}
++  public void update() {
++    this.position = this.getPosition().add(this.getDirection().copy().mult(getSpeed()));
++  }
+ 
+ }
+Index: datapirates/src/main/java/org/example/Timer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\npublic class Timer {\r\n\r\n  int currTime;\r\n  int endTime;\r\n}\r\n
+===================================================================
+diff --git a/datapirates/src/main/java/org/example/Timer.java b/datapirates/src/main/java/org/example/Timer.java
+--- a/datapirates/src/main/java/org/example/Timer.java	
++++ b/datapirates/src/main/java/org/example/Timer.java	
+@@ -4,4 +4,13 @@
+ 
+   int currTime;
+   int endTime;
++
++  public Timer() {
++    currTime = 0;
++    endTime = 30;
++  }
++
++  public void run() {
++    currTime++;
++  }
+ }
+Index: datapirates/src/main/java/org/example/Score.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\npublic class Score {\r\n}\r\n
+===================================================================
+diff --git a/datapirates/src/main/java/org/example/Score.java b/datapirates/src/main/java/org/example/Score.java
+--- a/datapirates/src/main/java/org/example/Score.java	
++++ b/datapirates/src/main/java/org/example/Score.java	
+@@ -1,4 +1,27 @@
+ package org.example;
+ 
+ public class Score {
++
++  private int value;
++
++  private static Score score;
++
++  private Score(int val) {
++    value = val;
++  }
++
++  public static Score getInstance() {
++    if (score == null)
++      score = new Score(0);
++    score.value = 0;
++    return score;
++  }
++
++  public void setValue(int value) {
++    this.value = value;
++  }
++
++  public int getValue() {
++    return value;
++  }
+ }
+Index: datapirates/src/main/java/org/example/Sprite.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\nimport processing.core.PVector;\r\n\r\nimport java.awt.*;\r\n\r\npublic class Sprite implements Comparable<Sprite> {\r\n\r\n  protected PVector position;\r\n\r\n  private PVector direction;\r\n\r\n  private float size;\r\n\r\n  /* Might include a speed buff thingy. */\r\n  private float speed;\r\n\r\n  private Color color;\r\n\r\n  protected Window window;\r\n\r\n  public Sprite(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {\r\n\r\n  }\r\n\r\n  \r\n  /**\r\n   * Compares this object with the specified object for order.  Returns a\r\n   * negative integer, zero, or a positive integer as this object is less\r\n   * than, equal to, or greater than the specified object.\r\n   *\r\n   * <p>The implementor must ensure {@link Integer#signum\r\n   * signum}{@code (x.compareTo(y)) == -signum(y.compareTo(x))} for\r\n   * all {@code x} and {@code y}.  (This implies that {@code\r\n   * x.compareTo(y)} must throw an exception if and only if {@code\r\n   * y.compareTo(x)} throws an exception.)\r\n   *\r\n   * <p>The implementor must also ensure that the relation is transitive:\r\n   * {@code (x.compareTo(y) > 0 && y.compareTo(z) > 0)} implies\r\n   * {@code x.compareTo(z) > 0}.\r\n   *\r\n   * <p>Finally, the implementor must ensure that {@code\r\n   * x.compareTo(y)==0} implies that {@code signum(x.compareTo(z))\r\n   * == signum(y.compareTo(z))}, for all {@code z}.\r\n   *\r\n   * @param o the object to be compared.\r\n   * @return a negative integer, zero, or a positive integer as this object\r\n   * is less than, equal to, or greater than the specified object.\r\n   * @throws NullPointerException if the specified object is null\r\n   * @throws ClassCastException   if the specified object's type prevents it\r\n   *                              from being compared to this object.\r\n   * @apiNote It is strongly recommended, but <i>not</i> strictly required that\r\n   * {@code (x.compareTo(y)==0) == (x.equals(y))}.  Generally speaking, any\r\n   * class that implements the {@code Comparable} interface and violates\r\n   * this condition should clearly indicate this fact.  The recommended\r\n   * language is \"Note: this class has a natural ordering that is\r\n   * inconsistent with equals.\"\r\n   */\r\n  @Override\r\n  public int compareTo(Sprite o) {\r\n    return 0;\r\n  }\r\n}\r\n
+===================================================================
+diff --git a/datapirates/src/main/java/org/example/Sprite.java b/datapirates/src/main/java/org/example/Sprite.java
+--- a/datapirates/src/main/java/org/example/Sprite.java	
++++ b/datapirates/src/main/java/org/example/Sprite.java	
+@@ -20,10 +20,90 @@
+   protected Window window;
+ 
+   public Sprite(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {
++    position = pos;
++    this.direction = direction;
++    this.size = size;
++    this.speed = speed;
++    color = clr;
++    this.window = scene;
++  }
++
++  public void draw() {
++    window.pushStyle();
++    window.fill(this.color.getRed(), this.color.getGreen(), this.color.getBlue());
++    window.ellipse(this.position.x, this.position.y, size, size);
++    window.popStyle();
++  }
++
++  public void bounce() {
++    if (this.position.x <= 0 ||
++            this.position.x >= window.width ||
++            this.position.y <= 0 ||
++            this.position.y >= window.height) {
++      this.direction.rotate(window.HALF_PI);
++    }
++  }
++
++  public boolean collided(Sprite obj) {
++    float distance = PVector.dist(this.getPosition(), obj.getPosition());
++    if (distance <= (this.getSize() + obj.getSize())) {
++      return true;
++    }
++    return false;
++  }
++
++  public void update() {
++//    this.bounce();
++    this.position = this.getPosition().add(this.direction.copy().mult(speed));
++  }
++  public PVector getPosition() {
++    return position;
++  }
++
++  public Color getColor() {
++    return color;
++  }
++
++  public Window getWindow() {
++    return window;
++  }
+ 
++  public float getSize() {
++    return size;
+   }
+ 
+-  
++  public float getSpeed() {
++    return speed;
++  }
++
++  public PVector getDirection() {
++    return direction;
++  }
++
++  public void setWindow(Window window) {
++    this.window = window;
++  }
++
++  public void setPosition(PVector position) {
++    this.position = position;
++  }
++
++  public void setColor(Color color) {
++    this.color = color;
++  }
++
++  public void setSpeed(float speed) {
++    this.speed = speed;
++  }
++
++  public void setSize(float size) {
++    this.size = size;
++  }
++
++  public void setDirection(PVector direction) {
++    this.direction = direction;
++  }
++
+   /**
+    * Compares this object with the specified object for order.  Returns a
+    * negative integer, zero, or a positive integer as this object is less
+Index: datapirates/src/main/java/org/example/Player.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\nimport processing.core.PVector;\r\n\r\nimport java.awt.*;\r\nimport java.awt.event.KeyEvent;\r\n\r\npublic class Player extends Sprite {\r\n\r\n  private Weapon weapon;\r\n\r\n  public Player(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {\r\n    super(pos, direction, size, speed, clr, scene);\r\n  }\r\n\r\n\r\n  public void move(KeyEvent event) {}\r\n\r\n  public void shoot() {}\r\n\r\n}\r\n
+===================================================================
+diff --git a/datapirates/src/main/java/org/example/Player.java b/datapirates/src/main/java/org/example/Player.java
+--- a/datapirates/src/main/java/org/example/Player.java	
++++ b/datapirates/src/main/java/org/example/Player.java	
+@@ -2,20 +2,94 @@
+ 
+ import processing.core.PVector;
+ 
++import processing.core.PApplet;
++import processing.event.KeyEvent;
++
+ import java.awt.*;
+-import java.awt.event.KeyEvent;
+ 
+ public class Player extends Sprite {
+ 
+   private Weapon weapon;
+ 
+-  public Player(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {
++  private static Player player;
++
++  private Player(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {
+     super(pos, direction, size, speed, clr, scene);
+   }
+ 
++  public static Player getInstance(PVector position, PVector direction, float size, float speed, Color color, Window window) {
++    if (player == null) {
++      player = new Player(position, direction, size, speed, color, window);
++    } else {
++      player.setPosition(position);
++      player.setDirection(direction);
++      player.setSize(size);
++      player.setSpeed(speed);
++      player.setColor(color);
++      player.setWindow(window);
++    }
++    return player;
++  }
++
++  @Override
++  public void update() {
++//    super.update();
++  }
+ 
+-  public void move(KeyEvent event) {}
++  public void draw() {
++    player.getWindow().pushStyle();
++    player.getWindow().fill(player.getColor().getRed(), player.getColor().getGreen(), player.getColor().getBlue());
++    float startx = player.getPosition().x - (player.getSize() / 2 * Math.abs(player.getDirection().y));
++    float starty = player.getPosition().y + (player.getDirection().x * -1 * player.getSize() / 2);
+ 
+-  public void shoot() {}
++    float midx = player.getPosition().x + (player.getDirection().x * player.getSize() / 1);
++    float midy = player.getPosition().y + (player.getDirection().y * player.getSize() / 1);
+ 
++    float finalx = player.getPosition().x + (player.getSize() / 2 * Math.abs(player.getDirection().y));
++    float finaly = player.getPosition().y - (player.getDirection().x * -1 * player.getSize() / 2);
++
++    player.getWindow().triangle(
++            startx,starty,
++            midx,midy,finalx,finaly);
++    player.getWindow().popStyle();
++  }
++
++  public void move(float x, float y) {
++    player.setDirection(player.getPosition().mult(-1).add(new PVector(x, y)).normalize());
++  }
++
++  public void move(KeyEvent event) {
++    char key = event.getKey();
++    switch (key) {
++      case 'w':
++
++        player.setDirection(new PVector(0, -1));
++        break;
++      case 's':
++        player.setDirection(new PVector(0, 1));
++        break;
++      case 'a':
++        player.setDirection(new PVector(-1, 0));
++        break;
++      case 'd':
++        player.setDirection(new PVector(1, 0));
++        break;
++      default:
++        return;
++//        System.out.println("Test");
++//        break;
++    }
++    player.setPosition(player.getPosition().add(player.getDirection().copy().mult(player.getSpeed())));
++
++//            .position = this.getPosition().add(this.direction.copy().mult(speed));
++  }
++
++
++  public void setWeapon(Weapon weapon) {
++    this.weapon = weapon;
++  }
++
++  public Weapon getWeapon() {
++    return weapon;
++  }
+ }
+Index: datapirates/src/main/java/org/example/Weapon.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\npublic interface Weapon {\r\n\r\n  void levelUp();\r\n\r\n}\r\n
+===================================================================
+diff --git a/datapirates/src/main/java/org/example/Weapon.java b/datapirates/src/main/java/org/example/Weapon.java
+--- a/datapirates/src/main/java/org/example/Weapon.java	
++++ b/datapirates/src/main/java/org/example/Weapon.java	
+@@ -1,7 +1,48 @@
+ package org.example;
+ 
+-public interface Weapon {
++import java.awt.*;
++
++public class Weapon {
++
++  private Color bulletColor;
++
++  private int ammoCapacity;
++
++  private String model;
++
++  private int currentAmmo;
++
++  public Weapon(String name, Color bulletColor, int maxAmmo) {
++    model = name;
++    this.bulletColor = bulletColor;
++    ammoCapacity = maxAmmo;
++    currentAmmo = maxAmmo;
++  }
++  public void levelUp() {
+ 
+-  void levelUp();
++  }
+ 
++  public void shoot() {
++    if (hasAmmo()) {
++      currentAmmo--;
++    }
++  }
++
++  public boolean hasAmmo() {
++    if (currentAmmo <= 0)
++      return false;
++    return true;
++  }
++
++  public void reload() {
++    currentAmmo = ammoCapacity;
++  }
++
++  public int getAmmoCapacity() {
++    return ammoCapacity;
++  }
++
++  public int getCurrentAmmo() {
++    return currentAmmo;
++  }
+ }
+Index: datapirates/src/main/java/org/example/Projectile.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\npublic class Projectile implements Weapon {\r\n\r\n  private Sprite projectile;\r\n\r\n  /**\r\n   *\r\n   */\r\n  @Override\r\n  public void levelUp() {\r\n  }\r\n\r\n  public void move() {}\r\n\r\n}\r\n
+===================================================================
+diff --git a/datapirates/src/main/java/org/example/Projectile.java b/datapirates/src/main/java/org/example/Projectile.java
+--- a/datapirates/src/main/java/org/example/Projectile.java	
++++ b/datapirates/src/main/java/org/example/Projectile.java	
+@@ -1,16 +1,35 @@
+ package org.example;
+ 
+-public class Projectile implements Weapon {
++import processing.core.PVector;
++
++import java.awt.*;
++
++public class Projectile extends Sprite{
+ 
+   private Sprite projectile;
+ 
+-  /**
+-   *
+-   */
+-  @Override
+-  public void levelUp() {
++  public Projectile(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {
++    super(pos, direction, size, speed, clr, scene);
+   }
++
++//
++//  public void move() {
++//
++//  }
++
++}
+ 
+-  public void move() {}
++class ProjectileManager {
++
++//  private static Player player;
++//
++//  private Weapon weapon;
++//
++//  private Projectile projectile;
++//
++//  public ProjectileManager(Player p) {
++//    player = p;
++//  }
++//
+ 
+ }
+Index: datapirates/src/main/java/org/example/Window.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\nimport processing.core.PApplet;\r\n\r\nimport java.awt.event.KeyEvent;\r\n\r\npublic class Window extends PApplet {\r\n\r\n  protected Player player;\r\n\r\n  private Timer timer;\r\n\r\n  private int numEnemies;\r\n\r\n  /* Min size of entities. */\r\n  private int minSize;\r\n\r\n  /* Max size of entities. */\r\n  private int maxSize;\r\n  int width = 1080;\r\n  int height = 720;\r\n\r\n  public void settings() {\r\n    size(width, height);\r\n  }\r\n  public void setup() {\r\n    settings();\r\n    this.init();\r\n  }\r\n\r\n  public void init() {\r\n\r\n  }\r\n\r\n  @Override\r\n  public void keyPressed(KeyEvent e) {\r\n    super.keyPressed(e);\r\n  }\r\n\r\n  @Override\r\n  public void mouseClicked() {\r\n    super.mouseClicked();\r\n  }\r\n\r\n  @Override\r\n  public void draw() {\r\n    super.draw();\r\n  }\r\n\r\n  public void remove(Sprite s) {}\r\n\r\n  public void removeBullet(Sprite b) {}\r\n}\r\n
+===================================================================
+diff --git a/datapirates/src/main/java/org/example/Window.java b/datapirates/src/main/java/org/example/Window.java
+--- a/datapirates/src/main/java/org/example/Window.java	
++++ b/datapirates/src/main/java/org/example/Window.java	
+@@ -1,8 +1,10 @@
+ package org.example;
+ 
+ import processing.core.PApplet;
++import processing.core.PVector;
++import processing.event.KeyEvent;
+ 
+-import java.awt.event.KeyEvent;
++import java.util.Map;
+ 
+ public class Window extends PApplet {
+ 
+@@ -10,44 +12,192 @@
+ 
+   private Timer timer;
+ 
+-  private int numEnemies;
++  private int numEnemies = 1;
+ 
+   /* Min size of entities. */
+-  private int minSize;
++  private int minSize = 9;
+ 
+   /* Max size of entities. */
+-  private int maxSize;
++  private int maxSize = 20;
+   int width = 1080;
+-  int height = 720;
++  int height = 520;
++  DataPiratesCollection dpC;
++  Score score;
++
+ 
+   public void settings() {
+     size(width, height);
+   }
++
+   public void setup() {
+-    settings();
++//    settings();
++    dpC = DataPiratesCollection.getInstance();
++    score = Score.getInstance();
++    EntityColor.setColors();
+     this.init();
+   }
+ 
+   public void init() {
++    Player p = Player.getInstance(
++            new PVector(this.width / 2,this.height / 2),
++            new PVector(0,1),
++            40,
++            10,
++            EntityColor.getSpriteColors().get("Player"),
++            this);
++//    dpC.getEnemies().add(e);
++    player = p;
++    Weapon basic = new Weapon("Basic", EntityColor.getSpriteColors().get("Bullet"), 100);
++    player.setWeapon(basic);
++    dpC.getSprites().add(p);
++
++//    PVector plyer = new PVector(player.getPosition().x, player.getPosition().y);
+ 
++
++    for (int i = 0; i < numEnemies; i++) {
++      PVector enemy = new PVector(random(0, this.width), random(0, this.height));
++      PVector enemyDirection = SpriteManager.calculateDirection(enemy, player.getPosition());
++      Sprite e = new Enemy(
++              enemy,
++              enemyDirection,
++              random(minSize, maxSize),
++              random(0,2),
++              EntityColor.getSpriteColors().get("Enemy"),
++              this
++      );
++      dpC.getEnemies().add(e);
++    }
++
++    dpC.getSprites().addAll(dpC.getEnemies());
+   }
+ 
+   @Override
+   public void keyPressed(KeyEvent e) {
+-    super.keyPressed(e);
++    if (e.getKey() == 'r')
++      player.getWeapon().reload();
++    player.move(e);
+   }
+ 
+   @Override
+-  public void mouseClicked() {
+-    super.mouseClicked();
++  public void mousePressed() {
++    if (player.getWeapon().hasAmmo()) {
++      player.getWeapon().shoot();
++      // Direction Calculation
++      // src: https://processing.org/tutorials/pvector/#vectors-interactivity
++      PVector mouse = new PVector(mouseX, mouseY);
++      PVector dir = SpriteManager.calculateDirection(player.getPosition(), mouse);
++
++      Projectile projectile = new Projectile(player.getPosition().copy(), dir, 10, 5, EntityColor.getSpriteColors().get("Bullet"), this);
++      dpC.getSprites().add(projectile);
++      dpC.getBullets().add(projectile);
++    }
++    else {
++      textSize(30);
++      fill(EntityColor.getSpriteColors().get("Reload").getRed(), EntityColor.getSpriteColors().get("Reload").getGreen(), EntityColor.getSpriteColors().get("Reload").getBlue());
++      text("Reload!", player.getPosition().x + player.getSize(), player.getPosition().y + player.getSize());
++    }
+   }
+ 
+-  @Override
++
++  /**
++   * Make this function only available to certain
++   * weapons.
++   */
++  public void mouseDragged() {
++    mousePressed();
++  }
++
+   public void draw() {
+-    super.draw();
+-  }
++    background(0);
++
++    // example texts
++
++    textSize(10);
++    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
++    text("Score: " + score.getValue(), 40, 120);
++
++    textSize(30);
++    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
++    text("Ammo: " + player.getWeapon().getCurrentAmmo() + " / " + player.getWeapon().getAmmoCapacity() + "", 40, 100);
++
++//    textSize(30);
++//    text("Ammo: ", 40, 80);
++//    fill(EntityColor.getSpriteColors().get("Text").getRed(), EntityColor.getSpriteColors().get("Text").getGreen(), EntityColor.getSpriteColors().get("Text").getBlue());
++    dpC.getSprites().get(0).update();
++    dpC.getSprites().get(0).draw();
++//    while (true) {
++    for (Sprite s : dpC.getSprites()) {
++      if (!(s instanceof Player)) {
++        if (s instanceof Enemy) {
++          PVector dir = SpriteManager.calculateDirection(s.getPosition(), player.getPosition());
++          s.setDirection(dir);
++        }
++        s.update();
++        s.draw();
++      }
++    }
++
++    // bullet vs enemy
++    for (Sprite bullet : dpC.getBullets()) {
++      for (Sprite enemy : dpC.getEnemies()) {
++        if (bullet.collided(enemy)) {
++          System.out.println("Killed an enemy!");
++          dpC.getRemove().put((Projectile) bullet, (Enemy) enemy);
++          score.setValue(score.getValue() + 1);
++        } else if (bullet.getPosition().x >= this.width || bullet.getPosition().y >= this.height) {
++          dpC.getOutOfBondsBullets().add((Projectile) bullet);
++        }
++      }
++    }
++
++    // player vs enemy
++    for (Sprite enemy : dpC.getEnemies()) {
++      if (player.collided(enemy)) {
++        setup();
++      }
++    }
++
++    // remove the collision between bullets and enemies
++    for (Map.Entry<Projectile, Enemy> mapElement: dpC.getRemove().entrySet()) {
++        removeBullet(mapElement.getKey());
++        removeEnemies(mapElement.getValue());
++    }
+ 
+-  public void remove(Sprite s) {}
++    // remove bullets that are out of bounds.
++    for (Projectile b : dpC.getOutOfBondsBullets()) {
++      removeBullet(b);
++    }
++  }
+ 
+-  public void removeBullet(Sprite b) {}
++  /**
++   * Removes an enemy in the enemy
++   * and sprite list.
++   *
++   * @param s Enemy as a Sprite object.
++   */
++  public void removeEnemies(Sprite s) {
++    dpC.getEnemies().remove(s);
++    dpC.getSprites().remove(s);
++  }
++
++  /**
++   * Removes a bullet from the bullet
++   * and sprite list.
++   *
++   * @param b Bullet as a Sprite object.
++   */
++  public void removeBullet(Sprite b) {
++    dpC.getBullets().remove(b);
++    dpC.getSprites().remove(b);
++  }
++
++  /**
++   * Drives the program.
++   * @param args
++   */
++  public static void main(String[] args) {
++    String[] appletArgs = new String[]{"eatBubbles"};
++    Window eatBubbles = new Window();
++    PApplet.runSketch(appletArgs, eatBubbles);
++  }
+ }
+Index: datapirates/src/main/java/org/example/DataPiratesCollection.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class DataPiratesCollection {\r\n\r\n  protected static ArrayList<Sprite> enemies;\r\n  protected static ArrayList<Sprite> sprites;\r\n  protected static ArrayList<Sprite> bullets;\r\n\r\n  public static ArrayList<Sprite> getBullets() {\r\n    return bullets;\r\n  }\r\n\r\n  public static ArrayList<Sprite> getEnemies() {\r\n    return enemies;\r\n  }\r\n\r\n  public static ArrayList<Sprite> getSprites() {\r\n    return sprites;\r\n  }\r\n\r\n\r\n}\r\n
+===================================================================
+diff --git a/datapirates/src/main/java/org/example/DataPiratesCollection.java b/datapirates/src/main/java/org/example/DataPiratesCollection.java
+--- a/datapirates/src/main/java/org/example/DataPiratesCollection.java	
++++ b/datapirates/src/main/java/org/example/DataPiratesCollection.java	
+@@ -1,24 +1,73 @@
+ package org.example;
+ 
+ import java.util.ArrayList;
++import java.util.HashMap;
+ 
+ public class DataPiratesCollection {
+ 
+-  protected static ArrayList<Sprite> enemies;
+-  protected static ArrayList<Sprite> sprites;
+-  protected static ArrayList<Sprite> bullets;
++  private ArrayList<Sprite> enemies;
++  private  ArrayList<Sprite> sprites;
++  private  ArrayList<Sprite> bullets;
++
++  private  HashMap<Projectile, Enemy> remove;
+ 
+-  public static ArrayList<Sprite> getBullets() {
++  private ArrayList<Projectile> outOfBondsBullets;
++
++  private static DataPiratesCollection dpCollection;
++
++  public static DataPiratesCollection getInstance() {
++    if (dpCollection == null) {
++      dpCollection = new DataPiratesCollection();
++    }
++//    if (dpCollection.getEnemies() == null && dpCollection.getSprites() == null && dpCollection.getBullets() == null && dpCollection.getRemove() == null) {
++      dpCollection.setEnemies(new ArrayList<Sprite>());
++      dpCollection.setSprites(new ArrayList<Sprite>());
++      dpCollection.setBullets(new ArrayList<Sprite>());
++      dpCollection.setRemove(new HashMap<Projectile, Enemy>());
++      dpCollection.setOutOfBondsBullets(new ArrayList<Projectile>());
++//      sprites = new ArrayList<Sprite>();
++//      bullets = new ArrayList<Sprite>();
++//      remove = new HashMap<Projectile, Enemy>();
++//    }
++    return dpCollection;
++  }
++  public ArrayList<Sprite> getBullets() {
+     return bullets;
+   }
+ 
+-  public static ArrayList<Sprite> getEnemies() {
++  public ArrayList<Sprite> getEnemies() {
+     return enemies;
+   }
+ 
+-  public static ArrayList<Sprite> getSprites() {
++  public ArrayList<Sprite> getSprites() {
+     return sprites;
+   }
+ 
++  public HashMap<Projectile, Enemy> getRemove() {
++    return remove;
++  }
++
++  public ArrayList<Projectile> getOutOfBondsBullets() {
++    return outOfBondsBullets;
++  }
+ 
+-}
++  public void setSprites(ArrayList<Sprite> sprites) {
++    this.sprites = sprites;
++  }
++
++  public void setBullets(ArrayList<Sprite> bullets) {
++    this.bullets = bullets;
++  }
++
++  public void setEnemies(ArrayList<Sprite> enemies) {
++    this.enemies = enemies;
++  }
++
++  public void setRemove(HashMap<Projectile, Enemy> remove) {
++    this.remove = remove;
++  }
++
++  public void setOutOfBondsBullets(ArrayList<Projectile> outOfBondsBullets) {
++    this.outOfBondsBullets = outOfBondsBullets;
++  }
++}
+\ No newline at end of file
