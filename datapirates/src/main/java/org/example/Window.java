@@ -1,6 +1,9 @@
 package org.example;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
 import processing.core.PApplet;
@@ -17,6 +20,8 @@ public class Window extends PApplet {
   protected static Player player;
 
   private Timer clock;
+
+  private ArrayList<Projectile> projectiles = new ArrayList<Projectile>();
 
   private int numEnemies = 1;
   private final int numEnemiesUnChanged = numEnemies;
@@ -38,6 +43,9 @@ public class Window extends PApplet {
   PImage maps;
   public void settings() {
     size(width, height);
+  }
+  public List<Projectile> getProjectiles() {
+    return projectiles;
   }
 
   public void setup() {
@@ -65,7 +73,9 @@ public class Window extends PApplet {
               EntityColor.getSpriteColors().get("Enemy"),
               this
       );
+      ((Enemy) e).shoot(player, this);
       dpC.getEnemies().add(e);
+
     }
 
     dpC.getSprites().addAll(dpC.getEnemies());
@@ -89,18 +99,26 @@ public class Window extends PApplet {
 //    PVector plyer = new PVector(player.getPosition().x, player.getPosition().y);
     setUpEnemies();
 
+
   }
 
   @Override
   public void keyPressed(KeyEvent e) {
-    if (e.getKey() == 'r')
-      player.getWeapon().reload();
+    //let the reload delay 3 seconds
+    if (e.getKey() == 'r') {
+      //set 3 seconds to reload
+      Timer timer = new Timer(3000, e1-> player.getWeapon().reload());
+      timer.setRepeats(false);
+      timer.start();
+    }
     player.move(e);
   }
 
   @Override
   public void mousePressed() {
     if (player.getWeapon().hasAmmo()) {
+      // let the player shoot depending on mouse click but not hold
+
       player.getWeapon().shoot();
       // Direction Calculation
       // src: https://processing.org/tutorials/pvector/#vectors-interactivity
@@ -279,6 +297,8 @@ public class Window extends PApplet {
     dpC.getSprites().remove(b);
   }
 
+
+
   /**
    * Drives the program.
    * @param args unused
@@ -288,4 +308,5 @@ public class Window extends PApplet {
     Window eatBubbles = new Window();
     PApplet.runSketch(appletArgs, eatBubbles);
   }
+
 }

@@ -9,6 +9,8 @@ public class DataPiratesCollection {
   private  ArrayList<Sprite> sprites;
   private  ArrayList<Sprite> bullets;
 
+  private ArrayList<Sprite> projectiles;
+
   private  HashMap<Projectile, Enemy> remove;
 
   private ArrayList<Sprite> trash;

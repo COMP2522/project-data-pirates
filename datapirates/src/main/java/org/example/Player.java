@@ -61,7 +61,18 @@ public class Player extends Sprite {
 
   @Override
   public void update() {
-//    super.update();
+
+  }
+
+  public void updateAmmo() {
+    if (player.getWindow().frameCount % 60 == 0) { // every second
+      int previousHealth = health;
+      int healthChange = health - previousHealth;
+      int previousDefense = defense;
+      int defenseChange = defense - previousDefense;
+      weapon.increaseAmmo(healthChange / 2);
+      weapon.increaseAmmo(defenseChange / 2);
+    }
   }
 
   public void draw() {
@@ -120,4 +131,5 @@ public class Player extends Sprite {
   public Weapon getWeapon() {
     return weapon;
   }
+
 }

@@ -1,5 +1,7 @@
 package org.example;
 
+import java.awt.event.ActionListener;
+
 public class Timer {
 
   long currTime;
@@ -8,6 +10,10 @@ public class Timer {
   double estimated;
   boolean flippySwitch = false;
   public Timer() {
+  }
+
+  public Timer(int i, ActionListener actionListener) {
+
   }
 
   public void start() {
@@ -45,4 +51,7 @@ public class Timer {
     return estimated;
   }
 
+  public void setRepeats(boolean b) {
+    flippySwitch = b;
+  }
 }

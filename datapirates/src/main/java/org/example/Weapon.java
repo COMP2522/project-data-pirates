@@ -18,9 +18,30 @@ public class Weapon {
     ammoCapacity = maxAmmo;
     currentAmmo = maxAmmo;
   }
-  public void levelUp() {
 
+  //level up the weapon depends on the score of the player
+  public void levelUp() {
+    if (model.equals("Pistol")) {
+      model = "Rifle";
+      currentAmmo = ammoCapacity;
+    } else if (model.equals("Rifle")) {
+      model = "Shotgun";
+      currentAmmo = ammoCapacity;
+    } else if (model.equals("Shotgun")) {
+      model = "Sniper";
+      currentAmmo = ammoCapacity;
+    }
   }
+
+  //get the model of the weapon
+    public String getModel() {
+        return model;
+    }
+
+    //set the model of the weapon
+    public void setModel(String model) {
+        this.model = model;
+    }
 
   public void shoot() {
     if (hasAmmo()) {
@@ -35,6 +56,7 @@ public class Weapon {
   }
 
   public void reload() {
+
     currentAmmo = ammoCapacity;
   }
 
@@ -44,5 +66,13 @@ public class Weapon {
 
   public int getCurrentAmmo() {
     return currentAmmo;
+  }
+
+  //set Ammo increase depending on the damage by the player
+  public void increaseAmmo(int amount) {
+    currentAmmo += amount;
+    if (currentAmmo > ammoCapacity) {
+      currentAmmo = ammoCapacity;
+    }
   }
 }
