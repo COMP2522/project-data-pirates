@@ -2,9 +2,10 @@ package org.example.spriteClasses;
 
 import java.awt.Color;
 
-import org.example.Items;
-import org.example.Weapon;
-import org.example.Window;
+import org.example.Main.Items;
+import org.example.Main.Preloader;
+import org.example.Main.Weapon;
+import org.example.Main.Window;
 import processing.core.PVector;
 
 /**
@@ -33,6 +34,7 @@ public class Player extends Sprite {
 
   private SpriteStat playerStat;
 
+
   private Player(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {
     super(pos, direction, size, speed, clr, scene);
   }
@@ -53,7 +55,6 @@ public class Player extends Sprite {
                                    float size, float speed, Color color, Window window) {
     if (player == null) {
       player = new Player(position, direction, size, speed, color, window);
-
     } else {
       player.setPosition(position);
       player.setDirection(direction);
@@ -64,15 +65,13 @@ public class Player extends Sprite {
     }
 
 
-//    int initialHealth = 100;
-//    player.setHealth(initialHealth);
-//    player.setMaxHealth(initialHealth);
-//    player.setDefense(50);
+    player.setWeapon(Items.getWeapon(Items.getWeapons().get(Preloader.RNG.nextInt(Items.getWeapons().size())).getModel()));
+    System.out.println(player.getWeapon().getModel());
 
-    player.diag = new DiagonalMove();
-    player.setWeapon(Items.getWeapon("Your Pistol"));
-//    PImage img = this.window.loadImage("");
-    player.setMm(new GifManager("player\\frame ", 6, player.getPosition(), player.getWindow(), player));
+    if (!window.getPreloader().isFinished()) {
+      player.diag = new DiagonalMove();
+      player.setMm(new GifManager("player\\frame ", 6, player.getPosition(), player.getWindow(), player));
+    }
     player.setPlayerStat(new SpriteStat(player, 100, 50, player.getWeapon().getDmg()));
     return player;
   }

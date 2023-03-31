@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Main;
 
 import org.example.spriteClasses.Enemy;
 import org.example.spriteClasses.Projectile;
@@ -8,23 +8,30 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * A program that contains all the collections used
- * for data pirates.
+ * Data Pirates' sprite collection.
  *
- * @author Teddy Dumam-Ag
+ * @author Data Pirates Team
  *
  * @version JDK 18
  */
 public class DataPiratesCollection {
 
+  /* Enemies list. */
   private ArrayList<Sprite> enemies;
+
+  /* Current sprites in the frame. */
   private  ArrayList<Sprite> sprites;
+
+  /* All the projectiles and bullets in the game. */
   private  ArrayList<Sprite> bullets;
 
+  /* Trash collection 1. */
   private  HashMap<Projectile, Enemy> remove;
 
+  /* Trash collection 2. */
   private ArrayList<Sprite> trash;
 
+  /* Singleton. */
   private static DataPiratesCollection dpCollection;
 
   /**
@@ -37,20 +44,15 @@ public class DataPiratesCollection {
     if (dpCollection == null) {
       dpCollection = new DataPiratesCollection();
     }
-    //    if (dpCollection.getEnemies() == null && dpCollection.getSprites() == null
-    //    && dpCollection.getBullets() == null && dpCollection.getRemove() == null) {
     dpCollection.setEnemies(new ArrayList<Sprite>());
     dpCollection.setSprites(new ArrayList<Sprite>());
     dpCollection.setBullets(new ArrayList<Sprite>());
     dpCollection.setRemove(new HashMap<Projectile, Enemy>());
     dpCollection.setTrash(new ArrayList<Sprite>());
-    //      sprites = new ArrayList<Sprite>();
-    //      bullets = new ArrayList<Sprite>();
-    //      remove = new HashMap<Projectile, Enemy>();
-    //    }
     return dpCollection;
   }
 
+  /* Getters and Setters. */
   public ArrayList<Sprite> getBullets() {
     return bullets;
   }

@@ -1,5 +1,3 @@
-package org.example;
-
 import processing.core.PApplet;
 import processing.core.PImage;
 

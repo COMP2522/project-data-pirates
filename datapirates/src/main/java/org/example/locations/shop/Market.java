@@ -1,7 +1,7 @@
 package org.example.locations.shop;
 
 import org.example.spriteClasses.Sprite;
-import org.example.Window;
+import org.example.Main.Window;
 import processing.core.PVector;
 
 import java.awt.*;

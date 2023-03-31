@@ -3,9 +3,16 @@ package org.example.spriteClasses;
 import processing.core.PImage;
 import processing.core.PVector;
 
-import org.example.Window;
+import org.example.Main.Window;
 // Sprites only
 // IDLE and Movin
+
+/**
+ * Displays gif animations, allows sprites to be more alive
+ * and background to be less boring.
+ *
+ * @author Teddy Dumam-Ag
+ */
 public class GifManager {
 
   PVector prev = new PVector();
@@ -30,45 +37,60 @@ public class GifManager {
   }
 
   public GifManager(String fileNames, int numberOfSprites, Window scene) {
+//    if (scene.getWorld() == 3) {
+
+//    }
     spriteFiles = new String[numberOfSprites];
     amountOfSprites = numberOfSprites;
     this.scene = scene;
     frames = 0;
     frameImages = new PImage[numberOfSprites];
+
+
     setGifDisplays(fileNames);
+  }
+
+
+
+  public boolean isLoaded() {
+    return frameImages[amountOfSprites - 1] != null;
   }
   public boolean isMoving(PVector position) {
 //    if (prev.x != )
     return prev.x != position.x && prev.y != position.y;
   }
 
-  public boolean isMoving(Player p) {
-    return p.getDiag().aKeyPressed();
-  }
+//  public boolean isMoving(Player p) {
+//    return p.getDiag().aKeyPressed();
+//  }
   public void move(PVector position) {
     prev.set(position.x, position.y);
   }
   public void setSprites(String fileNames, Sprite s) {
 //    datapirates\\src\\main\\java\\org\\example\\music\\";
-    for (int i = 0; i < amountOfSprites; i++) {
-      spriteFiles[i] = "datapirates\\src\\main\\java\\org\\example\\spriteClasses\\sprites\\" + fileNames + "(" + (i + 1) + ")" + ".png";
-      frameImages[i] = scene.loadImage(spriteFiles[i]);
-      frameImages[i].resize((int) s.getSize(), (int) s.getSize());
-    }
+//    new Thread(() -> {
+      for (int i = 0; i < amountOfSprites; i++) {
+        spriteFiles[i] = "datapirates\\src\\main\\java\\org\\example\\spriteClasses\\sprites\\" + fileNames + "(" + (i + 1) + ")" + ".png";
+        frameImages[i] = scene.loadImage(spriteFiles[i]);
+        frameImages[i].resize((int) s.getSize(), (int) s.getSize());
+      }
+//    }).start();
   }
 
   public void setGifDisplays(String fileNames) {
-    for (int i = 0; i < amountOfSprites; i++) {
-      spriteFiles[i] = "datapirates\\src\\main\\java\\org\\example\\backgrounds\\" + fileNames + "(" + (i + 1) + ")" + ".png";
-      frameImages[i] = scene.loadImage(spriteFiles[i]);
-      frameImages[i].resize(scene.getWidth(), scene.getHeight());
-    }
+//    new Thread(() -> {
+      for (int i = 0; i < amountOfSprites; i++) {
+        spriteFiles[i] = "datapirates\\src\\main\\java\\org\\example\\backgrounds\\" + fileNames + "(" + (i + 1) + ")" + ".png";
+        frameImages[i] = scene.loadImage(spriteFiles[i]);
+        frameImages[i].resize(scene.getWidth(), scene.getHeight());
+      }
+//    }).start();
   }
   public void display(Sprite s) {
 //    for (int i = 0; i < amountOfSprites; i++) {
     if (frames == (amountOfSprites - 1))
       frames = 0;
-      scene.image(frameImages[frames], s.getPosition().x - s.getSize() / 2, s.getPosition().y - s.getSize() / 3, s.getSize(), s.getSize());
+      scene.image(frameImages[frames], s.getPosition().x - s.getSize() / 2, s.getPosition().y - s.getSize() / 3, s.getSize() + s.getSize() / 2, s.getSize() + s.getSize() / 2);
       frames++;
 //    }
   }
@@ -84,5 +106,9 @@ public class GifManager {
       frames = 0;
     scene.image(frameImages[frames], 0, 0);
     frames++;
+  }
+
+  public int getAmountOfSprites() {
+    return amountOfSprites;
   }
 }

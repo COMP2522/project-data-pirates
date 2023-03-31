@@ -2,7 +2,7 @@ package org.example.locations.chestroom;
 
 import org.example.spriteClasses.GifManager;
 import org.example.spriteClasses.Sprite;
-import org.example.Window;
+import org.example.Main.Window;
 import org.example.spriteClasses.SpriteManager;
 import processing.core.PVector;
 

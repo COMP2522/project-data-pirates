@@ -1,6 +1,5 @@
-package org.example;
+package org.example.Main;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 /**
@@ -8,6 +7,7 @@ import java.util.ArrayList;
  *
  * This also contains the calculation of RNGs.
  *
+ * @author Data Pirates Team
  */
 public class Items {
 
@@ -89,14 +89,16 @@ public class Items {
   }
 
 
+  public static ArrayList<Weapon> getWeapons() {
+    return weapons;
+  }
+
   public static Weapon getWeapon(String name) {
     for (Weapon w : weapons) {
       if (w.getModel().equals(name))
         return w;
     }
     return new Weapon("NULL", EntityColor.getSpriteColors().get("Hello"), 1, 0);
-//    weapons.stream().map().filter(() -> if )
-//    return weapons;
   }
 
 

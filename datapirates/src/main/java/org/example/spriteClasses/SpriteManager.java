@@ -29,13 +29,10 @@ public class SpriteManager {
       }
     }
     if (s instanceof Player) {
-      if (mmov.isMoving((Player) s)) {
+//      if (mmov.isMoving((Player) s)) {
 //        mmov.setSprites();
         mmov.display(s);
-      }
-      else {
-        mmov.displayIdle(s);
-      }
+//      }
     }
     else {
       if (mmov.isMoving(s.getPosition())) {

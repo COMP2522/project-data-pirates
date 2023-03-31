@@ -1,26 +1,20 @@
-package org.example;
+package org.example.Main;
 
 import java.awt.Color;
 import java.util.HashMap;
 
 /**
- * Basically, this is a misc program
- * that helps on obtaining entity colors.
- * Plan to create a package that holds
- * all identifications of the game.
+ * Data Pirates' colors.
+ * Helps on obtaining entity colors.
  *
- * @author Teddy Dumam-Ag
+ * @author Data Pirates Team
  *
  * @version JDK 18
  */
 public class EntityColor {
 
-  /**
-   * Collection of Colors for DataPirates.
-   * Index:
-   * 0 - Player
-   * 1 - Enemy
-   * 2 - Text
+  /*
+    Collection of Colors for DataPirates.
    */
   private static HashMap<String, Color> spriteColors = new HashMap<String, Color>();
 
@@ -31,13 +25,16 @@ public class EntityColor {
   public static void setColors() {
     spriteColors.put("Player", new Color(0, 255, 0));
     spriteColors.put("Enemy", new Color(255, 0, 0));
-    spriteColors.put("Text", new Color(43, 180, 219));
+    spriteColors.put("Text", new Color(255, 255, 255));
     spriteColors.put("Reload", new Color(231, 28, 28));
     spriteColors.put("Hello", new Color(41, 171, 62));
     weaponColors();
     guiColors();
   }
 
+  /**
+   * Put weapon colors to the color collection.
+   */
   private static void weaponColors() {
     spriteColors.put("The Almighty", new Color(255, 144, 0));
     spriteColors.put("Star Destroyer", new Color(60, 4, 107));
@@ -50,9 +47,17 @@ public class EntityColor {
     spriteColors.put("First", new Color(241, 169, 64));
   }
 
+  /**
+   * Put gui colors to the colors collection.
+   */
   private static void guiColors() {
     spriteColors.put("Menu Buttons", new Color(64, 188, 211));
   }
+
+  /**
+   * Get the HashMap collection to obtain every color.
+   * @return
+   */
   public static HashMap<String, Color> getSpriteColors() {
     return spriteColors;
   }

@@ -1,20 +1,25 @@
-package org.example;
+package org.example.Main;
 
 /**
  * Score program for the player.
- * Eventually will be renamed to be the player's
- * stats for the shop feature we will add.
  *
- * @author Teddy Dumam-Ag
+ * @author Data Pirates Team
  *
  * @version JDK 18
  */
 public class Score {
 
+  /* Player's score value. */
   private int value;
 
+  /* Singleton class. */
   private static Score score;
 
+  /**
+   * Create a Score object.
+   *
+   * @param val score value
+   */
   private Score(int val) {
     value = val;
   }
@@ -31,10 +36,18 @@ public class Score {
     return score;
   }
 
+  /**
+   * Set the score value.
+   * @param value new score value
+   */
   public void setValue(int value) {
     this.value = value;
   }
 
+  /**
+   * Get the score value.
+   * @return value
+   */
   public int getValue() {
     return value;
   }

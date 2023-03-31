@@ -1,7 +1,7 @@
 package org.example.locations.shop;
 
-import org.example.EntityColor;
-import org.example.Window;
+import org.example.Main.EntityColor;
+import org.example.Main.Window;
 import org.example.locations.KeyLocationManager;
 import processing.core.PVector;
 
@@ -43,12 +43,11 @@ public class Shop implements KeyLocationManager {
 //        scene.background(255);
         scene.setWorld(0);
         scene.background(0);
-        scene.getClock().start();
+        scene.getPreloader().getClock().start();
         scene.getPlayer().getPosition().set(scene.getWidth() - 10, scene.getPlayer().getPosition().y);
-        scene.setUpEnemies();
 //        travelBoolean = false;
       }
-    }
+  }
 
 
   public void draw() {

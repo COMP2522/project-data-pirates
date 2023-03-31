@@ -2,7 +2,7 @@ package org.example.spriteClasses;
 
 import java.awt.Color;
 
-import org.example.Window;
+import org.example.Main.Window;
 import processing.core.PVector;
 
 /**

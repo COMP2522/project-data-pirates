@@ -2,8 +2,8 @@ package org.example.spriteClasses;
 
 import java.awt.Color;
 
-import org.example.Weapon;
-import org.example.Window;
+import org.example.Main.Weapon;
+import org.example.Main.Window;
 import processing.core.PVector;
 
 /**

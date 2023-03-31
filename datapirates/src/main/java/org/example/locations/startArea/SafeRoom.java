@@ -1,18 +1,27 @@
 package org.example.locations.startArea;
 
-import org.example.Window;
+import org.example.Main.EntityColor;
+import org.example.Main.Window;
 import org.example.locations.KeyLocationManager;
+import org.example.spriteClasses.GifManager;
 
+/**
+ * Safe Room known as the Menu.
+ *
+ */
 public class SafeRoom implements KeyLocationManager {
 
   private Window scene;
 
+  private GifManager gM;
   public SafeRoom(Window scene) {
     this.scene = scene;
+    gM = new GifManager("world3\\frame ", 33, scene);
   }
   @Override
   public void renderLocation() {
-    scene.background(129);
+    gM.displayBackground();
+    draw();
   }
 
   @Override
@@ -29,9 +38,16 @@ public class SafeRoom implements KeyLocationManager {
     if (scene.getPlayer().getPosition().y >= scene.getHeight()) {
       scene.setWorld(0);
       scene.background(0);
-      scene.getClock().start();
+      scene.getPreloader().getClock().start();
       scene.getPlayer().getPosition().set(scene.getPlayer().getPosition().x, 10);
-      scene.setUpEnemies();
     }
+  }
+
+  public void draw() {
+    final int titleTextSize = scene.getWidth() / 10;
+    scene.textSize(titleTextSize);
+    scene.fill(EntityColor.getSpriteColors().get("Text").getRGB());
+    scene.text("Data\nPirates", scene.getWidth() / 2, scene.getHeight() / 5);
+
   }
 }
