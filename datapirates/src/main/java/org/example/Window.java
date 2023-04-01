@@ -7,11 +7,22 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
+import com.mongodb.ConnectionString;
+import com.mongodb.MongoClientSettings;
+import com.mongodb.ServerApi;
+import com.mongodb.ServerApiVersion;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.Updates;
+import org.bson.Document;
 import processing.core.PApplet;
 import processing.core.PImage;
 import processing.core.PVector;
 import processing.event.KeyEvent;
 import javax.sound.sampled.*;
+import static com.mongodb.client.model.Filters.eq;
 
 /**
  *
@@ -49,6 +60,11 @@ public class Window extends PApplet {
   private PImage playerImage;
   private PImage enemyImage;
 
+  MongoDatabase database;
+
+  private DatabaseHandler dbHandler;
+
+
 
   public void settings() {
     size(width, height);
@@ -67,6 +83,7 @@ public class Window extends PApplet {
     clock = new Timer();
     this.init();
     clock.start();
+    dbHandler = new DatabaseHandler();
   }
 
   public void setUpEnemies() {
@@ -114,7 +131,7 @@ public class Window extends PApplet {
       player.getWeapon().reload();
     player.move(e);
 
-    if (key == 'f' || key == 'F') {
+    if (key == 'j' || key == 'J') {
       if (player.getWeapon().hasAmmo()) {
         player.getWeapon().shoot();
         playSound("datapirates\\src\\main\\shoot.wav");
@@ -133,31 +150,24 @@ public class Window extends PApplet {
 
   @Override
   public void mousePressed() {
-    if (!gameRunning) {
-      for (Map.Entry<String, PVector> entry : menu.buttons.entrySet()) {
-        String button = entry.getKey();
-        PVector position = entry.getValue();
-        float halfWidth = 200 / 2; // Half of the button width
-        float halfHeight = 75 / 2; // Half of the button height
-        if (mouseButton == LEFT && mouseX >= position.x - halfWidth && mouseX <= position.x + halfWidth && mouseY >= position.y - halfHeight && mouseY <= position.y + halfHeight) {
-          switch (button) {
-            case "start":
-              gameRunning = true;
-              break;
-            case "highScore":
-              // Show high score
-              break;
-            case "credits":
-              // Show credits
-              break;
-            case "quit":
-              exit();
-              break;
-          }
-        }
-      }
-    } else {
+    String clickedButton = menu.getClickedButton(mouseX, mouseY);
 
+    if (clickedButton != null) {
+      switch (clickedButton) {
+        case "start":
+          gameRunning = true;
+          break;
+        case "highScore":
+          // Show high score
+          break;
+        case "credits":
+          // Show credits
+          break;
+        case "quit":
+          exit();
+          break;
+      }
+    } else if (gameRunning) {
       if (player.getWeapon().hasAmmo()) {
         player.getWeapon().shoot();
         playSound("datapirates\\src\\main\\shoot.wav");
@@ -321,7 +331,7 @@ public class Window extends PApplet {
     }
       weapon.update();
         weapon.draw();
-
+      saveGameState();
   }
 
   public void playSound(String soundFileName) {
@@ -384,6 +394,60 @@ public class Window extends PApplet {
   }
 
 
+  public class DatabaseHandler {
+    ConnectionString connectionString = new ConnectionString("mongodb+srv://jliao53:<a123456>@cluster0.eelgl4x.mongodb.net/?retryWrites=true&w=majority");
+    MongoClientSettings settings = MongoClientSettings.builder()
+            .applyConnectionString(connectionString)
+            .serverApi(ServerApi.builder()
+                    .version(ServerApiVersion.V1)
+                    .build())
+            .build();
+    MongoClient mongoClient = MongoClients.create(settings);
+    MongoDatabase database = mongoClient.getDatabase("test");
+    public void saveGameState(String playerName, int score, int health) {
+      Document document = new Document();
+      document.append("playerName", playerName);
+      document.append("score", score);
+      document.append("health", health);
+
+      new Thread(() -> {
+        database.getCollection("gameStates").insertOne(document);
+      }).start();
+    }
+    public void updateGameState(String playerName, int score, int health) {
+      new Thread(() -> {
+        database.getCollection("gameStates").updateOne(
+                Filters.eq("playerName", playerName),
+                Updates.combine(
+                        Updates.set("score", score),
+                        Updates.set("health", health)
+                )
+        );
+      }).start();
+    }
+  }
+
+  public void put(String key, String value) {
+    Document document;
+    document = new Document();
+    document.append(key, value);
+    CompletableFuture.runAsync(() -> {
+      MongoDatabase database = null;
+      database.getCollection("students").insertOne(document);
+    });
+    new Thread(() -> {
+      database.getCollection("students").insertOne(document);
+    }).start();
+  }
+
+  public void saveGameState() {
+    String playerName = "Player";
+    int playerScore = score.getValue();
+    int playerHealth = player.getHealth();
+
+    dbHandler.updateGameState(playerName, playerScore, playerHealth);
+  }
+
   /**
    * Drives the program.
    * @param args unused
@@ -392,5 +456,31 @@ public class Window extends PApplet {
     String[] appletArgs = new String[]{"eatBubbles"};
     Window eatBubbles = new Window();
     PApplet.runSketch(appletArgs, eatBubbles);
+
+    ConnectionString connectionString = new ConnectionString("mongodb+srv://jliao53:<a123456>@cluster0.eelgl4x.mongodb.net/?retryWrites=true&w=majority");
+    MongoClientSettings settings = MongoClientSettings.builder()
+            .applyConnectionString(connectionString)
+            .serverApi(ServerApi.builder()
+                    .version(ServerApiVersion.V1)
+                    .build())
+            .build();
+    MongoClient mongoClient = MongoClients.create(settings);
+    MongoDatabase database = mongoClient.getDatabase("test");
+
+    database.createCollection("students");
+
+    Document document;
+    document = new Document();
+    document.append("name", "Ram");
+    document.append("age", 26);
+    document.append("city", "Hyderabad");
+    database.getCollection("students").insertOne(document);
+
+    Document find = database.getCollection("students").find(eq("name", "Ram")).first();
+    System.out.println(find);
+
+    Window window = new Window();
+    window.put("name", "Ram");
+
   }
 }

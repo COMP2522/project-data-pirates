@@ -9,14 +9,13 @@ public class Sprite implements Comparable<Sprite> {
 
   protected PVector position;
 
-  public PVector direction;
+  protected PVector direction;
 
-  private float size;
+  protected float size;
 
-  /* Might include a speed buff thingy. */
-  private float speed;
+  protected float speed;
 
-  public Color color;
+  protected Color color;
 
   protected Window window;
 

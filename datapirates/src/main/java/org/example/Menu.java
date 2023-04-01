@@ -5,12 +5,16 @@ import processing.core.PImage;
 import processing.core.PVector;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Menu {
 
     PApplet parent;
     private boolean isVisible;
     public final HashMap<String, PVector> buttons;
+
+    Menu menu;
+
 
     private PImage startButton;
     private PImage highScoreButton;
@@ -19,6 +23,7 @@ public class Menu {
 
     public Menu(PApplet parent) {
         this.parent = parent;
+        this.menu = this;
         isVisible = false;
         buttons = new HashMap<>();
         this.startButton = parent.loadImage("datapirates\\src\\main\\play0.png");
@@ -35,14 +40,30 @@ public class Menu {
         isVisible = false;
     }
 
+    public String getClickedButton(float mouseX, float mouseY) {
+        for (Map.Entry<String, PVector> entry : menu.buttons.entrySet()) {
+            String buttonName = entry.getKey();
+            PVector buttonPosition = entry.getValue();
+            float halfWidth = 350 / 2; // Half of the button width
+            float halfHeight = 100 / 2; // Half of the button height
+
+            if (mouseX >= buttonPosition.x - halfWidth && mouseX <= buttonPosition.x + halfWidth &&
+                    mouseY >= buttonPosition.y - halfHeight && mouseY <= buttonPosition.y + halfHeight) {
+                return buttonName;
+            }
+        }
+        return null;
+    }
+
     public void draw() {
         if (!isVisible) return;
 
         parent.pushStyle();
+        //parent.background(255, 255, 255);
 
         // Set the size of the buttons
-        int buttonWidth = 200;
-        int buttonHeight = 75;
+        int buttonWidth = 350;
+        int buttonHeight = 100;
 
         // Set the padding between buttons
         int buttonPadding = 20;
@@ -67,5 +88,6 @@ public class Menu {
         buttons.put("quit", quitPosition);
 
         parent.popStyle();
+
     }
 }
