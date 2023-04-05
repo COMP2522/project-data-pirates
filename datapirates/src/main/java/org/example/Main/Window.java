@@ -52,18 +52,22 @@ public class Window extends PApplet {
   /*
     Screen's Width.
   */
-  int width = 1080;
+  final int width = 1080;
 
   /*
     Screen's Height.
   */
-  int height = 720;
+  final int height = 720;
 
   /*
     Menu HUD.
   */
   private boolean menuHudStatus = true;
 
+  /*
+    Entity Border Status.
+  */
+  private boolean entityBorderStatus = false;
   /*
     Preloader Class.
   */
@@ -112,16 +116,43 @@ public class Window extends PApplet {
     */
     for (int i = 0; i < (Preloader.RNG.nextInt(numEnemies) + 1); i++) {
       new Thread(() -> {
-        PVector enemy = new PVector(random(0, this.width), random(25, this.height));
-        PVector enemyDirection = SpriteManager.calculateDirection(enemy, player.getPosition());
-        Sprite e = new Enemy(
-                enemy,
-                enemyDirection,
-                random(MINSIZE, MAXSIZE),
-                random(0, 2),
-                EntityColor.getSpriteColors().get("Enemy"),
-                this, "LVL_1\\frame "
-        );
+        /* In between position of player's bounds and enemy bounds */
+
+        Sprite e = null;
+        if (preloader.getScore().getValue() < 100) {
+          e = new Enemy(
+                  15,
+                  false,
+                  random(MINSIZE, MAXSIZE),
+                  random(0, 2),
+                  this, "LVL_1\\frame ", 36
+          );
+        } else if (preloader.getScore().getValue() >= 100 && preloader.getScore().getValue() < 1000) {
+          e = new Enemy(
+                  25,
+                  true,
+                  random(MINSIZE, MAXSIZE),
+                  random(1, 4),
+                  this, "LVL_2\\frame ", 6
+          );
+        } else if (preloader.getScore().getValue() >= 1000 && preloader.getScore().getValue() < 5000) {
+          e = new Enemy(
+                  45,
+                  true,
+                  random(MINSIZE, MAXSIZE),
+                  random(5, 10),
+                  this, "LVL_5\\frame ", 9
+          );
+        } else if (preloader.getScore().getValue() >= 5000) {
+          e = new Enemy(
+                  75,
+                  true,
+                  random(MINSIZE, MAXSIZE),
+                  random(8, 12),
+                  this, "LVL_10\\frame ", 29
+          );
+        }
+
         preloader.getDpC().getSprites().add(e);
       }).start();
     }
@@ -132,15 +163,16 @@ public class Window extends PApplet {
    *
    */
   public void init() {
-
+    preloader.getScore().setValue(0);
     player = Player.getInstance(
             new PVector((float) (this.width / 2), (float) (this.height / 2)),
             new PVector(0, 1),
-            50,
+            75,
             5,
             EntityColor.getSpriteColors().get("Player"),
             this);
 
+    preloader.getDpC().getSprites().add(player);
   }
 
   /**
@@ -155,10 +187,18 @@ public class Window extends PApplet {
       If preloader is done, this function is enabled.
     */
     if (preloader.isFinished()) {
-      if (e.getKey() == 'r')
+      if (e.getKeyCode() == 32)
+        shootFunction();
+
+      if (e.getKey() == 'r') /* Delay on Reload */
         player.getWeapon().reload();
       else if (e.getKey() == 'c' && world == 0)
         isHudActive = !isHudActive;
+      else if (e.getKey() == 'q') {
+        /* Show boundaries. */
+        entityBorderStatus = !entityBorderStatus;
+      } else if (e.getKey() == 'e' && preloader.getMenu().isINPanelActive())
+        preloader.getMenu().setInstructionPanel(false);
       if (e.getKey() == 'e' && world == 2)
         preloader.getCchest().getChest().setOpened(!preloader.getCchest().getChest().isOpened());
 
@@ -171,6 +211,18 @@ public class Window extends PApplet {
         default -> { }
       }
     }
+
+  }
+
+
+  /**
+   * Keys that should not be hold.
+   * @param event
+   */
+  @Override
+  public void keyTyped(KeyEvent event) {
+
+//    super.keyTyped(event)
 
   }
 
@@ -205,8 +257,13 @@ public class Window extends PApplet {
       if (world == 3) {
         preloader.getMenu().update();
       }
-      if (player.getWeapon().hasAmmo()) {
-        player.getWeapon().shoot();
+      shootFunction();
+    }
+  }
+
+  public void shootFunction() {
+    if (player.getWeapon().hasAmmo()) {
+      player.getWeapon().shoot();
 //        preloader.getMusic().p
 
         /*
@@ -214,28 +271,25 @@ public class Window extends PApplet {
           src: https://processing.org/tutorials/pvector/#vectors-interactivity
         */
 
-        PVector mouse = new PVector(mouseX, mouseY);
+      PVector mouse = new PVector(mouseX, mouseY);
 
         /* TODO {Note}: There is a function for
             this but I did not know that until few weeks I did this. */
-        PVector dir = SpriteManager
-                .calculateDirection(player.getPosition(), mouse);
+      PVector dir = SpriteManager
+              .calculateDirection(player.getPosition(), mouse);
 
-        Projectile projectile = new Projectile(player.getPosition().copy(),
-                dir, 10, 5, player.getWeapon().getBulletColor(), this, player.getWeapon());
-        preloader.getDpC().getBullets().add(projectile);
-      } else {
-        textSize(60);
-        fill(EntityColor.getSpriteColors().get("Reload").getRed(),
-                EntityColor.getSpriteColors().get("Reload").getGreen(),
-                EntityColor.getSpriteColors().get("Reload").getBlue());
-        text("Reload!", player.getPosition().x + player.getSize(),
-                player.getPosition().y + player.getSize());
-      }
+      Projectile projectile = new Projectile(player.getPosition().copy(),
+              dir, 10, 5, player.getWeapon().getBulletColor(), this, player.getWeapon(), 0);
+      preloader.getDpC().getBullets().add(projectile);
+    } else {
+      textSize(60);
+      fill(EntityColor.getSpriteColors().get("Reload").getRed(),
+              EntityColor.getSpriteColors().get("Reload").getGreen(),
+              EntityColor.getSpriteColors().get("Reload").getBlue());
+      text("Reload!", player.getPosition().x + player.getSize(),
+              player.getPosition().y + player.getSize());
     }
-
   }
-
 
 
   /**
@@ -310,14 +364,18 @@ public class Window extends PApplet {
     }
 
     /* TODO {Issue}: Change the names of returnToOrigin() to loadLocation() */
-    if (worldID == 1)
-      preloader.getShop().returnToOrigin();
-    else if (worldID == 2)
-      preloader.getCchest().returnToOrigin();
+    if (worldID == 1) {
+      preloader.getShop().renderLocation();
+      menuHudStatus = false;
+    }
+    else if (worldID == 2) {
+      preloader.getCchest().renderLocation();
+      menuHudStatus = false;
+    }
     else if (worldID == 3) {
       isHudActive = false;
       menuHudStatus = true;
-      preloader.getSaferoom().returnToOrigin();
+      preloader.getSaferoom().renderLocation();
     }
   }
 
@@ -336,44 +394,19 @@ public class Window extends PApplet {
         preloader.getLoadingImage().displayBackground();
     }
     else {
-      /* World Zeros */
-      if (player.getPosition().x >= this.width && world == 0) {
-        /*
-          The Shop.
-          TODO {Note}: Might not be implemented.
-          See locations\shop
-        */
-//        world = 1;
-        player.getPosition().set(width / 2, player.getPosition().y);
-      } else if (player.getPosition().x < 5 && world == 0) {
-        /*
-          The Daily Chest Room.
-          See locations\chestroom
-        */
-        world = 2;
-        player.getPosition().set(this.width - 10, player.getPosition().y);
-      } else if (player.getPosition().y < 5 && world == 0) {
-        /*
-          The Menu / Safe Room.
-          See locations\startArea
-        */
+      /* If player dies. */
+      if (player.getPlayerStat().getHealth() <= 0) {
         world = 3;
-        player.getPosition().set(player.getPosition().x, this.height - 10);
-      } else if ((player.getPosition().x >= width || player.getPosition().x < 5 || player.getPosition().y < 5) && world == 3)
-        player.getPosition().set(width / 2, height / 2);
-      else if ((player.getPosition().x < 5 || player.getPosition().y < 5 || player.getPosition().y >= height) && world == 2)
-        player.getPosition().set(width / 2, height / 2);
-      else if (player.getPosition().y >= height && world == 0)
-        player.getPosition().set(width / 2, height / 2);
-//      else if (player.getPosition().y >= this.height && world == 0) {
-        /*
-          Kathyrinollettebellja, the Twelveth Voidylss. (Boss Room)
-          TODO {Note}: Might not be implemented in this term. Teddy might do this on his own, because he wants to.
-          See locations\happyWorld
-        */
-//        world = 4;
-//        player.getPosition().set(player.getPosition().x, 10);
-//      }
+        numEnemies = 1;
+        preloader.getDpC().getTrash().addAll(preloader.getDpC().getBullets());
+        preloader.getDpC().getTrash().addAll(preloader.getDpC().getSprites());
+//
+//
+        init();
+      }
+
+      /* Placeholder for travel function. */
+      preloader.getSaferoom().travel();
 
       /*
         player.move() is placed here to ensure smooth player movement every frame.
@@ -426,10 +459,13 @@ public class Window extends PApplet {
           and it is added everytime err.. see the next -> */ /* TODO.
 
       */
-      player.update();
-      player.draw();
+//      player.update();
+//      player.draw();
 
-      for (Sprite s : preloader.getDpC().getBullets()) {
+      ArrayList<Sprite> bulletConCurrentModHelper = new ArrayList<>(preloader.getDpC().getBullets());
+      for (Sprite s : bulletConCurrentModHelper) {
+        if (entityBorderStatus)
+          s.showBorders();
         s.draw();
         s.update();
       }
@@ -441,23 +477,18 @@ public class Window extends PApplet {
        */
       ArrayList<Sprite> conCurrentModHelper = new ArrayList<>(preloader.getDpC().getSprites());
       for (Sprite s : conCurrentModHelper) {
-        if (!(s instanceof Player)) {
+//        if (!(s instanceof Player)) {
+          if (entityBorderStatus)
+            s.showBorders();
           s.update();
           s.draw();
           /* TODO: Show the enemy health. */
           if (s instanceof Enemy) {
             PVector dir = SpriteManager.calculateDirection(s.getPosition(), player.getPosition());
             s.setDirection(dir);
-            textSize(10);
-            fill(EntityColor.getSpriteColors().get("Text").getRed(),
-                    EntityColor.getSpriteColors().get("Text").getGreen(),
-                    EntityColor.getSpriteColors().get("Text").getBlue());
-            text("health: " + ((Enemy) s).getEnemyStat().getHealth(),
-                    s.getPosition().x - 10,
-                    s.getPosition().y + 20);
           }
         }
-      }
+//      }
       collideManager();
     }
   }
@@ -471,39 +502,43 @@ public class Window extends PApplet {
     /* Fixed Issue for ConcurrentModification. TODO {Warning} Duplicate Code! */
     ArrayList<Sprite> conCurrentModHelper = new ArrayList<>(preloader.getDpC().getSprites());
     ArrayList<Sprite> conCurrentModHelper2 = new ArrayList<>(preloader.getDpC().getBullets());
-    for (Sprite bullet : conCurrentModHelper2)
-      for (Sprite enemy : conCurrentModHelper) {
-        if (enemy instanceof Enemy && bullet.collided(enemy)) {
-          ((Enemy) enemy).getEnemyStat().setHealth(((Enemy) enemy).getEnemyStat().getHealth() - player.getWeapon().getDmg());
-          if (((Enemy) enemy).getEnemyStat().getHealth() <= 0) {
-            System.out.println("Killed an enemy!");
+    for (Sprite bullet : conCurrentModHelper2) {
+      if (bullet.collided(player) && ((Projectile) bullet).type == 1) {
+        player.getPlayerStat().setHealth(player.getPlayerStat().getHealth() - 10);
+        System.out.println("Ouch!");
+        preloader.getDpC().getTrash().add(bullet);
+      }
+      for (Sprite sprite : conCurrentModHelper) {
+        if (sprite instanceof Enemy && bullet.collided(sprite) && ((Projectile) bullet).type == 0) {
+          ((Enemy) sprite).getEnemyStat().setHealth(((Enemy) sprite).getEnemyStat().getHealth() - player.getWeapon().getDmg());
+          if (((Enemy) sprite).getEnemyStat().getHealth() <= 0) {
+            System.out.println("Killed an sprite!");
             Player.setBalance(Player.getBalance() + 2);
-            preloader.getDpC().getRemove().put((Projectile) bullet, (Enemy) enemy);
+            preloader.getDpC().getRemove().put((Projectile) bullet, (Enemy) sprite);
             preloader.getScore().setValue(preloader.getScore().getValue() + 2);
           } else
             preloader.getDpC().getTrash().add(bullet);
-        } else if (bullet.getPosition().x >= this.width || bullet.getPosition().y >= this.height)
-          preloader.getDpC().getTrash().add(bullet);
+        }
         /* TODO {Note} : Code above is for bullets going beyond bounds. */
       }
+    if (bullet.getPosition().x >= this.width || bullet.getPosition().y >= this.height)
+      preloader.getDpC().getTrash().add(bullet);
+  }
 
 
     /* Player colliding themselves to Enemies. */
     for (Sprite enemy : conCurrentModHelper)
       if (enemy instanceof Enemy)
-        if (!(player.getPlayerStat().getHealth() <= 0)) {
           if (player.collided(enemy)) {
             player.getPlayerStat().setHealth(((Enemy) enemy).getEnemyStat().getCalculatedDamage(player));
 //            ((Enemy) enemy).getEnemyStat().setHealth(pl); /* Calculated Damage */
+            /* For now make the enemy lose their health. */
+            ((Enemy) enemy).getEnemyStat().setHealth(0);
             preloader.getScore().setValue(preloader.getScore().getValue() + 1);
             preloader.getDpC().getTrash().add(enemy);
             System.out.println("collided with enemy");
           }
-        } else {
-          world = 3;
-          numEnemies = 1;
-          init();
-        }
+
 
     /* For each 'Bullet Vs Enemy' in 'Bullet colliding Enemy', remove it. */
     for (Map.Entry<Projectile, Enemy> mapElement: preloader.getDpC().getRemove().entrySet()) {
@@ -519,6 +554,8 @@ public class Window extends PApplet {
     for (Sprite s : preloader.getDpC().getTrash()) {
       if (s instanceof Projectile)
         removeBullet(s);
+      else if (s instanceof Player)
+        preloader.getDpC().getSprites().remove(s);
       removeEnemies(s);
     }
 
@@ -545,6 +582,7 @@ public class Window extends PApplet {
     preloader.getDpC().getBullets().remove(b);
     preloader.getDpC().getSprites().remove(b);
   }
+
 
   /**
    * Gets the player, only this class has the player.

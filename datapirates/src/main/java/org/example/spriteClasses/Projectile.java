@@ -16,13 +16,17 @@ import processing.core.PVector;
  */
 public class Projectile extends Sprite {
 
+  public final int type;
   private Sprite projectile;
 
   private Weapon weapon;
+
   public Projectile(PVector pos, PVector direction, float size,
-                    float speed, Color clr, Window scene, Weapon w) {
+                    float speed, Color clr, Window scene, Weapon w, int type) {
     super(pos, direction, size, speed, clr, scene);
+    this.type = type;
   }
+
 
   public Weapon getWeapon() {
     return weapon;

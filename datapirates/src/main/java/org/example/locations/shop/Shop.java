@@ -3,18 +3,18 @@ package org.example.locations.shop;
 import org.example.Main.EntityColor;
 import org.example.Main.Window;
 import org.example.locations.KeyLocationManager;
+import org.example.spriteClasses.GifManager;
 import processing.core.PVector;
 
 /**
  * Extends Scene manager
  */
-public class Shop implements KeyLocationManager {
+public class Shop extends KeyLocationManager {
 
-  private Window scene;
   private Market market;
 
-  public Shop(Window scene) {
-    this.scene = scene;
+  public Shop(Window sketch, GifManager bg) {
+    super(sketch, bg);
     market = new Market(new PVector(scene.getWidth() / 5, 0),
             new PVector(0, 0)
     , 200, 0, EntityColor.getSpriteColors().get("Reload"), scene);
@@ -22,33 +22,24 @@ public class Shop implements KeyLocationManager {
 
   @Override
   public void renderLocation() {
-    scene.background(255);
-    draw();
-  }
-
-  @Override
-  public boolean isInOrigin() {
-    return scene.getWorld() == 0;
-  }
-
-  @Override
-  public void returnToOrigin() {
-    if (!isInOrigin()) {
-      renderLocation();
+    if (!isAtEdge()) {
+      scene.background(255);
+      draw();
     }
-
-//      scene.setUpEnemies();
-      if (scene.getPlayer().getPosition().x < 5) {
-//    System.out.println(scene.getPlayer().getPosition().x);
-//        scene.background(255);
-        scene.setWorld(0);
-        scene.background(0);
-        scene.getPreloader().getClock().start();
-        scene.getPlayer().getPosition().set(scene.getWidth() - 10, scene.getPlayer().getPosition().y);
-//        travelBoolean = false;
-      }
+    super.renderLocation();
   }
 
+
+  @Override
+  public void battleSetup() {
+    super.battleSetup();
+    scene.getPlayer().getPosition().set(scene.getWidth() - 10, scene.getPlayer().getPosition().y);
+  }
+
+  @Override
+  public boolean isAtEdge() {
+    return scene.getPlayer().getPosition().x < 5;
+  }
 
   public void draw() {
     market.draw();

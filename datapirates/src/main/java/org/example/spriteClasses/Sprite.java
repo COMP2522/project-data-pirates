@@ -3,6 +3,7 @@ package org.example.spriteClasses;
 import java.awt.Color;
 
 import org.example.Main.Window;
+import processing.core.PConstants;
 import processing.core.PVector;
 
 /**
@@ -16,6 +17,7 @@ import processing.core.PVector;
  */
 public class Sprite implements Comparable<Sprite> {
 
+  public static final float accurateDistance = 10F;
   protected PVector position;
 
   private PVector direction;
@@ -55,6 +57,12 @@ public class Sprite implements Comparable<Sprite> {
 //    spriteMoveFunctions = new MoveManager();
   }
 
+  public Sprite(float size, float speed, Window scene) {
+    this.speed = speed;
+    window = scene;
+    this.size = size;
+  }
+
   public void setMm(GifManager mm) {
     this.mm = mm;
   }
@@ -67,12 +75,26 @@ public class Sprite implements Comparable<Sprite> {
    * Draws the sprite into the Frame.
    */
   public void draw() {
+//    showBorders();
     window.pushStyle();
-    window.fill(this.color.getRed(), this.color.getGreen(), this.color.getBlue());
-    window.ellipse(this.position.x, this.position.y, size, size);
+    window.fill(color.getRGB());
+    window.ellipseMode(PConstants.CENTER);
+    window.ellipse(position.x, position.y, size, size);
+    window.ellipseMode(PConstants.CORNER);
+
     window.popStyle();
+
   }
 
+  public void showBorders() {
+    window.pushStyle();
+    window.stroke(new Color(0xFFFFFF).getRGB());
+    window.noFill();
+    window.rectMode(PConstants.CENTER);
+    window.rect(position.x, position.y, size, size);
+    window.rectMode(PConstants.CORNER);
+    window.popStyle();
+  }
   /**
    * Will be used probably on explosive weapons.
    */
@@ -95,13 +117,8 @@ public class Sprite implements Comparable<Sprite> {
    */
   public boolean collided(Sprite obj) {
     float distance = PVector.dist(this.getPosition(), obj.getPosition());
-    if (distance <= (this.getSize() + obj.getSize())) {
-      return true;
-    }
-    return false;
+    return distance <= (size + 20);
   }
-
-  // this is the moves
   public void update() {
     //    this.bounce();
     this.position = this.getPosition().add(this.direction.copy().mult(speed));

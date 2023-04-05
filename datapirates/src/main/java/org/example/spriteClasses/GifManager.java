@@ -1,5 +1,6 @@
 package org.example.spriteClasses;
 
+import processing.core.PConstants;
 import processing.core.PImage;
 import processing.core.PVector;
 
@@ -90,20 +91,26 @@ public class GifManager {
 //    for (int i = 0; i < amountOfSprites; i++) {
     if (frames == (amountOfSprites - 1))
       frames = 0;
-      scene.image(frameImages[frames], s.getPosition().x - s.getSize() / 2, s.getPosition().y - s.getSize() / 3, s.getSize() + s.getSize() / 2, s.getSize() + s.getSize() / 2);
+      scene.imageMode(PConstants.CENTER);
+      scene.image(frameImages[frames], s.getPosition().x, s.getPosition().y, s.getSize(), s.getSize());
+      scene.imageMode(PConstants.CORNER);
       frames++;
+
 //    }
   }
 
   public void displayIdle(Sprite s) {
 //    img = scene.loadImage(spriteFiles[0]);
 //    img.resize((int) s.getSize(), (int) s.getSize());
+    scene.imageMode(PConstants.CENTER);
     scene.image(frameImages[0], s.getPosition().x - s.getSize() / 2, s.getPosition().y - s.getSize() / 3, s.getSize(), s.getSize());
+    scene.imageMode(PConstants.CORNER);
   }
 
   public void displayBackground() {
     if (frames == (amountOfSprites - 1))
       frames = 0;
+
     scene.image(frameImages[frames], 0, 0);
     frames++;
   }

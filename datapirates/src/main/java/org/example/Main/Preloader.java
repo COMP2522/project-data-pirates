@@ -28,6 +28,7 @@ public class Preloader {
   private GifManager gifBackground;
   private Window scene;
   public DataPiratesCollection dpC;
+
   private Score score;
   private Items item;
   private Timer clock;
@@ -67,15 +68,16 @@ public class Preloader {
 
       /* Load these resources. */
       gifBackground = new GifManager("world0\\frame ", 57, scene);
+//      shop = new Shop(scene);
+      cchest = new ChestRoom(scene, new GifManager("world2\\frame ", 150, scene));
+      saferoom = new SafeRoom(scene, new GifManager("world3\\frame ", 33, scene));
       db = new DatabaseManagement();
       dpC = DataPiratesCollection.getInstance();
       score = Score.getInstance();
       EntityColor.setColors();
       item = Items.getInstance();
       clock = new Timer();
-      shop = new Shop(scene);
-      cchest = new ChestRoom(scene);
-      saferoom = new SafeRoom(scene);
+
       music = MusicManager.getInstance();
       menu = new Menu(scene);
 

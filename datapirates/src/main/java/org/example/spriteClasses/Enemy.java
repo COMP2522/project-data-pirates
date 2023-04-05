@@ -2,7 +2,9 @@ package org.example.spriteClasses;
 
 import java.awt.Color;
 
+import org.example.Main.Items;
 import org.example.Main.Window;
+import processing.core.PConstants;
 import processing.core.PVector;
 
 /**
@@ -24,22 +26,56 @@ public class Enemy extends Sprite {
 
   private SpriteStat enemyStat;
 
+  private boolean canShoot;
+
+  private Thread shootDelays;
+
+  private int delayAmount;
+
   /**
    * Constructor. Sets a normal enemy with
    * the desired parameters.
    *
-   * @param pos Current position of the sprite.
-   * @param direction Starting direction of the sprite.
    * @param size Size of the sprite.
    * @param speed Speed of the sprite.
-   * @param clr Color that identifies the sprite.
    * @param scene The Window or GUI where the sprite will appear.
    */
-  public Enemy(PVector pos, PVector direction, float size, float speed, Color clr, Window scene, String level) {
-    super(pos, direction, size, speed, clr, scene);
-    setMm(new GifManager(level, 36, getPosition(), getWindow(), this));
+  public Enemy(int dmg, boolean canShoot, float size, float speed,  Window scene, String level, int numSprites) {
+    super(size, speed, scene);
     // use map to get the HP, DEF, and DMG of an enemy
-    enemyStat = new SpriteStat(this, 100, 25, 15);
+    PVector locations[] = {
+            new PVector(scene.random(0, scene.getWidth()), scene.getHeight()),
+            new PVector(scene.random(0, scene.getWidth()), 0),
+            new PVector(scene.getWidth(), scene.random(0, scene.getHeight())),
+            new PVector(0, scene.random(0, scene.getHeight()))
+    };
+    if (level.contains("LVL_2"))
+      delayAmount = 1000;
+    else if (level.contains("LVL_5"))
+      delayAmount = 500;
+    else if (level.contains("LVL_10"))
+      delayAmount = 250;
+
+    this.canShoot = canShoot;
+
+    PVector enemy = locations[(int) scene.random(0, 4)];
+    PVector enemyDirection = SpriteManager.calculateDirection(enemy, scene.getPlayer().getPosition());
+
+    setPosition(enemy);
+    setDirection(enemyDirection);
+    setMm(new GifManager(level, numSprites, getPosition(), getWindow(), this));
+    enemyStat = new SpriteStat(this, 100, 25, dmg);
+
+    shootDelays = new Thread(() -> {
+      try {
+        while (canShoot && getEnemyStat().getHealth() > 0) {
+          shoot();
+          Thread.sleep(1000);
+        }
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+    });
   }
 
   public SpriteStat getEnemyStat() {
@@ -48,9 +84,24 @@ public class Enemy extends Sprite {
 
   @Override
   public void draw() {
+//    showBorders();
+    if (canShoot && !shootDelays.isAlive())
+      shootDelays.start();
     SpriteManager.assignSprite(this, getMm());
   }
 
+  public void shoot() {
+//    PVector mouse = new PVector(mouseX, mouseY);
+
+        /* TODO {Note}: There is a function for
+            this but I did not know that until few weeks I did this. */
+    PVector enemyDirection = SpriteManager.calculateDirection(position, window.getPlayer().getPosition());
+
+    Projectile projectile = new Projectile(position.copy(),
+            enemyDirection, 10, 5, new Color(0xF32B2B), window, Items.getWeapon("Starter Laser"), 1);
+    window.getPreloader().getDpC().getBullets().add(projectile);
+  }
+//      scene.image(frameImages[frames], s.getPosition().x - s.getSize(), s.getPosition().y, s.getSize(), s.getSize());
 
 
   public void init(Enemy enemy) {}

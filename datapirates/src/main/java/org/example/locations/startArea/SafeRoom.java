@@ -9,38 +9,30 @@ import org.example.spriteClasses.GifManager;
  * Safe Room known as the Menu.
  *
  */
-public class SafeRoom implements KeyLocationManager {
+public class SafeRoom extends KeyLocationManager {
 
-  private Window scene;
-
-  private GifManager gM;
-  public SafeRoom(Window scene) {
-    this.scene = scene;
-    gM = new GifManager("world3\\frame ", 33, scene);
+  public SafeRoom(Window sketch, GifManager bg) {
+    super(sketch, bg);
   }
   @Override
   public void renderLocation() {
-    gM.displayBackground();
-    draw();
+    if (!isAtEdge()) {
+      gM.displayBackground();
+      draw();
+    }
+    super.renderLocation();
+  }
+
+
+  @Override
+  public void battleSetup() {
+    super.battleSetup();
+    scene.getPlayer().getPosition().set(scene.getPlayer().getPosition().x, 10);
   }
 
   @Override
-  public boolean isInOrigin() {
-    return scene.getWorld() == 0;
-  }
-
-  @Override
-  public void returnToOrigin() {
-    if (!isInOrigin()) {
-      renderLocation();
-    }
-
-    if (scene.getPlayer().getPosition().y >= scene.getHeight()) {
-      scene.setWorld(0);
-      scene.background(0);
-      scene.getPreloader().getClock().start();
-      scene.getPlayer().getPosition().set(scene.getPlayer().getPosition().x, 10);
-    }
+  public boolean isAtEdge() {
+    return scene.getPlayer().getPosition().y >= scene.getHeight();
   }
 
   public void draw() {

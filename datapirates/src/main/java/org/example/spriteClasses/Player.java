@@ -6,6 +6,7 @@ import org.example.Main.Items;
 import org.example.Main.Preloader;
 import org.example.Main.Weapon;
 import org.example.Main.Window;
+import processing.core.PConstants;
 import processing.core.PVector;
 
 /**
@@ -122,6 +123,7 @@ public class Player extends Sprite {
    * Draws the shape of the player.
    */
   public void draw() {
+//    showBorders();
       SpriteManager.assignSprite(this, getMm());
   }
 
