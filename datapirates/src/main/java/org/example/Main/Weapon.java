@@ -55,7 +55,7 @@ public class Weapon {
    * @return true when has clips, otherwise false
    */
   public boolean hasAmmo() {
-    return currentAmmo >= 0;
+    return currentAmmo > 0;
   }
 
   /**

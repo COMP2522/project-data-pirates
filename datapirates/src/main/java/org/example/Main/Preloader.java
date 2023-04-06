@@ -1,6 +1,7 @@
 package org.example.Main;
 
 import org.example.database.DatabaseManagement;
+import org.example.gui.Hud;
 import org.example.gui.Menu;
 import org.example.locations.chestroom.ChestRoom;
 import org.example.locations.shop.Shop;
@@ -40,6 +41,8 @@ public class Preloader {
 
   private Menu menu;
 
+  private Hud dp_Hud;
+
   private static DatabaseManagement db;
 
   /**
@@ -71,10 +74,11 @@ public class Preloader {
 //      shop = new Shop(scene);
       cchest = new ChestRoom(scene, new GifManager("world2\\frame ", 150, scene));
       saferoom = new SafeRoom(scene, new GifManager("world3\\frame ", 33, scene));
+      EntityColor.setColors();
+      dp_Hud = new Hud(scene, this);
       db = new DatabaseManagement();
       dpC = DataPiratesCollection.getInstance();
       score = Score.getInstance();
-      EntityColor.setColors();
       item = Items.getInstance();
       clock = new Timer();
 
@@ -123,6 +127,10 @@ public class Preloader {
   }
   public DataPiratesCollection getDpC() {
     return dpC;
+  }
+
+  public Hud getDp_Hud() {
+    return dp_Hud;
   }
 
   public Score getScore() {

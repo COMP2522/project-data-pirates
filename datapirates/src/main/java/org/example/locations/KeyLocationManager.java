@@ -3,7 +3,6 @@ package org.example.locations;
 import org.example.Main.Window;
 import org.example.spriteClasses.GifManager;
 import org.example.spriteClasses.Player;
-import processing.core.PApplet;
 import processing.core.PVector;
 
 /**
@@ -36,8 +35,8 @@ public class KeyLocationManager {
   public void travel() {
     Player p = scene.getPlayer();
     PVector user_pos = p.getPosition();
-    int width = scene.getWidth();
-    int height = scene.getHeight();
+    int width = scene.width;
+    int height = scene.height;
     int world = scene.getWorld();
 
     final boolean atRight = user_pos.x >= width;

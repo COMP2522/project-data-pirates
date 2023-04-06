@@ -32,14 +32,14 @@ public class SafeRoom extends KeyLocationManager {
 
   @Override
   public boolean isAtEdge() {
-    return scene.getPlayer().getPosition().y >= scene.getHeight();
+    return scene.getPlayer().getPosition().y >= scene.height;
   }
 
   public void draw() {
-    final int titleTextSize = scene.getWidth() / 10;
+    final int titleTextSize = scene.height / 15;
     scene.textSize(titleTextSize);
     scene.fill(EntityColor.getSpriteColors().get("Text").getRGB());
-    scene.text("Data\nPirates", scene.getWidth() / 2, scene.getHeight() / 5);
+    scene.text("Data Pirates\nBy The Team", scene.width / 2, scene.height / 5);
 
   }
 }

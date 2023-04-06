@@ -100,9 +100,9 @@ public class Sprite implements Comparable<Sprite> {
    */
   public void bounce() {
     if (this.position.x <= 0
-            || this.position.x >= window.getWidth()
+            || this.position.x >= window.width
             || this.position.y <= 0
-            || this.position.y >= window.getHeight()) {
+            || this.position.y >= window.height) {
       this.direction.rotate(window.HALF_PI);
     }
   }

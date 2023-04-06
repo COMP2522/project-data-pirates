@@ -1,11 +1,8 @@
 package org.example.music;
 
-import processing.core.PImage;
-
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
+import javax.sound.sampled.*;
 import java.io.File;
+import java.io.IOException;
 
 /**
  * Data Pirates' Music Manager.
@@ -19,10 +16,14 @@ public class MusicManager {
   private static MusicManager moosic;
 
   /* The audio object. */
-  private Clip clip;
+  private Clip bgClip;
+
+  private Clip spriteClip;
 
   /* Check if it is playing. */
   private boolean isPlaying = false;
+
+  private int objectType;
 
   /**
    * This is not a singleton. Everything is going to be changed to static.
@@ -40,29 +41,58 @@ public class MusicManager {
    * @param id worldID or unique id that identifies a sprite type.
    */
   public void play(int id) {
-    String path = "";
-    boolean mustLoop = false;
     if (id >= 0 && id <= 3) {
-      path = getBackgroundMusic(id);
-      mustLoop = true;
+      playBG(getBackgroundMusic(id), true);
     }
     else
-      path = getSpriteMusic(id);
+//      path = ;
+    playSprite(getSpriteMusic(id));
     /* TODO {Warning}: Before Running this, the files must be in WAV not in MP3, convert MP3 TO WAV! */
+
+  }
+
+
+  public void playBG(String path, boolean mustLoop) {
     try {
       File file = new File(path);
       AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
-      clip = AudioSystem.getClip();
-      clip.open(audioStream);
-      clip.start();
-      if (mustLoop)
-        clip.loop(Clip.LOOP_CONTINUOUSLY);
-      isPlaying = true;
+      bgClip = AudioSystem.getClip();
+      bgClip.open(audioStream);
+
+      if (mustLoop) {
+        bgClip.loop(Clip.LOOP_CONTINUOUSLY);
+        isPlaying = true;
+      }
+      bgClip.start();
+
     } catch (Exception e) {
       e.printStackTrace();
     }
+
+
   }
 
+  public void playSprite(String path) {
+    try {
+      File file = new File(path);
+      AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+      spriteClip = AudioSystem.getClip();
+      spriteClip.open(audioStream);
+
+      // Get the FloatControl object associated with the Clip
+      FloatControl gainControl = (FloatControl) spriteClip.getControl(FloatControl.Type.MASTER_GAIN);
+
+      // Set the gain to -6dB, which corresponds to half the full volume
+      float gain = 0.25f;
+      float dB = (float) (Math.log(gain) / Math.log(10.0) * 20.0);
+      gainControl.setValue(dB);
+      spriteClip.start();
+
+
+    } catch (Exception e) {
+      System.out.println("Something went wrong, woops~");
+    }
+  }
   /**
    * Check if it is playing.
    * @return true if it is playing, false otherwise
@@ -83,10 +113,13 @@ public class MusicManager {
     String path = "datapirates\\src\\main\\java\\org\\example\\music\\sprites\\";
     switch (sprite) {
       case 4 -> {
-        return path + "";
+        return path + "playerShoot.wav";
+      }
+      case 5 -> {
+        return path + "enemyShoot.wav";
       }
       default -> {
-        return null;
+        return path + "playerDamage.wav";
       }
     }
   }
@@ -99,21 +132,24 @@ public class MusicManager {
    * @return audio file path
    */
   private String getBackgroundMusic(int worldID) {
+    objectType = worldID;
     String path = "datapirates\\src\\main\\java\\org\\example\\music\\";
     switch (worldID) {
-      case 0: return path + "Devourer.wav";
-      case 1: return path + "Devourer.wav";
-      case 2: return path + "Devourer.wav";
-      case 3: return path + "Devourer.wav";
+      case 0: return path + "arena.wav";
+      case 3: return path + "spawn.wav";
       /* Placeholders. Lil lorem ipsum */
     }
     return null;
+  }
+
+  public int getObjectType() {
+    return objectType;
   }
 
   /**
    * Used when travelling to different scenes.
    */
   public void stop() {
-    clip.stop();
+    bgClip.stop();
   }
 }

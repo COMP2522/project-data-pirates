@@ -13,7 +13,7 @@ public class ChestRoom extends KeyLocationManager {
 
   public ChestRoom(Window sketch, GifManager bg) {
     super(sketch, bg);
-    chest = new Chest(new PVector(scene.getWidth() / 2, scene.getHeight() / 2),
+    chest = new Chest(new PVector(scene.width/ 2, scene.height / 2),
             new PVector(0, 0), 250, 0, EntityColor.getSpriteColors().get("Reload"), scene);
 //
   }
@@ -44,7 +44,7 @@ public class ChestRoom extends KeyLocationManager {
 
   @Override
   public boolean isAtEdge() {
-    return scene.getPlayer().getPosition().x >= scene.getWidth();
+    return scene.getPlayer().getPosition().x >= scene.width;
   }
 
   public void draw() {

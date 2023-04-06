@@ -4,7 +4,6 @@ import java.awt.Color;
 
 import org.example.Main.Items;
 import org.example.Main.Window;
-import processing.core.PConstants;
 import processing.core.PVector;
 
 /**
@@ -44,10 +43,10 @@ public class Enemy extends Sprite {
     super(size, speed, scene);
     // use map to get the HP, DEF, and DMG of an enemy
     PVector locations[] = {
-            new PVector(scene.random(0, scene.getWidth()), scene.getHeight()),
-            new PVector(scene.random(0, scene.getWidth()), 0),
-            new PVector(scene.getWidth(), scene.random(0, scene.getHeight())),
-            new PVector(0, scene.random(0, scene.getHeight()))
+            new PVector(scene.random(0, scene.width), scene.height),
+            new PVector(scene.random(0, scene.width), 0),
+            new PVector(scene.width, scene.random(0, scene.height)),
+            new PVector(0, scene.random(0, scene.height))
     };
     if (level.contains("LVL_2"))
       delayAmount = 1000;
@@ -70,6 +69,7 @@ public class Enemy extends Sprite {
       try {
         while (canShoot && getEnemyStat().getHealth() > 0) {
           shoot();
+          scene.getPreloader().getMusic().play(5);
           Thread.sleep(1000);
         }
       } catch (InterruptedException e) {

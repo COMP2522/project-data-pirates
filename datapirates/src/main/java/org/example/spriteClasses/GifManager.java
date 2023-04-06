@@ -83,7 +83,7 @@ public class GifManager {
       for (int i = 0; i < amountOfSprites; i++) {
         spriteFiles[i] = "datapirates\\src\\main\\java\\org\\example\\backgrounds\\" + fileNames + "(" + (i + 1) + ")" + ".png";
         frameImages[i] = scene.loadImage(spriteFiles[i]);
-        frameImages[i].resize(scene.getWidth(), scene.getHeight());
+        frameImages[i].resize(scene.width, scene.height);
       }
 //    }).start();
   }

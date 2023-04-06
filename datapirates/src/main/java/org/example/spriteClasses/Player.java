@@ -73,9 +73,10 @@ public class Player extends Sprite {
       player.diag = new DiagonalMove();
       player.setMm(new GifManager("player\\frame ", 6, player.getPosition(), player.getWindow(), player));
     }
-    player.setPlayerStat(new SpriteStat(player, 100, 50, player.getWeapon().getDmg()));
+    player.setPlayerStat(new SpriteStat(player, 1000, 500, player.getWeapon().getDmg()));
     return player;
   }
+
 
 
   private void setPlayerStat(SpriteStat playerStat) {

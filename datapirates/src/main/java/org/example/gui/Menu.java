@@ -17,9 +17,9 @@ public class Menu extends GuiManager {
     super(scene);
 
     instructionPhoto = scene.loadImage("datapirates\\src\\main\\java\\org\\example\\gui\\instructions.png");
-    instructionPhoto.resize(scene.getWidth(), scene.getHeight());
-    int firstMenuX = getScene().getWidth() / 12;
-    int firstMenuY = getScene().getHeight() / 15;
+    instructionPhoto.resize(scene.width, scene.height);
+    int firstMenuX = getScene().width / 12;
+    int firstMenuY = getScene().height / 15;
     int size = 100;
     int marginY = 20;
 
@@ -62,7 +62,7 @@ public class Menu extends GuiManager {
 
     if (instructionPanel) {
       getScene().imageMode(PConstants.CENTER);
-      getScene().image(instructionPhoto, getScene().getWidth() / 2, getScene().getHeight() / 2);
+      getScene().image(instructionPhoto, getScene().width / 2, getScene().height / 2);
       getScene().imageMode(PConstants.CORNER);
 
     }

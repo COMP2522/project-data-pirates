@@ -15,7 +15,7 @@ public class Shop extends KeyLocationManager {
 
   public Shop(Window sketch, GifManager bg) {
     super(sketch, bg);
-    market = new Market(new PVector(scene.getWidth() / 5, 0),
+    market = new Market(new PVector(scene.width / 5, 0),
             new PVector(0, 0)
     , 200, 0, EntityColor.getSpriteColors().get("Reload"), scene);
   }
@@ -33,7 +33,7 @@ public class Shop extends KeyLocationManager {
   @Override
   public void battleSetup() {
     super.battleSetup();
-    scene.getPlayer().getPosition().set(scene.getWidth() - 10, scene.getPlayer().getPosition().y);
+    scene.getPlayer().getPosition().set(scene.width - 10, scene.getPlayer().getPosition().y);
   }
 
   @Override
