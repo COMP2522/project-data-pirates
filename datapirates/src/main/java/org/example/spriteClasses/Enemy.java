@@ -2,6 +2,9 @@ package org.example.spriteClasses;
 
 import java.awt.Color;
 
+import org.example.Main.EntityColor;
+import org.example.spriteClasses.Player;
+
 import org.example.Main.Window;
 import processing.core.PVector;
 
@@ -24,6 +27,8 @@ public class Enemy extends Sprite {
 
   private SpriteStat enemyStat;
 
+  private Player targetPlayer;
+
   /**
    * Constructor. Sets a normal enemy with
    * the desired parameters.
@@ -40,6 +45,7 @@ public class Enemy extends Sprite {
     setMm(new GifManager(level, 36, getPosition(), getWindow(), this));
     // use map to get the HP, DEF, and DMG of an enemy
     enemyStat = new SpriteStat(this, 100, 25, 15);
+    this.targetPlayer = Player.getInstance( new PVector(0, 0), new PVector(0, 0), 0, 0, EntityColor.getSpriteColors().get("Player"), getWindow());
   }
 
   public SpriteStat getEnemyStat() {
@@ -51,6 +57,11 @@ public class Enemy extends Sprite {
     SpriteManager.assignSprite(this, getMm());
   }
 
+//  public void shoot(Window window) {
+//    PVector dir = SpriteManager.calculateDirection(this.getPosition(), targetPlayer.getPosition());
+//    Projectile projectile = new Projectile(this.getPosition().copy(), dir, 10, 5, EntityColor.getSpriteColors().get("EnemyProjectile"), window, this);
+//    window.getPreloader().getDpC().getBullets().add(projectile);
+//  }
 
 
   public void init(Enemy enemy) {}

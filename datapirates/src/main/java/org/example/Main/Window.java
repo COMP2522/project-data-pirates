@@ -521,8 +521,6 @@ public class Window extends PApplet {
         removeBullet(s);
       removeEnemies(s);
     }
-
-
   }
 
   /**
