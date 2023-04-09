@@ -29,12 +29,6 @@ Ensure you have the following software installed:
 - Toggle the player's stat HUD by pressing the `C` key (only available in the **arena** world).
 - Interact with the daily chest by pressing the `E` key (only available in the **chest room** world).
 
-## Worlds
-- 0: Arena
-- 1: Shop
-- 2: Daily Chest
-- 3: Menu / Safe Room
-
 ## Controls
 - `W`: Move up
 - `A`: Move left
@@ -43,7 +37,7 @@ Ensure you have the following software installed:
 - `R`: Reload weapon
 - `C`: Toggle player's stat HUD (arena world only)
 - `E`: Interact with daily chest (chest room world only)
-- `Left mouse button`: Shoot
+- `Left mouse button` / `SPACE`: Shoot
 
 ## Authors
 - Eric
