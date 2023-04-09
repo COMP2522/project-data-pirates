@@ -1,5 +1,5 @@
 # **_Data Pirates_** 
-![alt text](https://github.com/COMP2522/project-data-pirates/blob/TD_01_javs/datapirates/src/main/java/org/example/pictures/DP_Title.png?raw=true)
+![Data Pirates Logo](https://github.com/COMP2522/project-data-pirates/blob/TD_01_javs/datapirates/src/main/java/org/example/pictures/DP_Title.png?raw=true)
 
 ## Description
 Data Pirates is a single-player 2D game where the player navigates through various worlds, fighting enemies and interacting with different elements in the environment. The game features smooth player movement, diagonal movement, and a variety of weapons and enemies.
