@@ -236,8 +236,6 @@ public class Window extends PApplet {
 
   }
 
-
-
   /**
    * Get the information of your stats and the wave time.
    */
@@ -489,6 +487,7 @@ public class Window extends PApplet {
 
 
     /* Player colliding themselves to Enemies. */
+    //if player die code here
     for (Sprite enemy : conCurrentModHelper)
       if (enemy instanceof Enemy)
         if (!(player.getPlayerStat().getHealth() <= 0)) {
