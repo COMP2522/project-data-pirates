@@ -9,11 +9,14 @@ package org.example.Main;
  */
 public class Score {
 
-  /* Player's score value. */
-  private int value;
-
   /* Singleton class. */
   private static Score score;
+
+  /* For leaderboard. */
+  private int maxValue = 0;
+
+  /* Player's score value. */
+  private int value;
 
   /**
    * Create a Score object.
@@ -38,10 +41,21 @@ public class Score {
 
   /**
    * Set the score value.
-   * @param value new score value
+   * @param v new score value
    */
-  public void setValue(int value) {
-    this.value = value;
+  public void setValue(int v) {
+    value = v;
+    if (value > maxValue) {
+      maxValue = value;
+    }
+  }
+
+  public int getHighScore() {
+    return maxValue;
+  }
+
+  public void getHighScoreData(int maxValue) {
+    this.maxValue = maxValue;
   }
 
   /**

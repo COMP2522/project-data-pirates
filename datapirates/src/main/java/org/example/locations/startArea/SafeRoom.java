@@ -40,6 +40,7 @@ public class SafeRoom extends KeyLocationManager {
     scene.textSize(titleTextSize);
     scene.fill(EntityColor.getSpriteColors().get("Text").getRGB());
     scene.text("Data Pirates\nBy The Team", scene.width / 2, scene.height / 5);
+    scene.text("High Score: " + scene.getPreloader().getScore().getHighScore() + "pts", scene.width / 2, scene.height - titleTextSize);
 
   }
 }

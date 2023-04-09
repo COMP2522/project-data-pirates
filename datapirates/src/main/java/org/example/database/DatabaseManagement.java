@@ -27,6 +27,8 @@ public class DatabaseManagement {
 
   private static String name;
   private static final int VERYCOOLNUMBER = 8;
+
+  private static final String[] identifiers = {"id", "name", "highscore"};
   private String playerID;
   MongoDatabase database;
 
@@ -43,13 +45,15 @@ public class DatabaseManagement {
 //    new Thread(() -> {
       while (isInDatabase()/* && JSONdata has playerID*/)
         setPlayerID();
-      if (localFile.getData() != null)
-        playerID = (String) localFile.getData().get(0).getValue();
+//      if (localFile.getData() != null)
+//        playerID = (String) localFile.getData().get(0).getValue();
+
 //      else {
         save();
 //      }
         try {
-          localFile.writeData(playerID);
+          localFile.getData();
+          localFile.writeData(identifiers , playerID);
         } catch (IOException e) {
           throw new RuntimeException(e);
         }
@@ -75,15 +79,13 @@ public class DatabaseManagement {
     if (database.getCollection("players") == null)
       database.createCollection("players");
 
-
-
   }
 
   public void save() {
 //    if (email != null && password != null) {
       Document doc = new Document();
       doc.append("id", playerID);
-    doc.append("name", playerID);
+      doc.append("name", playerID);
       database.getCollection("players").insertOne(doc);
 
 //      doc.append("email", email);

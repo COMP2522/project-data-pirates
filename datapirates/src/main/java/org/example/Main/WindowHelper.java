@@ -229,14 +229,6 @@ public class WindowHelper {
     Hud hudStatus = preloader.getDp_Hud();
     /* TODO {Issue}: Change the names of returnToOrigin() to loadLocation() */
     switch (worldID) {
-      case 1:
-        preloader.getShop().renderLocation();
-        hudStatus.setMenuHudStatus(false);
-        break;
-      case 2:
-        preloader.getCchest().renderLocation();
-        hudStatus.setMenuHudStatus(false);
-        break;
       case 3:
         preloader.getSaferoom().renderLocation();
         hudStatus.setMenuHudStatus(true);

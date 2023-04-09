@@ -2,9 +2,15 @@ package org.example.spriteClasses;
 
 import java.awt.Color;
 
+import jdk.jshell.execution.JdiInitiator;
 import org.example.Main.Weapon;
 import org.example.Main.Window;
+import processing.core.PApplet;
+import processing.core.PConstants;
+import processing.core.PShape;
 import processing.core.PVector;
+
+import static processing.core.PConstants.*;
 
 /**
  * Projectile program. Another sprite
@@ -21,10 +27,12 @@ public class Projectile extends Sprite {
 
   private Weapon weapon;
 
+
   public Projectile(PVector pos, PVector direction, float size,
                     float speed, Color clr, Window scene, Weapon w, int type) {
     super(pos, direction, size, speed, clr, scene);
     this.type = type;
+//    getWindow().
   }
 
 
@@ -33,8 +41,11 @@ public class Projectile extends Sprite {
   }
 
   //
-//  public void move() {
-//
+
+
+//  public void update() {
+//    //    this.bounce();
+//    this.position = this.getPosition().add(this.direction.copy().mult(speed));
 //  }
 
 }

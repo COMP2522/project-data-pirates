@@ -3,8 +3,6 @@ package org.example.Main;
 import org.example.database.DatabaseManagement;
 import org.example.gui.Hud;
 import org.example.gui.Menu;
-import org.example.locations.chestroom.ChestRoom;
-import org.example.locations.shop.Shop;
 import org.example.locations.startArea.SafeRoom;
 import org.example.music.MusicManager;
 import org.example.spriteClasses.GifManager;
@@ -33,8 +31,6 @@ public class Preloader {
   private Score score;
   private Items item;
   private Timer clock;
-  private Shop shop;
-  private ChestRoom cchest;
   private SafeRoom saferoom;
   private MusicManager music;
   private GifManager loadingIMG;
@@ -72,7 +68,6 @@ public class Preloader {
       /* Load these resources. */
       gifBackground = new GifManager("world0\\frame ", 57, scene);
 //      shop = new Shop(scene);
-      cchest = new ChestRoom(scene, new GifManager("world2\\frame ", 150, scene));
       saferoom = new SafeRoom(scene, new GifManager("world3\\frame ", 33, scene));
       EntityColor.setColors();
       dp_Hud = new Hud(scene, this);
@@ -143,14 +138,6 @@ public class Preloader {
 
   public Timer getClock() {
     return clock;
-  }
-
-  public Shop getShop() {
-    return shop;
-  }
-
-  public ChestRoom getCchest() {
-    return cchest;
   }
 
   public SafeRoom getSaferoom() {

@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="I made boundaries more smooth and gave an instruction panel. Also creating some levels of enemies that shoot towards the player. There is an issue though, somehow, once the player dies, the image or gifs do not display, I will need to fix that after this patch.">
-      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/WindowHelper.java" afterDir="false" />
+    <list default="true" id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="I added sounds, for start room, and arena, along with the player shoot and the player getting hit. And enemy shooting sounds.&#10;I added the border function, changed the distance between the player and enemy colliding.&#10;The score increases by 50 at the moment, it's for testing to see if the other enemies spawn and function properly.&#10;Furthermore, I am still continuing on fixing the feedback.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -15,21 +14,32 @@
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Preloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Preloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Score.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Hud.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Hud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/WindowHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/WindowHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/DatabaseManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/DatabaseManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/JSONData.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/JSONData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/KeyLocationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/KeyLocationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/chestroom/ChestRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/chestroom/ChestRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/shop/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/shop/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/chestroom/Chest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/chestroom/ChestRoom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/shop/Market.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/shop/Shop.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/startArea/SafeRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/startArea/SafeRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/music/MusicManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/music/MusicManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/music/Devourer.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/DailyC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/Testtyy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/god.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/lambyconcerned.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/map1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/map2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/map3.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/GifManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/GifManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Projectile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/SpriteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/SpriteManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/SpriteMap.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,33 +134,33 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Owner/IdeaProjects/project-data-pirates/datapirates/src/main/java/org/example/spriteClasses/sprites",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Owner/IdeaProjects/project-data-pirates/datapirates/src/main/java/org/example/spriteClasses/sprites&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "module",
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;module&quot;,
+      &quot;directory&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TEXT"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\spriteClasses\sprites" />
@@ -275,7 +285,10 @@
       <workItem from="1680744115462" duration="325000" />
       <workItem from="1680744480909" duration="516000" />
       <workItem from="1680745060803" duration="90000" />
-      <workItem from="1680750085078" duration="7203000" />
+      <workItem from="1680750085078" duration="7542000" />
+      <workItem from="1680794484197" duration="594000" />
+      <workItem from="1680797170953" duration="525000" />
+      <workItem from="1680989416706" duration="9075000" />
     </task>
     <task id="LOCAL-00002" summary="Implemented Timer functions, entrance to a next scene, and a basic health system for the Player.">
       <created>1676857005285</created>
@@ -340,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680672566335</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="I added sounds, for start room, and arena, along with the player shoot and the player getting hit. And enemy shooting sounds.&#10;I added the border function, changed the distance between the player and enemy colliding.&#10;The score increases by 50 at the moment, it's for testing to see if the other enemies spawn and function properly.&#10;Furthermore, I am still continuing on fixing the feedback.">
+      <created>1680761065414</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680761065414</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +404,8 @@
     <MESSAGE value="Game Demo. Not entirely having all documentary but it works." />
     <MESSAGE value="All the resources." />
     <MESSAGE value="I made boundaries more smooth and gave an instruction panel. Also creating some levels of enemies that shoot towards the player. There is an issue though, somehow, once the player dies, the image or gifs do not display, I will need to fix that after this patch." />
-    <option name="LAST_COMMIT_MESSAGE" value="I made boundaries more smooth and gave an instruction panel. Also creating some levels of enemies that shoot towards the player. There is an issue though, somehow, once the player dies, the image or gifs do not display, I will need to fix that after this patch." />
+    <MESSAGE value="I added sounds, for start room, and arena, along with the player shoot and the player getting hit. And enemy shooting sounds.&#10;I added the border function, changed the distance between the player and enemy colliding.&#10;The score increases by 50 at the moment, it's for testing to see if the other enemies spawn and function properly.&#10;Furthermore, I am still continuing on fixing the feedback." />
+    <option name="LAST_COMMIT_MESSAGE" value="I added sounds, for start room, and arena, along with the player shoot and the player getting hit. And enemy shooting sounds.&#10;I added the border function, changed the distance between the player and enemy colliding.&#10;The score increases by 50 at the moment, it's for testing to see if the other enemies spawn and function properly.&#10;Furthermore, I am still continuing on fixing the feedback." />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="XDebuggerManager">

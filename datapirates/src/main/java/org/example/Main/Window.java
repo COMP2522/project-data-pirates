@@ -130,8 +130,6 @@ public class Window extends PApplet {
         wH.getPreloader().getDp_Hud().setEntityBorderStatus(!wH.getPreloader().getDp_Hud().isEntityBorderActive());
       } else if (e.getKey() == 'e' && preloader.getMenu().isINPanelActive())
         preloader.getMenu().setInstructionPanel(false);
-      if (e.getKey() == 'e' && wH.getWorld() == 2)
-        preloader.getCchest().getChest().setOpened(!preloader.getCchest().getChest().isOpened());
 
       /* Thank you for changing that IntelliJ, that is clean. */
       switch (e.getKey()) {

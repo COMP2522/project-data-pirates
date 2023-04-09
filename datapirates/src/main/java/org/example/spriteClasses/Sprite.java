@@ -76,15 +76,16 @@ public class Sprite implements Comparable<Sprite> {
    */
   public void draw() {
 //    showBorders();
+
     window.pushStyle();
     window.fill(color.getRGB());
     window.ellipseMode(PConstants.CENTER);
     window.ellipse(position.x, position.y, size, size);
     window.ellipseMode(PConstants.CORNER);
-
     window.popStyle();
 
   }
+
 
   public void showBorders() {
     window.pushStyle();

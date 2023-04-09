@@ -12,7 +12,7 @@ import java.util.*;
 /**
  * Local.
  */
-public class JSONData {
+public class JSONData<Data> {
 
   Object data;
 
@@ -37,33 +37,30 @@ public class JSONData {
     if (data == null)
       return null;
       JSONObject jsonO = (JSONObject) data;
-      String playerID = (String) jsonO.get("id");
-//      long minutes = (long) jsonO.get("until_chest");
-      tempData.add(new UserData("ID", playerID));
-//    }
-//    System.out.println(playerID);
+    final List keys = jsonO.keySet().stream().toList();
+    final List values = jsonO.values().stream().toList();
+    for (int i = 0; i < keys.size(); i++) {
+      tempData.add(new UserData(keys.get(i).toString(), values.get(i)));
+
+    }
     return tempData;
   }
 
-  public void writeData(String id /* , int[] date */) throws IOException {
+  public void writeData(String[] key, Data... values /* , int[] date */) throws IOException {
     FileWriter fw = new FileWriter(directory);
-    ArrayList<UserData> tempDatas = new ArrayList<>();
-//    KVPair timeTillChest = new KVPair("until_chest");
-//    if (date == null)
-//    LocalDateTime time = LocalDateTime.of(date[0], date[1], date[2], date[3], date[4], date[5]);
-//    long minutesBetween = Duration.between(LocalDateTime.now(), time).toMinutes();
-//    Time a = new Time;
-//    LocalDate time1 = LocalDate.of(date[0], date[1], date[2]);
-//    LocalDateTime time = LocalDate.of(2023, 1, 30, );
-//    ;
-    tempDatas.add(new UserData("id", id));
-//    tempDatas.add(new KVPair("until_chest", id));
-//    System.out.println(minutesBetween);
-    UserData a = new UserData("id", id);
-
     JSONObject j = new JSONObject();
-    j.put(a.getField(), a.getValue());
+
+    for (int i = 0; i < key.length; i++) {
+//      tempDatas.add(new UserData(key[i], value));
+      if (i >= values.length)
+        j.put(key[i], null);
+      else
+        j.put(key[i], values[i]);
+
+    }
+
     fw.write(j.toJSONString());
     fw.close();
+
   }
 }

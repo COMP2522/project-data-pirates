@@ -72,7 +72,7 @@ public class Enemy extends Sprite {
           scene.getPreloader().getMusic().play(5);
           Thread.sleep(1000);
         }
-      } catch (InterruptedException e) {
+      } catch (Exception e) {
         e.printStackTrace();
       }
     });
