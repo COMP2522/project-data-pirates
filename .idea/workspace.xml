@@ -4,22 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="fix">
+    <list default="true" id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="fix conflict">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_4_9_23_18_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_4_9_23_18__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/documents/Jack/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/documents/Jack/pitch.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/EnemyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/MenuTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/MusicManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/PlayerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/PreloaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/test/java/GifManagerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/test/java/MenuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/test/java/MenuTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/test/java/MusicManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/test/java/MusicManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datapirates/src/test/java/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/test/java/PlayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +124,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -128,7 +134,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/adj37/Desktop/project-data-pirates/datapirates/src/main",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/adj37/Desktop/project-data-pirates/datapirates/src/test",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -151,11 +158,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adj37\Desktop\project-data-pirates\datapirates\src\test" />
+      <recent name="C:\Users\adj37\Desktop\project-data-pirates\datapirates\src" />
       <recent name="C:\Users\adj37\Desktop\project-data-pirates\datapirates\src\main" />
       <recent name="C:\Users\adj37\Desktop\project-data-pirates\datapirates\src\main\java\org\example" />
       <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\backgrounds" />
-      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\spriteClasses\sprites\player" />
-      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\spriteClasses\sprites" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\pictures" />
@@ -409,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681103918823</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix conflict">
+      <created>1681110368484</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681110368484</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,6 +458,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Created the basic structure and gameplay of the game." />
     <MESSAGE value="Implemented Timer functions, entrance to a next scene, and a basic health system for the Player." />
     <MESSAGE value="Created a health system for enemies. Will plan on calculating defense values to the entities." />
@@ -452,7 +467,8 @@
     <MESSAGE value="Current State of the game. Next final steps, finalize the usage of JSON ideas, make some rooms cleaner, get the correct sprites, cleanse the text and format them nicely. Basically, just do the design phase and clean code." />
     <MESSAGE value="Game Demo. Not entirely having all documentary but it works." />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="fix conflict" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix conflict" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="XDebuggerManager">

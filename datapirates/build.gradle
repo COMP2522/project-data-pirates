@@ -17,6 +17,7 @@ dependencies {
     implementation 'org.processing:core:3.3.7'
     implementation 'org.processing:processing-complete:3.3.7'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testImplementation project(path: ':')
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
     implementation 'org.mongodb:mongodb-driver-sync:4.9.0'
     implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
