@@ -2,6 +2,15 @@ package org.example.spriteClasses;
 
 import processing.core.PVector;
 
+/**
+ * Helper Module / Method class for allowing the player to move
+ * smoothly.
+ *
+ * @author Data Pirates Team.
+ *
+ * @version JDK 18.
+ *
+ */
 public class DiagonalMove {
 
   private boolean upPressed = false;
@@ -9,7 +18,13 @@ public class DiagonalMove {
   private boolean leftPressed = false;
   private boolean rightPressed = false;
 
-  public PVector getDirection() {
+  /**
+   * Works with update, allows for better player movement.
+   *
+   * @return new translation.
+   *
+   */
+  public PVector translateDirection() {
     PVector tempDirection = new PVector();
     if (upPressed)
       tempDirection.y = -1;
@@ -21,13 +36,9 @@ public class DiagonalMove {
       tempDirection.x = 1;
 
     return tempDirection;
-//      tempDirection.set(0, -1);
-//      player.setDirection(new PVector(0, -1))
   }
 
-  public boolean aKeyPressed() {
-    return upPressed || downPressed || leftPressed || rightPressed;
-  }
+  /* TODO: Setters beyond this point. */
   public void setDownPressed(boolean downPressed) {
     this.downPressed = downPressed;
   }

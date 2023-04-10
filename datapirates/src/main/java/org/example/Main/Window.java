@@ -1,38 +1,36 @@
 package org.example.Main;
 
-import java.awt.Color;
-
+import org.example.music.MusicManager;
 import org.example.spriteClasses.Player;
-import org.example.spriteClasses.Projectile;
-import org.example.spriteClasses.SpriteManager;
 import processing.core.PApplet;
+import processing.core.PImage;
 import processing.core.PVector;
 import processing.event.KeyEvent;
 
-
-
 /**
- * Data Pirates.
- *
+ * <h1>Data Pirates, A COMP 2522 Game!</h1>
+ * <p>
+ *   <strong>About</strong><br>
+ *   Data Pirates is a survival game where you have to
+ *   defend yourself against these space data creatures.
+ *   <br>
+ *   Data Pirates can be considered as a playground.
+ *   The game is designed to be a bit challenging.
+ *   However, it is still quite fun.
+ *   <br><br>
+ * </p>
  * @author The Team:
  *     Eric G,
  *     Ning,
  *     Jack,
  *     Teddy D
  *
- * @version JDK 18
- *     Documentary:
- *      Smooth Player Movement -> Diagonal Movement, don't have to press key again to move entirely.
+ * @version JDK 18.
  */
 public class Window extends PApplet {
 
-
-
   /* Only one player allowed. Single player. */
   protected static Player player;
-
-  /* World ID value. */
-  private int world = 3;
 
   /*
     Screen's Width.
@@ -45,15 +43,15 @@ public class Window extends PApplet {
   public static final int HEIGHT = 720;
 
   /*
-    Menu HUD.
-  */
-
-  /*
     Preloader Class.
   */
   private Preloader preloader;
 
+  /*
+    The "Functions" class.
+  */
   private WindowHelper wH;
+
   /**
    * Settings of the PApplet program.
    */
@@ -65,7 +63,6 @@ public class Window extends PApplet {
   public void exit() {
     super.exit();
   }
-
 
   /**
    * Setup version 2.
@@ -82,21 +79,20 @@ public class Window extends PApplet {
    * Sets the game mechanics.
    */
   public void setup() {
+    PImage icon = loadImage("datapirates\\src\\main\\java\\org\\example\\static_assets\\icon.png");
     surface.setTitle("Data Pirates");
+    surface.setIcon(icon);
     wH = new WindowHelper(this);
     preloader = wH.getPreloader();
-//            new Preloader(this); /* TODO: Removal */
-
   }
 
   /**
-   * Sets extra important things.
-   *
+   * Set player.
    */
   public void init() {
     preloader.getScore().setValue(0);
     player = Player.getInstance(
-            new PVector((float) (WIDTH / 2), (float) (this.HEIGHT / 2)),
+            new PVector((float) (WIDTH / 2), (float) (HEIGHT / 2)),
             new PVector(0, 1),
             75,
             5,
@@ -108,46 +104,24 @@ public class Window extends PApplet {
 
   /**
    * Triggers when a key is pressed.
+   * Spam bullet is now a feature.
    *
    * @param e KeyEvent, key input.
+   *
    */
   @Override
   public void keyPressed(KeyEvent e) {
-
     /*
       If preloader is done, this function is enabled.
     */
-    if (preloader.isFinished()) {
-      if (e.getKeyCode() == 32)
-        shootFunction();
-
-      if (e.getKey() == 'r') /* Delay on Reload */
-        player.getWeapon().reload();
-      else if (e.getKey() == 'c' && wH.getWorld() == 0)
-        wH.getPreloader().getDp_Hud().setHudStatus(!wH.getPreloader().getDp_Hud().isHudActive());
-      else if (e.getKey() == 'q') {
-        /* Show boundaries. */
-        wH.getPreloader().getDp_Hud().setEntityBorderStatus(!wH.getPreloader().getDp_Hud().isEntityBorderActive());
-      } else if (e.getKey() == 'e' && preloader.getMenu().isINPanelActive())
-        preloader.getMenu().setInstructionPanel(false);
-
-      /* Thank you for changing that IntelliJ, that is clean. */
-      switch (e.getKey()) {
-        case 'w' -> player.getDiag().setUpPressed(true);
-        case 's' -> player.getDiag().setDownPressed(true);
-        case 'a' -> player.getDiag().setLeftPressed(true);
-        case 'd' -> player.getDiag().setRightPressed(true);
-        default -> { }
-      }
-    }
-
+    if (preloader.isFinished())
+      wH.keyPressedHandler(e);
   }
-
-
 
   /**
    * Included this function to help smooth player movement.
-   * @param e keyboard input
+   *
+   * @param e keyboard input.
    *
    */
   @Override
@@ -156,14 +130,8 @@ public class Window extends PApplet {
       Meaning, this function will only activate when the preloader is finished.
     */
     if (preloader.isFinished())
-      switch (e.getKey()) {
-        case 'w' -> player.getDiag().setUpPressed(false);
-        case 's' -> player.getDiag().setDownPressed(false);
-        case 'a' -> player.getDiag().setLeftPressed(false);
-        case 'd' -> player.getDiag().setRightPressed(false);
-        default -> {
-        }
-      }
+      wH.keyReleasedHandler(e);
+
   }
 
   /**
@@ -176,100 +144,29 @@ public class Window extends PApplet {
       if (wH.getWorld() == 3) {
         preloader.getMenu().update();
       }
-      shootFunction();
+      wH.shootFunction();
     }
   }
 
-  public void shootFunction() {
-    if (player.getWeapon().hasAmmo()) {
-      player.getWeapon().shoot();
-//        preloader.getMusic().p
-      preloader.getMusic().play(4);
-
-        /*
-          TODO: Enables the player to shoot at any direction.
-          src: https://processing.org/tutorials/pvector/#vectors-interactivity
-        */
-
-      PVector mouse = new PVector(mouseX, mouseY);
-
-        /* TODO {Note}: There is a function for
-            this but I did not know that until few weeks I did this. */
-      PVector dir = SpriteManager
-              .calculateDirection(player.getPosition(), mouse);
-
-      Projectile projectile = new Projectile(player.getPosition().copy(),
-              dir, 10, 5, player.getWeapon().getBulletColor(), this, player.getWeapon(), 0);
-      preloader.getDpC().getBullets().add(projectile);
-    }
-  }
-
-
-  /**
-   * Get the information of your stats and the wave time.
-   */
-  public void printDisplayText() {
-
-    final int scoreText = 20;
-    final int playerTextSize = scoreText + 10;
-    /*
-      The score
-    */
-    textSize(scoreText);
-    Color textColor = EntityColor.getSpriteColors().get("Text");
-    fill(textColor.getRGB());
-
-    text(preloader.getScore().getValue() + "pts", 0, scoreText);
-
-
-    /*
-      Health Points.
-    */
-    textSize(playerTextSize);
-    fill(textColor.getRGB());
-    text("HP " + player.getPlayerStat().getHealth()
-            + "/" + player.getPlayerStat().getMaxHealth(),
-            0, HEIGHT - playerTextSize - playerTextSize);
-
-    /*
-      Ammo Capacity.
-    */
-    fill(textColor.getRGB());
-    text("AMMO " + player.getWeapon().getCurrentAmmo()
-            + "/" + player.getWeapon().getAmmoCapacity()
-            + "", 0, HEIGHT - playerTextSize);
-
-    /*
-      Wave Time.
-    */
-    fill(textColor.getRGB());
-    text("Next: " + (int) preloader.getClock().getEstimated()
-            + "s", 0, playerTextSize + playerTextSize);
-
-  }
 
   /**
    * Threads... every frame.
    */
   public void draw() {
-
-      /*
-        TODO: If preloader is not finished loading everything
-          display loading background. Duh.
-      */
+    /*
+      TODO: If preloader is not finished loading everything
+        display loading background. Duh.
+    */
     if (!preloader.isFinished()) {
       if (preloader.getLoadingImage() != null)
         preloader.getLoadingImage().displayBackground();
-    }
-    else {
+    } else {
       wH.setWindow(this);
       /* If player dies. */
       if (wH.isPlayerDead()) {
         wH.resetStates();
         init();
       }
-
-
 
       /* Placeholder for travel function. */
       preloader.getSaferoom().travel();
@@ -287,11 +184,10 @@ public class Window extends PApplet {
       /*
         Play the background music.
       */
-//      !preloader.getMusic().isPlaying()
-      if (preloader.getMusic().getObjectType() != wH.getWorld()) {
-        if (preloader.getMusic().isPlaying())
-          preloader.getMusic().stop();
-        preloader.getMusic().play(wH.getWorld());
+      if (MusicManager.getObjectType() != wH.getWorld()) {
+        if (MusicManager.isPlaying())
+          MusicManager.stop();
+        MusicManager.play(wH.getWorld());
       }
 
       /* Alternate Name: Start next wave. */
@@ -300,9 +196,7 @@ public class Window extends PApplet {
       /* The compact function of draw and update. */
       wH.updateFrame();
 
-      /* Heads-Up Display. */
-      preloader.getDp_Hud().updateFrame();
-
+      /* Warns player to reload. */
       if (!player.getWeapon().hasAmmo()) {
         textSize(60);
         fill(EntityColor.getSpriteColors().get("Reload").getRed(),
@@ -314,11 +208,13 @@ public class Window extends PApplet {
     }
   }
 
-
   /**
    * Gets the player, only this class has the player.
-   * @return player
+   *
+   * @return player.
+   *
    * @type <!-- Ignore Wrong tag --> Important Getter.
+   *
    */
   public Player getPlayer() {
     return player;
@@ -326,8 +222,11 @@ public class Window extends PApplet {
 
   /**
    * Gets the Preloader, only this class has the Preloader.
-   * @return the preloader
+   *
+   * @return the preloader.
+   *
    * @type <!-- Ignore Wrong tag --> Important Getter.
+   *
    */
   public Preloader getPreloader() {
     return preloader;
@@ -338,6 +237,7 @@ public class Window extends PApplet {
    * Used for scene generation.
    *
    * @return world.
+   *
    */
   public int getWorld() {
     return wH.getWorld();
@@ -348,6 +248,7 @@ public class Window extends PApplet {
    * Used when the player moves into specific places.
    *
    * @param world number, worldID.
+   *
    */
   public void setWorld(int world) {
     wH.setWorld(world);
@@ -355,7 +256,9 @@ public class Window extends PApplet {
 
   /**
    * Drives the program.
-   * @param args unused
+   *
+   * @param args unused.
+   *
    */
   public static void main(String[] args) {
     PApplet.main("org.example.Main.Window");

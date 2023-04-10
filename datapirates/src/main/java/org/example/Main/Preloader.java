@@ -1,19 +1,19 @@
 package org.example.Main;
 
+import java.util.Random;
 import org.example.database.DatabaseManagement;
 import org.example.gui.Hud;
 import org.example.gui.Menu;
 import org.example.locations.startArea.SafeRoom;
-import org.example.music.MusicManager;
-import org.example.spriteClasses.GifManager;
-
-import java.util.Random;
+import org.example.spriteClasses.Gif;
 
 /**
  * Activates before the game starts.
  * This is to prevent the performance delays when starting the game.
  *
  * @author Data Pirates Team
+ *
+ * @version JDK 18.
  */
 public class Preloader {
 
@@ -22,34 +22,30 @@ public class Preloader {
       that make the program slow in the beginning.
         Will be created in a thread.
   */
-  public static final Random RNG = new Random();
-  private boolean isFinished = false;
-  private GifManager gifBackground;
-  private Window scene;
-  public DataPiratesCollection dpC;
 
+  public static final Random RNG = new Random();
+  public static DatabaseManagement db;
+  public DataPiratesCollection dpC;
+  private Gif gifBackground;
+  private final Window scene;
   private Score score;
-  private Items item;
   private Timer clock;
   private SafeRoom saferoom;
-  private MusicManager music;
-  private GifManager loadingIMG;
-
+  private Gif loadingIMG;
   private Menu menu;
-
   private Hud dp_Hud;
 
-  private static DatabaseManagement db;
+  /* Preloader loading status. */
+  private boolean isFinished = false;
 
   /**
    * Create a new Preloader class.
+   *
    * @param scene the Window where the loading screen will be placed.
    */
   public Preloader(Window scene) {
     this.scene = scene;
-    new Thread(() -> {
-      loadingIMG = new GifManager("loading\\frame ", 60, scene);
-    }).start();
+    new Thread(() -> loadingIMG = new Gif("loading\\frame ", 60, scene)).start();
     loadThings();
   }
 
@@ -66,18 +62,15 @@ public class Preloader {
     new Thread(() -> {
 
       /* Load these resources. */
-      gifBackground = new GifManager("world0\\frame ", 57, scene);
-//      shop = new Shop(scene);
-      saferoom = new SafeRoom(scene, new GifManager("world3\\frame ", 33, scene));
+      gifBackground = new Gif("world0\\frame ", 57, scene);
+      saferoom = new SafeRoom(scene, new Gif("world3\\frame ", 33, scene));
       EntityColor.setColors();
-      dp_Hud = new Hud(scene, this);
-      db = new DatabaseManagement();
-      dpC = DataPiratesCollection.getInstance();
       score = Score.getInstance();
-      item = Items.getInstance();
+      dp_Hud = new Hud(scene, this);
+      db = new DatabaseManagement(score);
+      dpC = DataPiratesCollection.getInstance();
+      Weapons.weaponStash();
       clock = new Timer();
-
-      music = MusicManager.getInstance();
       menu = new Menu(scene);
 
       /*
@@ -85,9 +78,8 @@ public class Preloader {
        */
       scene.getResource();
       isFinished = true;
-//      exit();
       try {
-        Thread.sleep(100);
+        Thread.sleep(100); /* constant is only used here. */
       } catch (Exception e) {
         e.printStackTrace();
       }
@@ -96,30 +88,23 @@ public class Preloader {
 
   /**
    * Checks if the Preloader is finished.
-   * @return true if finished, false otherwise
+   *
+   * @return true if finished, false otherwise.
    */
   public boolean isFinished() {
     return isFinished;
   }
 
+  /* TODO: Getters and Setters. */
 
-  /* Getters and Setters. */
-
-  public DatabaseManagement getDb() {
-    return db;
-  }
-
-  public static void setDb(DatabaseManagement db) {
-    Preloader.db = db;
-  }
-
-  public GifManager getLoadingImage() {
+  public Gif getLoadingImage() {
     return loadingIMG;
   }
 
-  public GifManager getGifBackground() {
+  public Gif getGifBackground() {
     return gifBackground;
   }
+
   public DataPiratesCollection getDpC() {
     return dpC;
   }
@@ -132,10 +117,6 @@ public class Preloader {
     return score;
   }
 
-  public Items getItem() {
-    return item;
-  }
-
   public Timer getClock() {
     return clock;
   }
@@ -144,9 +125,6 @@ public class Preloader {
     return saferoom;
   }
 
-  public MusicManager getMusic() {
-    return music;
-  }
 
   public Menu getMenu() {
     return menu;

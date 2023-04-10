@@ -1,66 +1,87 @@
 package org.example.database;
 
-
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.*;
-//import java.time.Duration;
-import java.util.*;
-
 /**
- * Local.
+ * Procedure for saving and obtaining data from JSON file.
+ *
+ * @author Teddy Dumam-Ag
+ *
+ * @version JDK 18
  */
 public class JSONData<Data> {
 
-  Object data;
+  private boolean fileExists = true;
 
-  private String directory;
+  /* JSON contents. */
+  private Object data;
+
+  /* Directory of the config.json. */
+  private final String directory;
+
+  /**
+   * Construct a JSON file creator for data pirates.
+   *
+   * @param fileName the name of the file.
+   * @throws IOException when the file is a directory, or not modifiable.
+   * @throws ParseException JSON parsing.
+   */
   public JSONData(String fileName) throws IOException, ParseException {
     directory = "datapirates\\src\\main\\java\\org\\example\\database\\" + fileName;
     JSONParser convertToArray = new JSONParser();
     File file = new File(directory);
-    // Check if exists
-    if (!file.exists())
+    /* Check if it exists. */
+    if (!file.exists()) {
       file.createNewFile();
-    if (file.length() > 0)
+      fileExists = false;
+    } else /* If it exists. */
       data = convertToArray.parse(new FileReader(file));
-
-
-
   }
 
+  public boolean doesFileExists() {
+    return fileExists;
+  }
+
+  /**
+   * Get the JSON contents as an ArrayList.
+   *
+   * @return JSON contents in an ArrayList.
+   */
   public ArrayList<UserData> getData() {
     ArrayList<UserData> tempData = new ArrayList<>();
-//    for (Object o : data) {
     if (data == null)
       return null;
-      JSONObject jsonO = (JSONObject) data;
-    final List keys = jsonO.keySet().stream().toList();
-    final List values = jsonO.values().stream().toList();
-    for (int i = 0; i < keys.size(); i++) {
+    JSONObject parsedJSON = (JSONObject) data;
+    final List keys = parsedJSON.keySet().stream().toList();
+    final List values = parsedJSON.values().stream().toList();
+    for (int i = 0; i < keys.size(); i++)
       tempData.add(new UserData(keys.get(i).toString(), values.get(i)));
-
-    }
     return tempData;
   }
 
-  public void writeData(String[] key, Data... values /* , int[] date */) throws IOException {
+  /**
+   * Write the values to the JSON file.
+   *
+   * @param key column name.
+   * @param values values for each column, as a list.
+   * @throws IOException throws whenever file is not modifiable.
+   */
+  public void writeToJson(String[] key, Data... values) throws IOException {
     FileWriter fw = new FileWriter(directory);
     JSONObject j = new JSONObject();
 
-    for (int i = 0; i < key.length; i++) {
-//      tempDatas.add(new UserData(key[i], value));
-      if (i >= values.length)
-        j.put(key[i], null);
-      else
+    for (int i = 0; i < key.length; i++)
         j.put(key[i], values[i]);
-
-    }
 
     fw.write(j.toJSONString());
     fw.close();
-
   }
 }
