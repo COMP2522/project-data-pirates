@@ -1,10 +1,9 @@
 package org.example.spriteClasses;
 
 import java.awt.Color;
-
-import org.example.Main.Items;
 import org.example.Main.Preloader;
 import org.example.Main.Weapon;
+import org.example.Main.Weapons;
 import org.example.Main.Window;
 import processing.core.PVector;
 
@@ -12,26 +11,15 @@ import processing.core.PVector;
  * Player class that is controlled by
  * the user. Can move, shoot, and obtain items.
  *
- * @author Teddy Dumam-Ag
+ * @author Data Pirates Team.
  *
- * @version JDK 18
+ * @version JDK 18.
  */
 public class Player extends Sprite {
 
   private Weapon weapon;
-
   private static Player player;
-
-  private static int balance;
-
-  private int health;
-
-  private int maxHealth;
-
-  private int defense;
-
   private DiagonalMove diag;
-
   private SpriteStat playerStat;
 
 
@@ -50,6 +38,7 @@ public class Player extends Sprite {
    * @param window The scene / Window where the sprite is shown.
    *
    * @return The only player object.
+   *
    */
   public static Player getInstance(PVector position, PVector direction,
                                    float size, float speed, Color color, Window window) {
@@ -64,18 +53,47 @@ public class Player extends Sprite {
       player.setWindow(window);
     }
 
+    player.setUp();
 
-    player.setWeapon(Items.getWeapon(Items.getWeapons().get(Preloader.RNG.nextInt(Items.getWeapons().size())).getModel()));
-    System.out.println(player.getWeapon().getModel());
-
-    if (!window.getPreloader().isFinished()) {
-      player.diag = new DiagonalMove();
-      player.setMm(new GifManager("player\\frame ", 6, player.getPosition(), player.getWindow(), player));
-    }
-    player.setPlayerStat(new SpriteStat(player, 100, 50, player.getWeapon().getDmg()));
     return player;
   }
 
+  @Override
+  public void setUp() {
+    player.setWeapon(Weapons.getWeapon(Weapons.getWeapons().get(
+            Preloader.RNG.nextInt(Weapons.getWeapons().size())).getModel()));
+
+    if (!window.getPreloader().isFinished()) {
+      player.diag = new DiagonalMove();
+      player.setGm(new Gif("player\\frame ", 6, player.getWindow(), player));
+    }
+    player.setPlayerStat(new SpriteStat(player, 1000, player.getWeapon().getDmg()));
+  }
+
+  /**
+   * Must disable the super method so that the player will not
+   * constantly be walking.
+   */
+  @Override
+  public void update() { }
+
+  /**
+   * Draws the shape of the player.
+   */
+  public void draw() {
+    SpriteManager.assignGif(this, getGm());
+  }
+
+  /**
+   * Function shows how the player will move.
+   */
+  public  void move() {
+    player.setDirection(diag.translateDirection());
+    player.setPosition(player.getPosition().add(
+            player.getDirection().copy().mult(player.getSpeed())));
+  }
+
+  /* TODO: Setters and Getters beyond this point! */
 
   private void setPlayerStat(SpriteStat playerStat) {
     this.playerStat = playerStat;
@@ -84,71 +102,6 @@ public class Player extends Sprite {
   public SpriteStat getPlayerStat() {
     return playerStat;
   }
-
-//  public int getHealth() {
-//    return health;
-//  }
-//
-//  public int getDefense() {
-//    return defense;
-//  }
-//
-//  public int getMaxHealth() {
-//    return maxHealth;
-//  }
-
-//  public void setMaxHealth(int maxHealth) {
-//    this.maxHealth = maxHealth;
-//  }
-//
-//  public void setHealth(int health) {
-//    this.health = health;
-//  }
-
-  public void setDefense(int def) {
-    defense = def;
-  }
-
-  /**
-   * With disabling its super method, the player sprite
-   * will not constantly move all the time.
-   */
-  @Override
-  public void update() {
-    //    super.update();
-  }
-
-  /**
-   * Draws the shape of the player.
-   */
-  public void draw() {
-      SpriteManager.assignSprite(this, getMm());
-  }
-
-  public void move(float x, float y) {
-    player.setDirection(player.getPosition().mult(-1).add(new PVector(x, y)).normalize());
-  }
-
-  /**
-   * Function shows how the player will move.
-   *
-//   * @param event KeyEvent -> keyboard button.
-   */
-  public  void move() {
-    player.setDirection(diag.getDirection());
-    player.setPosition(player.getPosition().add(
-            player.getDirection().copy().mult(player.getSpeed())));
-  }
-
-
-  public static int getBalance() {
-    return balance;
-  }
-
-  public static void setBalance(int balance) {
-    Player.balance = balance;
-  }
-
 
   public void setWeapon(Weapon weapon) {
     this.weapon = weapon;

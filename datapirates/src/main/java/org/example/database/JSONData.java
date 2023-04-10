@@ -1,75 +1,86 @@
 package org.example.database;
 
-
-import org.json.simple.JSONArray;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.*;
-import java.sql.Time;
-//import java.time.Duration;
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
-import java.util.*;
-import java.time.Duration;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
 /**
- * Local.
+ * Procedure for saving and obtaining data from JSON file.
+ *
+ * @author Teddy Dumam-Ag
+ *
+ * @version JDK 18
  */
-public class JSONData {
+public class JSONData<Data> {
 
-  Object data;
+  private boolean fileExists = true;
 
-  private String directory;
+  /* JSON contents. */
+  private Object data;
+
+  /* Directory of the config.json. */
+  private final String directory;
+
+  /**
+   * Construct a JSON file creator for data pirates.
+   *
+   * @param fileName the name of the file.
+   * @throws IOException when the file is a directory, or not modifiable.
+   * @throws ParseException JSON parsing.
+   */
   public JSONData(String fileName) throws IOException, ParseException {
     directory = "datapirates\\src\\main\\java\\org\\example\\database\\" + fileName;
     JSONParser convertToArray = new JSONParser();
     File file = new File(directory);
-    // Check if exists
-    if (!file.exists())
+    /* Check if it exists. */
+    if (!file.exists()) {
       file.createNewFile();
-    if (file.length() > 0)
+      fileExists = false;
+    } else /* If it exists. */
       data = convertToArray.parse(new FileReader(file));
-
-
-
   }
 
-  public ArrayList<KVPair> getData() {
-    ArrayList<KVPair> tempData = new ArrayList<>();
-//    for (Object o : data) {
+  public boolean doesFileExists() {
+    return fileExists;
+  }
+
+  /**
+   * Get the JSON contents as an ArrayList.
+   *
+   * @return JSON contents in an ArrayList.
+   */
+  public ArrayList<UserData> getData() {
+    ArrayList<UserData> tempData = new ArrayList<>();
     if (data == null)
       return null;
-      JSONObject jsonO = (JSONObject) data;
-      String playerID = (String) jsonO.get("id");
-//      long minutes = (long) jsonO.get("until_chest");
-      tempData.add(new KVPair("ID", playerID));
-//    }
-//    System.out.println(playerID);
+    JSONObject parsedJSON = (JSONObject) data;
+    final List keys = parsedJSON.keySet().stream().toList();
+    final List values = parsedJSON.values().stream().toList();
+    for (int i = 0; i < keys.size(); i++)
+      tempData.add(new UserData(keys.get(i).toString(), values.get(i)));
     return tempData;
   }
 
-  public void writeData(String id /* , int[] date */) throws IOException {
+  /**
+   * Write the values to the JSON file.
+   *
+   * @param key column name.
+   * @param values values for each column, as a list.
+   * @throws IOException throws whenever file is not modifiable.
+   */
+  public void writeToJson(String[] key, Data... values) throws IOException {
     FileWriter fw = new FileWriter(directory);
-    ArrayList<KVPair> tempDatas = new ArrayList<>();
-//    KVPair timeTillChest = new KVPair("until_chest");
-//    if (date == null)
-//    LocalDateTime time = LocalDateTime.of(date[0], date[1], date[2], date[3], date[4], date[5]);
-//    long minutesBetween = Duration.between(LocalDateTime.now(), time).toMinutes();
-//    Time a = new Time;
-//    LocalDate time1 = LocalDate.of(date[0], date[1], date[2]);
-//    LocalDateTime time = LocalDate.of(2023, 1, 30, );
-//    ;
-    tempDatas.add(new KVPair("id", id));
-//    tempDatas.add(new KVPair("until_chest", id));
-//    System.out.println(minutesBetween);
-    KVPair a = new KVPair("id", id);
-
     JSONObject j = new JSONObject();
-    j.put(a.getField(), a.getValue());
+
+    for (int i = 0; i < key.length; i++)
+        j.put(key[i], values[i]);
+
     fw.write(j.toJSONString());
     fw.close();
   }

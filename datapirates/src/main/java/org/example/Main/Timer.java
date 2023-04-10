@@ -3,26 +3,28 @@ package org.example.Main;
 /**
  * Data Pirates' Timer class.
  * Used for proceeding to the next wave.
+ * Meme: Reference to the "Mood Up" timer.
  *
- * @author Data Pirates Team
+ * @author Data Pirates Team.
+ *
+ * @version JDK 18.
  */
 public class Timer {
 
   /* Current Time. */
   private long currTime;
 
-
   /* Difference between old time (currTime) and new time. */
   private double estimated;
 
   /* False -> Timer is stopped, True -> Timer is started. */
-  private boolean flippySwitch = false;
+  private boolean isRunning = false;
 
   /**
    * Start the timer.
    */
   public void start() {
-    flippySwitch = true;
+    isRunning = true;
     currTime = System.currentTimeMillis();
   }
 
@@ -30,7 +32,7 @@ public class Timer {
    * Stops the timer when time is actually above the next wave.
    */
   public void stop() {
-    if (flippySwitch) {
+    if (isRunning) {
       final long end = System.currentTimeMillis();
       estimated = (end - currTime) / 1000.0;
 
@@ -40,7 +42,7 @@ public class Timer {
 
       if (estimated >= endTime) {
         currTime = 0;
-        flippySwitch = false;
+        isRunning = false;
       }
     } else
       estimated = 0;
@@ -48,10 +50,12 @@ public class Timer {
 
   /**
    * Check if the timer is currently deactivated.
-   * @return true if stopped, otherwise false
+   *
+   * @return true if stopped, otherwise false.
+   *
    */
   public boolean isStopped() {
-    return !flippySwitch;
+    return !isRunning;
   }
 
   /**
@@ -64,7 +68,9 @@ public class Timer {
 
   /**
    * Get the time value. (Seconds)
-   * @return estimated
+   *
+   * @return estimated.
+   *
    */
   public double getEstimated() {
     return estimated;
