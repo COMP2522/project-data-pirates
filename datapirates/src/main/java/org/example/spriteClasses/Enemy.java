@@ -1,14 +1,7 @@
 package org.example.spriteClasses;
 
 import java.awt.Color;
-<<<<<<< HEAD
-
-import org.example.Main.EntityColor;
-import org.example.spriteClasses.Player;
-
-=======
 import org.example.Main.Weapons;
->>>>>>> TD_01_javs
 import org.example.Main.Window;
 import org.example.music.MusicManager;
 import processing.core.PVector;
@@ -38,8 +31,6 @@ public class Enemy extends Sprite {
   */
   private int delayAmount;
 
-  private Player targetPlayer;
-
   /**
    * Constructor. Sets a normal enemy with
    * the desired parameters.
@@ -49,14 +40,6 @@ public class Enemy extends Sprite {
    * @param scene The Window or GUI where the sprite will appear.
    *
    */
-<<<<<<< HEAD
-  public Enemy(PVector pos, PVector direction, float size, float speed, Color clr, Window scene, String level) {
-    super(pos, direction, size, speed, clr, scene);
-    setMm(new GifManager(level, 36, getPosition(), getWindow(), this));
-    // use map to get the HP, DEF, and DMG of an enemy
-    enemyStat = new SpriteStat(this, 100, 25, 15);
-    this.targetPlayer = Player.getInstance( new PVector(0, 0), new PVector(0, 0), 0, 0, EntityColor.getSpriteColors().get("Player"), getWindow());
-=======
   public Enemy(int dmg, boolean canShoot, float size, float speed,
                Window scene, String level, int numSprites) {
     super(size, speed, scene);
@@ -74,7 +57,6 @@ public class Enemy extends Sprite {
     setGm(new Gif(level, numSprites, getWindow(), this));
     enemyStat = new SpriteStat(this, 100, dmg);
 
->>>>>>> TD_01_javs
   }
 
   @Override
@@ -115,21 +97,7 @@ public class Enemy extends Sprite {
     SpriteManager.assignGif(this, getGm());
   }
 
-<<<<<<< HEAD
-//  public void shoot(Window window) {
-//    PVector dir = SpriteManager.calculateDirection(this.getPosition(), targetPlayer.getPosition());
-//    Projectile projectile = new Projectile(this.getPosition().copy(), dir, 10, 5, EntityColor.getSpriteColors().get("EnemyProjectile"), window, this);
-//    window.getPreloader().getDpC().getBullets().add(projectile);
-//  }
-
-
-  public void init(Enemy enemy) {}
-
-  public void remove(Enemy enemy) {}
-
-=======
   @Override
->>>>>>> TD_01_javs
   public void update() {
     this.position = this.getPosition().add(this.getDirection().copy().mult(getSpeed()));
   }
