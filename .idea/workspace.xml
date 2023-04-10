@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="Game Demo. Not entirely having all documentary but it works.">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-02-19_3_37_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-02-19_3_37_p_m___Changes_.xml" afterDir="false" />
+=======
+    <list default="true" id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="Cleansed Window class.&#10;Removed Chest Room and Shop.">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Gif.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/static_assets/exit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/static_assets/guide.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/static_assets/icon.png" afterDir="false" />
+>>>>>>> TD_01_javs
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
@@ -15,11 +24,353 @@
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Window.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/DataPiratesCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/DataPiratesCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/EntityColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/EntityColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Weapons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Preloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Preloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Timer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/WindowHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/WindowHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (10).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (100).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (101).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (102).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (103).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (104).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (105).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (106).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (107).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (108).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (109).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (11).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (110).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (111).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (112).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (113).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (114).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (115).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (116).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (117).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (118).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (119).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (12).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (120).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (121).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (122).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (123).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (124).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (125).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (126).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (127).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (128).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (129).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (13).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (130).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (131).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (132).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (133).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (134).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (135).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (136).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (137).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (138).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (139).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (14).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (140).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (141).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (142).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (143).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (144).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (145).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (146).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (147).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (148).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (149).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (15).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (150).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (16).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (17).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (18).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (19).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (20).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (21).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (22).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (23).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (24).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (25).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (26).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (27).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (28).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (29).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (30).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (31).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (32).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (33).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (34).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (35).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (36).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (37).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (38).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (39).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (40).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (41).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (42).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (43).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (44).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (45).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (46).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (47).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (48).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (49).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (50).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (51).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (52).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (53).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (54).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (55).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (56).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (57).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (58).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (59).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (6).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (60).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (61).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (62).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (63).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (64).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (65).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (66).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (67).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (68).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (69).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (7).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (70).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (71).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (72).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (73).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (74).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (75).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (76).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (77).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (78).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (79).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (8).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (80).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (81).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (82).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (83).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (84).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (85).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (86).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (87).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (88).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (89).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (9).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (90).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (91).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (92).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (93).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (94).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (95).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (96).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (97).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (98).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/backgrounds/world2/frame (99).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/DatabaseManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/DatabaseManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/JSONData.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/JSONData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/DeathGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/GuiManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/GuiManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Hud.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Hud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/SecretManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/gui/instructions.png" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/static_assets/instructions.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/KeyLocationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/KeyLocationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/startArea/SafeRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/locations/startArea/SafeRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/music/MusicManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/music/MusicManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/DP_Title.png" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/static_assets/DP_Title.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/exit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/guide.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/instructions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/pictures/rank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/DiagonalMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/DiagonalMove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/GifManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Projectile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/SpriteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/SpriteManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/SpriteStat.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/SpriteStat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (10).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (100).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (101).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (102).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (103).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (104).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (105).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (106).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (107).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (108).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (109).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (11).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (110).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (111).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (112).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (113).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (114).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (115).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (116).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (117).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (118).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (119).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (12).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (120).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (121).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (122).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (123).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (124).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (125).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (126).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (127).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (128).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (129).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (13).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (130).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (131).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (132).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (133).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (134).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (135).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (136).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (137).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (138).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (139).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (14).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (140).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (141).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (142).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (143).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (144).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (145).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (146).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (147).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (148).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (149).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (15).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (150).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (16).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (17).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (18).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (19).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (20).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (21).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (22).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (23).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (24).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (25).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (26).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (27).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (28).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (29).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (30).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (31).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (32).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (33).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (34).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (35).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (36).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (37).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (38).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (39).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (40).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (41).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (42).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (43).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (44).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (45).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (46).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (47).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (48).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (49).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (50).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (51).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (52).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (53).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (54).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (55).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (56).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (57).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (58).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (59).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (6).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (60).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (61).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (62).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (63).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (64).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (65).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (66).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (67).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (68).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (69).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (7).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (70).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (71).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (72).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (73).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (74).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (75).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (76).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (77).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (78).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (79).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (8).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (80).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (81).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (82).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (83).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (84).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (85).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (86).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (87).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (88).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (89).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (9).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (90).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (91).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (92).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (93).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (94).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (95).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (96).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (97).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (98).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/chest/frame (99).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/sprites/sprite.jpg" beforeDir="false" />
+>>>>>>> TD_01_javs
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,15 +471,26 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+<<<<<<< HEAD
     "last_opened_file_path": "C:/Users/adj37/Desktop/como2522/project-data-pirates",
+=======
+    "last_opened_file_path": "C:/Users/Owner/IdeaProjects/project-data-pirates/datapirates/src/main/java/org/example/static_assets",
+>>>>>>> TD_01_javs
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+<<<<<<< HEAD
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+=======
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+>>>>>>> TD_01_javs
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -143,18 +505,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\static_assets" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\spriteClasses\sprites" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\gui" />
       <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\backgrounds" />
       <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\spriteClasses\sprites\player" />
-      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\spriteClasses\sprites" />
-      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\pictures" />
-      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\library" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\music\sprites" />
       <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\pictures" />
       <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\music" />
       <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main" />
       <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example" />
-      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java" />
     </key>
   </component>
   <component name="RunManager">
@@ -248,7 +610,28 @@
       <workItem from="1680206934567" duration="95000" />
       <workItem from="1680211471858" duration="406000" />
       <workItem from="1680214717928" duration="14391000" />
-      <workItem from="1680275419229" duration="3289000" />
+      <workItem from="1680275419229" duration="7506000" />
+      <workItem from="1680290954368" duration="1215000" />
+      <workItem from="1680301944491" duration="286000" />
+      <workItem from="1680307423046" duration="107000" />
+      <workItem from="1680324523000" duration="5000" />
+      <workItem from="1680546649321" duration="14616000" />
+      <workItem from="1680647153543" duration="176000" />
+      <workItem from="1680664012847" duration="808000" />
+      <workItem from="1680672435237" duration="336000" />
+      <workItem from="1680672926266" duration="27000" />
+      <workItem from="1680672968519" duration="85000" />
+      <workItem from="1680673239984" duration="74000" />
+      <workItem from="1680717869952" duration="5047000" />
+      <workItem from="1680739154398" duration="4813000" />
+      <workItem from="1680744115462" duration="325000" />
+      <workItem from="1680744480909" duration="516000" />
+      <workItem from="1680745060803" duration="90000" />
+      <workItem from="1680750085078" duration="7542000" />
+      <workItem from="1680794484197" duration="594000" />
+      <workItem from="1680797170953" duration="525000" />
+      <workItem from="1680989416706" duration="13420000" />
+      <workItem from="1681070584653" duration="20476000" />
     </task>
     <task id="LOCAL-00002" summary="Implemented Timer functions, entrance to a next scene, and a basic health system for the Player.">
       <created>1676857005285</created>
@@ -299,7 +682,35 @@
       <option name="project" value="LOCAL" />
       <updated>1680276783221</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="All the resources.">
+      <created>1680278847072</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680278847072</updated>
+    </task>
+    <task id="LOCAL-00010" summary="I made boundaries more smooth and gave an instruction panel. Also creating some levels of enemies that shoot towards the player. There is an issue though, somehow, once the player dies, the image or gifs do not display, I will need to fix that after this patch.">
+      <created>1680672566335</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680672566335</updated>
+    </task>
+    <task id="LOCAL-00011" summary="I added sounds, for start room, and arena, along with the player shoot and the player getting hit. And enemy shooting sounds.&#10;I added the border function, changed the distance between the player and enemy colliding.&#10;The score increases by 50 at the moment, it's for testing to see if the other enemies spawn and function properly.&#10;Furthermore, I am still continuing on fixing the feedback.">
+      <created>1680761065414</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680761065414</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Cleansed Window class.&#10;Removed Chest Room and Shop.">
+      <created>1681017039220</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681017039220</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +752,11 @@
     <MESSAGE value="Fixed conflicts from main." />
     <MESSAGE value="Current State of the game. Next final steps, finalize the usage of JSON ideas, make some rooms cleaner, get the correct sprites, cleanse the text and format them nicely. Basically, just do the design phase and clean code." />
     <MESSAGE value="Game Demo. Not entirely having all documentary but it works." />
-    <option name="LAST_COMMIT_MESSAGE" value="Game Demo. Not entirely having all documentary but it works." />
+    <MESSAGE value="All the resources." />
+    <MESSAGE value="I made boundaries more smooth and gave an instruction panel. Also creating some levels of enemies that shoot towards the player. There is an issue though, somehow, once the player dies, the image or gifs do not display, I will need to fix that after this patch." />
+    <MESSAGE value="I added sounds, for start room, and arena, along with the player shoot and the player getting hit. And enemy shooting sounds.&#10;I added the border function, changed the distance between the player and enemy colliding.&#10;The score increases by 50 at the moment, it's for testing to see if the other enemies spawn and function properly.&#10;Furthermore, I am still continuing on fixing the feedback." />
+    <MESSAGE value="Cleansed Window class.&#10;Removed Chest Room and Shop." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleansed Window class.&#10;Removed Chest Room and Shop." />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -351,11 +766,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Preloader.java</url>
-          <line>143</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -1,20 +1,19 @@
 package org.example.Main;
 
-import org.example.database.DatabaseManagement;
-import org.example.gui.Menu;
-import org.example.locations.chestroom.ChestRoom;
-import org.example.locations.shop.Shop;
-import org.example.locations.startArea.SafeRoom;
-import org.example.music.MusicManager;
-import org.example.spriteClasses.GifManager;
-
 import java.util.Random;
+import org.example.database.DatabaseManagement;
+import org.example.gui.Hud;
+import org.example.gui.Menu;
+import org.example.locations.startArea.SafeRoom;
+import org.example.spriteClasses.Gif;
 
 /**
  * Activates before the game starts.
  * This is to prevent the performance delays when starting the game.
  *
  * @author Data Pirates Team
+ *
+ * @version JDK 18.
  */
 public class Preloader {
 
@@ -23,33 +22,30 @@ public class Preloader {
       that make the program slow in the beginning.
         Will be created in a thread.
   */
+
   public static final Random RNG = new Random();
-  private boolean isFinished = false;
-  private GifManager gifBackground;
-  private Window scene;
+  public static DatabaseManagement db;
   public DataPiratesCollection dpC;
+  private Gif gifBackground;
+  private final Window scene;
   private Score score;
-  private Items item;
   private Timer clock;
-  private Shop shop;
-  private ChestRoom cchest;
   private SafeRoom saferoom;
-  private MusicManager music;
-  private GifManager loadingIMG;
-
+  private Gif loadingIMG;
   private Menu menu;
+  private Hud dp_Hud;
 
-  private static DatabaseManagement db;
+  /* Preloader loading status. */
+  private boolean isFinished = false;
 
   /**
    * Create a new Preloader class.
+   *
    * @param scene the Window where the loading screen will be placed.
    */
   public Preloader(Window scene) {
     this.scene = scene;
-    new Thread(() -> {
-      loadingIMG = new GifManager("loading\\frame ", 60, scene);
-    }).start();
+    new Thread(() -> loadingIMG = new Gif("loading\\frame ", 60, scene)).start();
     loadThings();
   }
 
@@ -66,17 +62,15 @@ public class Preloader {
     new Thread(() -> {
 
       /* Load these resources. */
-      gifBackground = new GifManager("world0\\frame ", 57, scene);
-      db = new DatabaseManagement();
-      dpC = DataPiratesCollection.getInstance();
-      score = Score.getInstance();
+      gifBackground = new Gif("world0\\frame ", 57, scene);
+      saferoom = new SafeRoom(scene, new Gif("world3\\frame ", 33, scene));
       EntityColor.setColors();
-      item = Items.getInstance();
+      score = Score.getInstance();
+      dp_Hud = new Hud(scene, this);
+      db = new DatabaseManagement(score);
+      dpC = DataPiratesCollection.getInstance();
+      Weapons.weaponStash();
       clock = new Timer();
-      shop = new Shop(scene);
-      cchest = new ChestRoom(scene);
-      saferoom = new SafeRoom(scene);
-      music = MusicManager.getInstance();
       menu = new Menu(scene);
 
       /*
@@ -84,9 +78,8 @@ public class Preloader {
        */
       scene.getResource();
       isFinished = true;
-//      exit();
       try {
-        Thread.sleep(100);
+        Thread.sleep(100); /* constant is only used here. */
       } catch (Exception e) {
         e.printStackTrace();
       }
@@ -95,61 +88,43 @@ public class Preloader {
 
   /**
    * Checks if the Preloader is finished.
-   * @return true if finished, false otherwise
+   *
+   * @return true if finished, false otherwise.
    */
   public boolean isFinished() {
     return isFinished;
   }
 
+  /* TODO: Getters and Setters. */
 
-  /* Getters and Setters. */
-
-  public DatabaseManagement getDb() {
-    return db;
-  }
-
-  public static void setDb(DatabaseManagement db) {
-    Preloader.db = db;
-  }
-
-  public GifManager getLoadingImage() {
+  public Gif getLoadingImage() {
     return loadingIMG;
   }
 
-  public GifManager getGifBackground() {
+  public Gif getGifBackground() {
     return gifBackground;
   }
+
   public DataPiratesCollection getDpC() {
     return dpC;
+  }
+
+  public Hud getDp_Hud() {
+    return dp_Hud;
   }
 
   public Score getScore() {
     return score;
   }
 
-  public Items getItem() {
-    return item;
-  }
-
   public Timer getClock() {
     return clock;
-  }
-
-  public Shop getShop() {
-    return shop;
-  }
-
-  public ChestRoom getCchest() {
-    return cchest;
   }
 
   public SafeRoom getSaferoom() {
     return saferoom;
   }
 
-  public MusicManager getMusic() {
-    return music;
-  }
 
   public Menu getMenu() {
     return menu;
