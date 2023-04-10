@@ -2,55 +2,72 @@ package org.example.gui;
 
 import org.example.Main.EntityColor;
 import org.example.Main.Window;
+import processing.core.PImage;
 
-public class Menu extends GuiManager{
+/**
+ * Used in the safe room or the first room the player
+ * spawns in.
+ *
+ * @author Data Pirates Team.
+ *
+ * @version JDK 18.
+ */
+public class Menu extends GuiManager {
 
 
-  private Shape settings;
-
-  private Shape loadData;
-
+  /* Name of the files. */
+  private final String[] imagesSTR = {"DP_Title.png", "exit.png", "guide.png"};
   private Shape exit;
+  private PImage[] images_Array = new PImage[3];
 
   public Menu(Window scene) {
     super(scene);
-    int firstMenuX = getScene().getWidth() / 12;
-    int firstMenuY = getScene().getHeight() / 15;
-    int size = 100;
-    int marginY = 20;
+    setUp();
+  }
 
-    /* Will reformat soon. */
-    firstMenuY+=(size + marginY);
-    firstMenuY+=(size + marginY);
-    firstMenuY+=(size + marginY);
+  /**
+   * Set up the resources.
+   */
+  public void setUp() {
+    /* Directory where the buttons / title images are found. */
+    final String path = "datapirates\\src\\main\\java\\org\\example\\static_assets\\";
+
+    for (int i = 0; i < imagesSTR.length; i++) {
+      images_Array[i] = getScene().loadImage(path + imagesSTR[i]);
+    }
+    final int size = 100;
+    final int marginY = 20;
+    int firstMenuX = getScene().width / 12;
+    int firstMenuY = getScene().height / 15;
+    firstMenuY += (size + marginY);
+
     exit = new Shape(firstMenuX,
             firstMenuY,
-            size,
-            EntityColor.getSpriteColors().get("Menu Buttons"));
+            size);
   }
 
-
-  public void drawAtSafe() {
-    getScene().pushStyle();
+  /**
+   * Draw the objects at the title page room.
+   */
+  public void drawMenuComponents() {
     int allSize = exit.getSize();
-    int textSizee = allSize / 3;
+    getScene().image(images_Array[1], exit.getxPos(), exit.getyPos(), allSize + allSize, allSize);
+    getScene().image(
+            images_Array[0],
+            (float) Window.WIDTH / 2,
+            (float) Window.HEIGHT / 100,
+            allSize * 5,
+            allSize * 5);
 
-    /* There are some things in here that need to be changed. */
-
-    /* Get the leaderboard status and display it. */
-    getScene().fill(exit.getColor().getRGB());
-    getScene().rect(exit.getxPos(), exit.getyPos(), allSize + allSize, allSize);
-    getScene().textSize(textSizee);
-    getScene().fill(EntityColor.getSpriteColors().get("Terminator X").getRGB());
-    getScene().text("Exit", (exit.getxPos()), exit.getyPos() + textSizee + (textSizee / 2));
-    getScene().pushStyle();
-
-//    super.draw();
   }
 
+  /**
+   * Always check if the player clicks on the buttons.
+   */
   public void update() {
     if (overRect(exit.getxPos(), exit.getyPos(), exit.getSize() + exit.getSize(), exit.getSize())) {
       getScene().exit();
     }
   }
+
 }

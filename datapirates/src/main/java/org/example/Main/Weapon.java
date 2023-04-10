@@ -1,12 +1,14 @@
 package org.example.Main;
 
-import java.awt.*;
+import java.awt.Color;
 
 /**
  * Data Pirates' Weapon class.
  * Weapon object, used for players.
  *
- * @author Data Pirates Team
+ * @author Data Pirates Team.
+ *
+ * @version JDK 18.
  */
 public class Weapon {
 
@@ -27,10 +29,12 @@ public class Weapon {
 
   /**
    * Create a new weapon.
-   * @param name weapon model
-   * @param bulletColor weapon color
-   * @param maxAmmo weapon max capacity
-   * @param dmg weapon damage
+   *
+   * @param name weapon model.
+   * @param bulletColor weapon color.
+   * @param maxAmmo weapon max capacity.
+   * @param dmg weapon damage.
+   *
    */
   public Weapon(String name, Color bulletColor, int maxAmmo, int dmg) {
     model = name;
@@ -52,15 +56,19 @@ public class Weapon {
 
   /**
    * Check if there are clips.
-   * @return true when has clips, otherwise false
+   *
+   * @return true when has clips, otherwise false.
+   *
    */
   public boolean hasAmmo() {
-    return currentAmmo >= 0;
+    return currentAmmo > 0;
   }
 
   /**
    * Get the weapon name.
-   * @return model
+   *
+   * @return model.
+   *
    */
   public String getModel() {
     return model;
@@ -76,7 +84,9 @@ public class Weapon {
 
   /**
    * Get max ammo.
-   * @return ammoCapacity
+   *
+   * @return ammoCapacity.
+   *
    */
   public int getAmmoCapacity() {
     return ammoCapacity;
@@ -84,7 +94,9 @@ public class Weapon {
 
   /**
    * Get clip value.
-   * @return currentAmmo
+   *
+   * @return currentAmmo.
+   *
    */
   public int getCurrentAmmo() {
     return currentAmmo;
@@ -92,7 +104,9 @@ public class Weapon {
 
   /**
    * Get the weapon damage.
-   * @return dmg
+   *
+   * @return dmg.
+   *
    */
   public int getDmg() {
     return dmg;
@@ -100,7 +114,9 @@ public class Weapon {
 
   /**
    * Get the Projectile's color.
-   * @return bulletColor
+   *
+   * @return bulletColor.
+   *
    */
   public Color getBulletColor() {
     return bulletColor;

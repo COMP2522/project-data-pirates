@@ -3,51 +3,56 @@ package org.example.locations.startArea;
 import org.example.Main.EntityColor;
 import org.example.Main.Window;
 import org.example.locations.KeyLocationManager;
-import org.example.spriteClasses.GifManager;
+import org.example.spriteClasses.Gif;
 
 /**
- * Safe Room known as the Menu.
+ * Title page room / Menu / Safe room.
  *
+ * @author Data Pirates Team.
+ *
+ * @version JDK 18.
  */
-public class SafeRoom implements KeyLocationManager {
+public class SafeRoom extends KeyLocationManager {
 
-  private Window scene;
-
-  private GifManager gM;
-  public SafeRoom(Window scene) {
-    this.scene = scene;
-    gM = new GifManager("world3\\frame ", 33, scene);
+  /**
+   * Construct a SafeRoom object.
+   *
+   * @param sketch sketch where the room is going to be placed.
+   * @param bg gif background.
+   */
+  public SafeRoom(Window sketch, Gif bg) {
+    super(sketch, bg);
   }
+
   @Override
   public void renderLocation() {
-    gM.displayBackground();
-    draw();
+    if (!isAtEdge()) {
+      gM.displayBackground();
+      draw();
+    }
+    super.renderLocation();
   }
 
   @Override
-  public boolean isInOrigin() {
-    return scene.getWorld() == 0;
+  public void battleSetup() {
+    super.battleSetup();
+    scene.getPlayer().getPosition().set(scene.getPlayer().getPosition().x, 10);
   }
 
   @Override
-  public void returnToOrigin() {
-    if (!isInOrigin()) {
-      renderLocation();
-    }
-
-    if (scene.getPlayer().getPosition().y >= scene.getHeight()) {
-      scene.setWorld(0);
-      scene.background(0);
-      scene.getPreloader().getClock().start();
-      scene.getPlayer().getPosition().set(scene.getPlayer().getPosition().x, 10);
-    }
+  public boolean isAtEdge() {
+    return scene.getPlayer().getPosition().y >= scene.height;
   }
 
+  /**
+   * Display other components in the safe room.
+   */
   public void draw() {
-    final int titleTextSize = scene.getWidth() / 10;
+    final int titleTextSize = scene.height / 15;
     scene.textSize(titleTextSize);
     scene.fill(EntityColor.getSpriteColors().get("Text").getRGB());
-    scene.text("Data\nPirates", scene.getWidth() / 2, scene.getHeight() / 5);
+    scene.text("High Score: " + scene.getPreloader().getScore().getHighScore() + "pts",
+            (float) Window.WIDTH / 2, Window.HEIGHT - titleTextSize);
 
   }
 }

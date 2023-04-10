@@ -1,39 +1,31 @@
 package org.example.spriteClasses;
 
 import java.awt.Color;
-
 import org.example.Main.Window;
+import processing.core.PConstants;
 import processing.core.PVector;
 
 /**
  * The entity / drawing object in the game.
  * Contains: Enemy, Player, and Projectile.
- * Others: Barriers, Cards...
  *
- * @author Teddy Dumam-Ag
+ * @author Data Pirates Team.
  *
- * @version JDK 18
+ * @version JDK 18.
  */
-public class Sprite implements Comparable<Sprite> {
+public class Sprite {
 
   protected PVector position;
-
-  private PVector direction;
-
-  private GifManager spriteMoveFunctions;
-  private float size;
-
-  /* Might include a speed buff thingy. */
-  private float speed;
-
-  private Color color;
-
+  /* Oh my goodness. */
   protected Window window;
-
-  private GifManager mm;
+  protected PVector direction;
+  protected Color color;
+  protected Gif gm;
+  protected float size;
+  protected float speed;
 
   /**
-   * Create a Sprite object.
+   * Construct a Sprite object for <strong>Player</strong> and <strong>Projectile</strong>.
    *
    * @param pos Current position of the sprite.
    * @param direction Current direction of the sprite.
@@ -41,6 +33,7 @@ public class Sprite implements Comparable<Sprite> {
    * @param speed Speed of the sprite.
    * @param clr Color of the sprite.
    * @param scene The Frame where the sprite is displayed.
+   *
    */
   public Sprite(PVector pos, PVector direction, float size, float speed, Color clr, Window scene) {
     position = pos;
@@ -49,40 +42,51 @@ public class Sprite implements Comparable<Sprite> {
     this.speed = speed;
     color = clr;
     this.window = scene;
-    // Have a Map that uses filenames
-    // and add the amount of sprites
-    // then pvector the pos.
-//    spriteMoveFunctions = new MoveManager();
-  }
-
-  public void setMm(GifManager mm) {
-    this.mm = mm;
-  }
-
-  public GifManager getMm() {
-    return mm;
   }
 
   /**
-   * Draws the sprite into the Frame.
+   * Construct a Sprite object for <strong>Enemy</strong>.
+   *
+   * @param size Size of the sprite.
+   * @param speed Speed of the sprite.
+   * @param scene Sketch where the sprite is displayed.
+   *
+   */
+  public Sprite(float size, float speed, Window scene) {
+    this.speed = speed;
+    window = scene;
+    this.size = size;
+  }
+
+  /**
+   * Placeholder.
+   */
+  public void setUp() {}
+
+  /**
+   * Draws the sprite into the frame.
    */
   public void draw() {
     window.pushStyle();
-    window.fill(this.color.getRed(), this.color.getGreen(), this.color.getBlue());
-    window.ellipse(this.position.x, this.position.y, size, size);
+    window.fill(color.getRGB());
+    window.ellipseMode(PConstants.CENTER);
+    window.ellipse(position.x, position.y, size, size);
+    window.ellipseMode(PConstants.CORNER);
     window.popStyle();
+
   }
 
   /**
-   * Will be used probably on explosive weapons.
+   * Show that white square around a sprite.
    */
-  public void bounce() {
-    if (this.position.x <= 0
-            || this.position.x >= window.getWidth()
-            || this.position.y <= 0
-            || this.position.y >= window.getHeight()) {
-      this.direction.rotate(window.HALF_PI);
-    }
+  public void displayBoundaries() {
+    window.pushStyle();
+    window.stroke(new Color(0xFFFFFF).getRGB());
+    window.noFill();
+    window.rectMode(PConstants.CENTER);
+    window.rect(position.x, position.y, size, size);
+    window.rectMode(PConstants.CORNER);
+    window.popStyle();
   }
 
   /**
@@ -92,27 +96,30 @@ public class Sprite implements Comparable<Sprite> {
    * @param obj The Sprite possibly colliding.
    *
    * @return true if collided, otherwise false.
+   *
    */
   public boolean collided(Sprite obj) {
-    float distance = PVector.dist(this.getPosition(), obj.getPosition());
-    if (distance <= (this.getSize() + obj.getSize())) {
-      return true;
-    }
-    return false;
+    float distance = PVector.dist(position, obj.getPosition());
+    return distance <= (size + 20);
   }
 
-  // this is the moves
+  /**
+   * Translate sprite to new location.
+   */
   public void update() {
-    //    this.bounce();
-    this.position = this.getPosition().add(this.direction.copy().mult(speed));
+    position = position.add(direction.copy().mult(speed));
+  }
+
+  public void setGm(Gif gm) {
+    this.gm = gm;
+  }
+
+  public Gif getGm() {
+    return gm;
   }
 
   public PVector getPosition() {
     return position;
-  }
-
-  public Color getColor() {
-    return color;
   }
 
   public Window getWindow() {
@@ -155,43 +162,4 @@ public class Sprite implements Comparable<Sprite> {
     this.direction = direction;
   }
 
-  /**
-   * Compares this object with the specified object for order.  Returns a
-   * negative integer, zero, or a positive integer as this object is less
-   * than, equal to, or greater than the specified object.
-   *
-   * <p>The implementor must ensure {@link Integer#signum
-   * signum}{@code (x.compareTo(y)) == -signum(y.compareTo(x))} for
-   * all {@code x} and {@code y}.  (This implies that {@code
-   * x.compareTo(y)} must throw an exception if and only if {@code
-   * y.compareTo(x)} throws an exception.)
-   *
-   * <p>The implementor must also ensure that the relation is transitive:
-   * {@code (x.compareTo(y) > 0 && y.compareTo(z) > 0)} implies
-   * {@code x.compareTo(z) > 0}.
-   *
-   * <p>Finally, the implementor must ensure that {@code
-   * x.compareTo(y)==0} implies that {@code signum(x.compareTo(z))
-   * == signum(y.compareTo(z))}, for all {@code z}.
-   *
-   * @param o the object to be compared.
-   *
-   * @return a negative integer, zero, or a positive integer as this object
-   *        is less than, equal to, or greater than the specified object.
-   *
-   * @throws NullPointerException if the specified object is null
-   * @throws ClassCastException   if the specified object's type prevents it
-   *                              from being compared to this object.
-   *
-   * @apiNote It is strongly recommended, but <i>not</i> strictly required that
-   *        {@code (x.compareTo(y)==0) == (x.equals(y))}.  Generally speaking, any
-   *        class that implements the {@code Comparable} interface and violates
-   *        this condition should clearly indicate this fact.  The recommended
-   *        language is "Note: this class has a natural ordering that is
-   *        inconsistent with equals."
-   */
-  @Override
-  public int compareTo(Sprite o) {
-    return 0;
-  }
 }
