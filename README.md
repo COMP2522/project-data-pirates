@@ -24,7 +24,7 @@ Ensure you have the following software installed:
 ## How to Play
 **Start the game by descending from the first location.**
 - Move using the `W`, `A`, `S`, and `D` keys.
-- Shoot by pressing the `left mouse button`.
+- Shoot by pressing the `mouse keys` or `SPACE`.
 - Reload your weapon by pressing the `R` key.
 - Toggle the player's stat HUD by pressing the `C` key (only available in the **arena** world).
 ## Controls
@@ -34,7 +34,7 @@ Ensure you have the following software installed:
 - `D`: Move right
 - `R`: Reload weapon
 - `C`: Toggle player's stat HUD (arena world only)
-- `Left mouse button` / `SPACE`: Shoot
+- `mouse keys` / `SPACE`: Shoot
 
 ## Authors
 - Eric
