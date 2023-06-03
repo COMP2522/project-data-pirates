@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="fix conflict">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_4_9_23_18_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_4_9_23_18__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/documents/Jack/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/documents/Jack/pitch.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/EnemyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/MenuTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/MusicManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/PlayerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/PreloaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/database/config.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/datapirates">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/javs">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/javs">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/pirates">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/datapirates">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="datapirates" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="datapirates" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="datapirates" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="02164455-e5aa-45eb-85c7-f171c1162b65" />
+        <option name="url" value="https://github.com/COMP2522/project-data-pirates.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2LykBBs6Bxd3VgRYt20jkSInB9P" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/adj37/Desktop/project-data-pirates/datapirates/src/test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "module",
+      "directory"
+    ],
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adj37\Desktop\project-data-pirates\datapirates\src\test" />
+      <recent name="C:\Users\adj37\Desktop\project-data-pirates\datapirates\src" />
+      <recent name="C:\Users\adj37\Desktop\project-data-pirates\datapirates\src\main" />
+      <recent name="C:\Users\adj37\Desktop\project-data-pirates\datapirates\src\main\java\org\example" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\backgrounds" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\pictures" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\music" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example" />
+      <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Window">
+    <configuration name="Window" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main.Window" />
+      <module name="datapirates.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.spriteClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EnemyTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/datapirates" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;EnemyTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MusicManagerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/datapirates" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;MusicManagerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="PlayerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/datapirates" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;PlayerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.EnemyTest" />
+        <item itemvalue="Gradle.MusicManagerTest" />
+        <item itemvalue="Gradle.PlayerTest" />
+        <item itemvalue="Application.Window" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Created the basic structure and gameplay of the game.">
+      <created>1676850086327</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676850086327</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="Created the basic structure and gameplay of the game." />
+      <created>1676850571633</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676850571633</updated>
+      <workItem from="1676850572944" duration="6223000" />
+      <workItem from="1676857286480" duration="206000" />
+      <workItem from="1676865262122" duration="1177000" />
+      <workItem from="1676879424991" duration="689000" />
+      <workItem from="1677008475600" duration="596000" />
+      <workItem from="1677017859922" duration="2743000" />
+      <workItem from="1677021437084" duration="264000" />
+      <workItem from="1677036429540" duration="102000" />
+      <workItem from="1677089746958" duration="187000" />
+      <workItem from="1677176934369" duration="169000" />
+      <workItem from="1677255350943" duration="2817000" />
+      <workItem from="1677258513998" duration="2450000" />
+      <workItem from="1677860707910" duration="1060000" />
+      <workItem from="1677867867167" duration="76000" />
+      <workItem from="1677881847483" duration="6000" />
+      <workItem from="1678381711837" duration="159000" />
+      <workItem from="1678419001034" duration="47000" />
+      <workItem from="1678470370603" duration="2020000" />
+      <workItem from="1678490824103" duration="68000" />
+      <workItem from="1678490990286" duration="1366000" />
+      <workItem from="1679265722524" duration="6011000" />
+      <workItem from="1679337026609" duration="51000" />
+      <workItem from="1679415139675" duration="19000" />
+      <workItem from="1679421308120" duration="57000" />
+      <workItem from="1679423097776" duration="172000" />
+      <workItem from="1679498652196" duration="1897000" />
+      <workItem from="1679500593374" duration="9047000" />
+      <workItem from="1679511051740" duration="674000" />
+      <workItem from="1679512190268" duration="72000" />
+      <workItem from="1679512695995" duration="647000" />
+      <workItem from="1679526408959" duration="3329000" />
+      <workItem from="1679671211719" duration="230000" />
+      <workItem from="1679673297249" duration="387000" />
+      <workItem from="1679675636862" duration="2793000" />
+      <workItem from="1679693811501" duration="930000" />
+      <workItem from="1679694853164" duration="291000" />
+      <workItem from="1679696986161" duration="118000" />
+      <workItem from="1679701851292" duration="1490000" />
+      <workItem from="1679720902351" duration="7000" />
+      <workItem from="1679806547979" duration="10000" />
+      <workItem from="1679939875651" duration="4567000" />
+      <workItem from="1679946135838" duration="6000" />
+      <workItem from="1679946472557" duration="11025000" />
+      <workItem from="1679962992494" duration="376000" />
+      <workItem from="1680018491575" duration="84000" />
+      <workItem from="1680023604552" duration="65000" />
+      <workItem from="1680034376016" duration="9385000" />
+      <workItem from="1680047741742" duration="7520000" />
+      <workItem from="1680104083955" duration="13878000" />
+      <workItem from="1680127467405" duration="1565000" />
+      <workItem from="1680129043696" duration="324000" />
+      <workItem from="1680129376599" duration="10098000" />
+      <workItem from="1680197107138" duration="188000" />
+      <workItem from="1680206934567" duration="95000" />
+      <workItem from="1680211471858" duration="406000" />
+      <workItem from="1680214717928" duration="14391000" />
+      <workItem from="1680275419229" duration="3289000" />
+      <workItem from="1681030361188" duration="785000" />
+      <workItem from="1681082185415" duration="1195000" />
+    </task>
+    <task id="LOCAL-00002" summary="Implemented Timer functions, entrance to a next scene, and a basic health system for the Player.">
+      <created>1676857005285</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676857005285</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Created a health system for enemies. Will plan on calculating defense values to the entities.">
+      <created>1677036525594</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677036525594</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Pushed to main.">
+      <created>1677256201970</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677256201970</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed conflicts from main.">
+      <created>1677257338478</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677257338478</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Current State of the game. Next final steps, finalize the usage of JSON ideas, make some rooms cleaner, get the correct sprites, cleanse the text and format them nicely. Basically, just do the design phase and clean code.">
+      <created>1680068781400</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680068781400</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Current State of the game. Next final steps, finalize the usage of JSON ideas, make some rooms cleaner, get the correct sprites, cleanse the text and format them nicely. Basically, just do the design phase and clean code.">
+      <created>1680068915799</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680068915799</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Game Demo. Not entirely having all documentary but it works.">
+      <created>1680276783221</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680276783221</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Game Demo. Not entirely having all documentary but it works.">
+      <created>1680927186842</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680927186842</updated>
+    </task>
+    <task id="LOCAL-00010" summary="test">
+      <created>1681103327066</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681103327067</updated>
+    </task>
+    <task id="LOCAL-00011" summary="test">
+      <created>1681103565424</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681103565424</updated>
+    </task>
+    <task id="LOCAL-00012" summary="test">
+      <created>1681103918823</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681103918823</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix conflict">
+      <created>1681110368484</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681110368484</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Created the basic structure and gameplay of the game." />
+    <MESSAGE value="Implemented Timer functions, entrance to a next scene, and a basic health system for the Player." />
+    <MESSAGE value="Created a health system for enemies. Will plan on calculating defense values to the entities." />
+    <MESSAGE value="Pushed to main." />
+    <MESSAGE value="Fixed conflicts from main." />
+    <MESSAGE value="Current State of the game. Next final steps, finalize the usage of JSON ideas, make some rooms cleaner, get the correct sprites, cleanse the text and format them nicely. Basically, just do the design phase and clean code." />
+    <MESSAGE value="Game Demo. Not entirely having all documentary but it works." />
+    <MESSAGE value="test" />
+    <MESSAGE value="fix conflict" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix conflict" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

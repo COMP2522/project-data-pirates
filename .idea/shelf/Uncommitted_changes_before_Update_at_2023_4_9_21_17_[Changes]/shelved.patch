@@ -1,0 +1,614 @@
+Index: .idea/modules/datapirates.test.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules/datapirates.test.iml b/.idea/modules/datapirates.test.iml
+new file mode 100644
+--- /dev/null	(date 1681090156021)
++++ b/.idea/modules/datapirates.test.iml	(date 1681090156021)
+@@ -0,0 +1,29 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$/../../datapirates/src/test">
++      <sourceFolder url="file://$MODULE_DIR$/../../datapirates/src/test/java" isTestSource="true" />
++    </content>
++    <orderEntry type="jdk" jdkName="17" jdkType="JavaSDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" scope="TEST" name="Gradle: org.processing:core:3.3.7" level="project" />
++    <orderEntry type="module-library" scope="TEST">
++      <library name="testng">
++        <CLASSES>
++          <root url="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.1.0/testng-7.1.0.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.72/jcommander-1.72.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/com/google/inject/guice/4.1.0/guice-4.1.0-no_aop.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.21/snakeyaml-1.21.jar!/" />
++        </CLASSES>
++        <JAVADOC />
++        <SOURCES />
++      </library>
++    </orderEntry>
++    <orderEntry type="library" scope="TEST" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.9.2" level="project" />
++    <orderEntry type="module" module-name="datapirates.main" scope="TEST" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"FrameworkDetectionExcludesConfiguration\">\r\n    <file type=\"web\" url=\"file://$PROJECT_DIR$/datapirates\" />\r\n  </component>\r\n  <component name=\"PDMPlugin\">\r\n    <option name=\"skipTestSources\" value=\"false\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"18\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 1d14bd41dddcb0dfc755929ed623b5ff46a44517)
++++ b/.idea/misc.xml	(date 1681090156044)
+@@ -7,7 +7,7 @@
+   <component name="PDMPlugin">
+     <option name="skipTestSources" value="false" />
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1681090156031)
++++ b/.idea/modules.xml	(date 1681090156031)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/datapirates.test.iml" filepath="$PROJECT_DIR$/.idea/modules/datapirates.test.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"8ab59f6c-8c88-439d-9ede-7bd8782f96b1\" name=\"Changes\" comment=\"Game Demo. Not entirely having all documentary but it works.\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-02-19_3_37_p_m___Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-02-19_3_37_p_m___Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/README.md\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/README.md\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/resourceHashesCache.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/resourceHashesCache.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/outputFiles.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/outputFiles.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/datapirates/.gradle/file-system.probe\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/datapirates/.gradle/file-system.probe\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Window.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Window.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$/datapirates\">\r\n      <ProjectState />\r\n    </projectState>\r\n    <projectState path=\"$PROJECT_DIR$/javs\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <task path=\"$PROJECT_DIR$/javs\">\r\n          <activation />\r\n        </task>\r\n        <task path=\"$PROJECT_DIR$/pirates\">\r\n          <activation />\r\n        </task>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"datapirates\" type=\"f1a62948:ProjectNode\" />\r\n              </path>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"datapirates\" type=\"f1a62948:ProjectNode\" />\r\n                <item name=\"Dependencies\" type=\"6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode\" />\r\n              </path>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"datapirates\" type=\"f1a62948:ProjectNode\" />\r\n                <item name=\"Dependencies\" type=\"6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode\" />\r\n                <item name=\"compileClasspath\" type=\"62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode\" />\r\n              </path>\r\n            </expand>\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"FindBugs-IDEA-Workspace\">\r\n    <toolWindowEditorPreview>false</toolWindowEditorPreview>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"02164455-e5aa-45eb-85c7-f171c1162b65\" />\r\n        <option name=\"url\" value=\"https://github.com/COMP2522/project-data-pirates.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2LykBBs6Bxd3VgRYt20jkSInB9P\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"autoscrollToSource\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n    <option name=\"showVisibilityIcons\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"C:/Users/adj37/Desktop/como2522/project-data-pirates\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"reference.settings.ide.settings.uml\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"ChangesTree.GroupingKeys\": [\r\n      \"module\",\r\n      \"directory\"\r\n    ],\r\n    \"com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File\": [\r\n      \"TEXT\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Owner\\IdeaProjects\\project-data-pirates\\datapirates\\src\\main\\java\\org\\example\\backgrounds\" />\r\n      <recent name=\"C:\\Users\\Owner\\IdeaProjects\\project-data-pirates\\datapirates\\src\\main\\java\\org\\example\\spriteClasses\\sprites\\player\" />\r\n      <recent name=\"C:\\Users\\Owner\\IdeaProjects\\project-data-pirates\\datapirates\\src\\main\\java\\org\\example\\spriteClasses\\sprites\" />\r\n      <recent name=\"C:\\Users\\Owner\\IdeaProjects\\project-data-pirates\\datapirates\\src\\main\\java\\org\\example\\pictures\" />\r\n      <recent name=\"C:\\Users\\Owner\\IdeaProjects\\project-data-pirates\\datapirates\\library\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Owner\\IdeaProjects\\project-data-pirates\\datapirates\\src\\main\\java\\org\\example\\pictures\" />\r\n      <recent name=\"C:\\Users\\Owner\\IdeaProjects\\project-data-pirates\\datapirates\\src\\main\\java\\org\\example\\music\" />\r\n      <recent name=\"C:\\Users\\Owner\\IdeaProjects\\project-data-pirates\\datapirates\\src\\main\" />\r\n      <recent name=\"C:\\Users\\Owner\\IdeaProjects\\project-data-pirates\\datapirates\\src\\main\\java\\org\\example\" />\r\n      <recent name=\"C:\\Users\\Owner\\IdeaProjects\\project-data-pirates\\datapirates\\src\\main\\java\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Window\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.Main.Window\" />\r\n      <module name=\"datapirates.main\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.example.spriteClasses.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Window\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task id=\"LOCAL-00001\" summary=\"Created the basic structure and gameplay of the game.\">\r\n      <created>1676850086327</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1676850086327</updated>\r\n    </task>\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"8ab59f6c-8c88-439d-9ede-7bd8782f96b1\" name=\"Changes\" comment=\"Created the basic structure and gameplay of the game.\" />\r\n      <created>1676850571633</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1676850571633</updated>\r\n      <workItem from=\"1676850572944\" duration=\"6223000\" />\r\n      <workItem from=\"1676857286480\" duration=\"206000\" />\r\n      <workItem from=\"1676865262122\" duration=\"1177000\" />\r\n      <workItem from=\"1676879424991\" duration=\"689000\" />\r\n      <workItem from=\"1677008475600\" duration=\"596000\" />\r\n      <workItem from=\"1677017859922\" duration=\"2743000\" />\r\n      <workItem from=\"1677021437084\" duration=\"264000\" />\r\n      <workItem from=\"1677036429540\" duration=\"102000\" />\r\n      <workItem from=\"1677089746958\" duration=\"187000\" />\r\n      <workItem from=\"1677176934369\" duration=\"169000\" />\r\n      <workItem from=\"1677255350943\" duration=\"2817000\" />\r\n      <workItem from=\"1677258513998\" duration=\"2450000\" />\r\n      <workItem from=\"1677860707910\" duration=\"1060000\" />\r\n      <workItem from=\"1677867867167\" duration=\"76000\" />\r\n      <workItem from=\"1677881847483\" duration=\"6000\" />\r\n      <workItem from=\"1678381711837\" duration=\"159000\" />\r\n      <workItem from=\"1678419001034\" duration=\"47000\" />\r\n      <workItem from=\"1678470370603\" duration=\"2020000\" />\r\n      <workItem from=\"1678490824103\" duration=\"68000\" />\r\n      <workItem from=\"1678490990286\" duration=\"1366000\" />\r\n      <workItem from=\"1679265722524\" duration=\"6011000\" />\r\n      <workItem from=\"1679337026609\" duration=\"51000\" />\r\n      <workItem from=\"1679415139675\" duration=\"19000\" />\r\n      <workItem from=\"1679421308120\" duration=\"57000\" />\r\n      <workItem from=\"1679423097776\" duration=\"172000\" />\r\n      <workItem from=\"1679498652196\" duration=\"1897000\" />\r\n      <workItem from=\"1679500593374\" duration=\"9047000\" />\r\n      <workItem from=\"1679511051740\" duration=\"674000\" />\r\n      <workItem from=\"1679512190268\" duration=\"72000\" />\r\n      <workItem from=\"1679512695995\" duration=\"647000\" />\r\n      <workItem from=\"1679526408959\" duration=\"3329000\" />\r\n      <workItem from=\"1679671211719\" duration=\"230000\" />\r\n      <workItem from=\"1679673297249\" duration=\"387000\" />\r\n      <workItem from=\"1679675636862\" duration=\"2793000\" />\r\n      <workItem from=\"1679693811501\" duration=\"930000\" />\r\n      <workItem from=\"1679694853164\" duration=\"291000\" />\r\n      <workItem from=\"1679696986161\" duration=\"118000\" />\r\n      <workItem from=\"1679701851292\" duration=\"1490000\" />\r\n      <workItem from=\"1679720902351\" duration=\"7000\" />\r\n      <workItem from=\"1679806547979\" duration=\"10000\" />\r\n      <workItem from=\"1679939875651\" duration=\"4567000\" />\r\n      <workItem from=\"1679946135838\" duration=\"6000\" />\r\n      <workItem from=\"1679946472557\" duration=\"11025000\" />\r\n      <workItem from=\"1679962992494\" duration=\"376000\" />\r\n      <workItem from=\"1680018491575\" duration=\"84000\" />\r\n      <workItem from=\"1680023604552\" duration=\"65000\" />\r\n      <workItem from=\"1680034376016\" duration=\"9385000\" />\r\n      <workItem from=\"1680047741742\" duration=\"7520000\" />\r\n      <workItem from=\"1680104083955\" duration=\"13878000\" />\r\n      <workItem from=\"1680127467405\" duration=\"1565000\" />\r\n      <workItem from=\"1680129043696\" duration=\"324000\" />\r\n      <workItem from=\"1680129376599\" duration=\"10098000\" />\r\n      <workItem from=\"1680197107138\" duration=\"188000\" />\r\n      <workItem from=\"1680206934567\" duration=\"95000\" />\r\n      <workItem from=\"1680211471858\" duration=\"406000\" />\r\n      <workItem from=\"1680214717928\" duration=\"14391000\" />\r\n      <workItem from=\"1680275419229\" duration=\"3289000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Implemented Timer functions, entrance to a next scene, and a basic health system for the Player.\">\r\n      <created>1676857005285</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1676857005285</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Created a health system for enemies. Will plan on calculating defense values to the entities.\">\r\n      <created>1677036525594</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677036525594</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Pushed to main.\">\r\n      <created>1677256201970</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677256201970</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Fixed conflicts from main.\">\r\n      <created>1677257338478</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677257338478</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Current State of the game. Next final steps, finalize the usage of JSON ideas, make some rooms cleaner, get the correct sprites, cleanse the text and format them nicely. Basically, just do the design phase and clean code.\">\r\n      <created>1680068781400</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1680068781400</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Current State of the game. Next final steps, finalize the usage of JSON ideas, make some rooms cleaner, get the correct sprites, cleanse the text and format them nicely. Basically, just do the design phase and clean code.\">\r\n      <created>1680068915799</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1680068915799</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Game Demo. Not entirely having all documentary but it works.\">\r\n      <created>1680276783221</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1680276783221</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"9\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"CUSTOM_BOOLEAN_PROPERTIES\">\r\n                <map>\r\n                  <entry key=\"Show.Git.Branches\" value=\"true\" />\r\n                </map>\r\n              </option>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Created the basic structure and gameplay of the game.\" />\r\n    <MESSAGE value=\"Implemented Timer functions, entrance to a next scene, and a basic health system for the Player.\" />\r\n    <MESSAGE value=\"Created a health system for enemies. Will plan on calculating defense values to the entities.\" />\r\n    <MESSAGE value=\"Pushed to main.\" />\r\n    <MESSAGE value=\"Fixed conflicts from main.\" />\r\n    <MESSAGE value=\"Current State of the game. Next final steps, finalize the usage of JSON ideas, make some rooms cleaner, get the correct sprites, cleanse the text and format them nicely. Basically, just do the design phase and clean code.\" />\r\n    <MESSAGE value=\"Game Demo. Not entirely having all documentary but it works.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Game Demo. Not entirely having all documentary but it works.\" />\r\n    <option name=\"GROUP_MULTIFILE_MERGE_BY_DIRECTORY\" value=\"true\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.NullPointerException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"3\" />\r\n        </breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Preloader.java</url>\r\n          <line>143</line>\r\n          <option name=\"timeStamp\" value=\"7\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1d14bd41dddcb0dfc755929ed623b5ff46a44517)
++++ b/.idea/workspace.xml	(date 1681100106343)
+@@ -5,10 +5,17 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="8ab59f6c-8c88-439d-9ede-7bd8782f96b1" name="Changes" comment="Game Demo. Not entirely having all documentary but it works.">
++      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/modules/datapirates.test.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/UML diagram" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/EnemyTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/GifManagerTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/MenuTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/MusicManagerTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/PlayerTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/datapirates/src/test/java/PreloaderTest.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-02-19_3_37_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-02-19_3_37_p_m___Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
+@@ -17,9 +24,6 @@
+       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/.gradle/file-system.probe" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Window.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/datapirates/src/main/java/org/example/spriteClasses/Enemy.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -41,6 +45,9 @@
+           <activation />
+         </task>
+         <task path="$PROJECT_DIR$/pirates">
++          <activation />
++        </task>
++        <task path="$PROJECT_DIR$/datapirates">
+           <activation />
+         </task>
+         <projects_view>
+@@ -114,33 +121,38 @@
+     <option name="showMembers" value="true" />
+     <option name="showVisibilityIcons" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "last_opened_file_path": "C:/Users/adj37/Desktop/como2522/project-data-pirates",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/adj37/Desktop/project-data-pirates&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   },
+-  "keyToStringList": {
+-    "ChangesTree.GroupingKeys": [
+-      "module",
+-      "directory"
++  &quot;keyToStringList&quot;: {
++    &quot;ChangesTree.GroupingKeys&quot;: [
++      &quot;module&quot;,
++      &quot;directory&quot;
+     ],
+-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+-      "TEXT"
++    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
++      &quot;TEXT&quot;
+     ]
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java\org\example\backgrounds" />
+@@ -157,7 +169,7 @@
+       <recent name="C:\Users\Owner\IdeaProjects\project-data-pirates\datapirates\src\main\java" />
+     </key>
+   </component>
+-  <component name="RunManager">
++  <component name="RunManager" selected="Gradle.EnemyTest">
+     <configuration name="Window" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="org.example.Main.Window" />
+       <module name="datapirates.main" />
+@@ -170,9 +182,81 @@
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
++    </configuration>
++    <configuration name="EnemyTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$/datapirates" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" value="" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value=":test" />
++            <option value="--tests" />
++            <option value="&quot;EnemyTest&quot;" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
++    </configuration>
++    <configuration name="MusicManagerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$/datapirates" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" value="" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value=":test" />
++            <option value="--tests" />
++            <option value="&quot;MusicManagerTest&quot;" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
++    </configuration>
++    <configuration name="PlayerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$/datapirates" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" value="" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value=":test" />
++            <option value="--tests" />
++            <option value="&quot;PlayerTest&quot;" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Gradle.EnemyTest" />
++        <item itemvalue="Gradle.MusicManagerTest" />
++        <item itemvalue="Gradle.PlayerTest" />
+         <item itemvalue="Application.Window" />
+       </list>
+     </recent_temporary>
+@@ -249,6 +333,8 @@
+       <workItem from="1680211471858" duration="406000" />
+       <workItem from="1680214717928" duration="14391000" />
+       <workItem from="1680275419229" duration="3289000" />
++      <workItem from="1681030361188" duration="785000" />
++      <workItem from="1681082185415" duration="1195000" />
+     </task>
+     <task id="LOCAL-00002" summary="Implemented Timer functions, entrance to a next scene, and a basic health system for the Player.">
+       <created>1676857005285</created>
+@@ -299,7 +385,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1680276783221</updated>
+     </task>
+-    <option name="localTasksCounter" value="9" />
++    <task id="LOCAL-00009" summary="Game Demo. Not entirely having all documentary but it works.">
++      <created>1680927186842</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1680927186842</updated>
++    </task>
++    <option name="localTasksCounter" value="10" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -351,11 +444,6 @@
+           <properties class="java.lang.NullPointerException" package="java.lang" />
+           <option name="timeStamp" value="3" />
+         </breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/datapirates/src/main/java/org/example/Main/Preloader.java</url>
+-          <line>143</line>
+-          <option name="timeStamp" value="7" />
+-        </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+   </component>
+Index: datapirates/src/test/java/PlayerTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/datapirates/src/test/java/PlayerTest.java b/datapirates/src/test/java/PlayerTest.java
+new file mode 100644
+--- /dev/null	(date 1681090156075)
++++ b/datapirates/src/test/java/PlayerTest.java	(date 1681090156075)
+@@ -0,0 +1,55 @@
++import org.example.Main.Weapon;
++import org.example.Main.Window;
++import org.example.spriteClasses.Player;
++import org.junit.jupiter.api.BeforeEach;
++import org.junit.jupiter.api.Test;
++import processing.core.PVector;
++
++import java.awt.*;
++
++import static org.junit.jupiter.api.Assertions.*;
++
++public class PlayerTest {
++
++    private Player player;
++    private Window window;
++
++    @BeforeEach
++    public void setUp() {
++        window = new Window();
++        PVector position = new PVector(0, 0);
++        PVector direction = new PVector(0, 0);
++        float size = 10;
++        float speed = 5;
++        Color color = Color.BLUE;
++        player = Player.getInstance(position, direction, size, speed, color, window);
++    }
++
++    @Test
++    public void testMove() {
++        player.move(5, 5);
++        PVector expectedDirection = new PVector(5, 5).normalize();
++        assertEquals(expectedDirection, player.getDirection(), "Player direction should be updated");
++    }
++
++    @Test
++    public void testBalance() {
++        Player.setBalance(100);
++        assertEquals(100, Player.getBalance(), "Player balance should be updated");
++    }
++
++    @Test
++    public void testWeapon() {
++        // The player object now initializes with a random weapon, so it shouldn't be null initially
++        assertNotNull(player.getWeapon(), "Player weapon should not be null initially");
++
++        // Create a new weapon with the required arguments
++        String model = "Test Weapon";
++        Color bulletColor = Color.RED;
++        int maxAmmo = 50;
++        int dmg = 20;
++        Weapon weapon = new Weapon(model, bulletColor, maxAmmo, dmg);
++        player.setWeapon(weapon);
++        assertEquals(weapon, player.getWeapon(), "Player weapon should be updated");
++    }
++}
+Index: datapirates/UML diagram
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/datapirates/UML diagram b/datapirates/UML diagram
+new file mode 100644
+--- /dev/null	(date 1681100106246)
++++ b/datapirates/UML diagram	(date 1681100106246)
+@@ -0,0 +1,1 @@
++https://lucid.app/lucidchart/a19795ef-a477-47af-9b54-02133bf2b99e/edit?invitationId=inv_88da3721-c10f-4e3d-917e-01c0e868ec14&page=0_0#
+\ No newline at end of file
+Index: datapirates/src/test/java/EnemyTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/datapirates/src/test/java/EnemyTest.java b/datapirates/src/test/java/EnemyTest.java
+new file mode 100644
+--- /dev/null	(date 1681090156096)
++++ b/datapirates/src/test/java/EnemyTest.java	(date 1681090156096)
+@@ -0,0 +1,44 @@
++import org.example.Main.Window;
++import org.example.spriteClasses.Enemy;
++import org.junit.jupiter.api.BeforeEach;
++import org.junit.jupiter.api.Test;
++import processing.core.PVector;
++
++import java.awt.*;
++
++import static org.junit.jupiter.api.Assertions.*;
++
++public class EnemyTest {
++
++    private Enemy enemy;
++
++    @BeforeEach
++    public void setUp() {
++        Window window = new Window();
++        PVector position = new PVector(0, 0);
++        PVector direction = new PVector(0, 0);
++        float size = 10;
++        float speed = 5;
++        Color color = Color.RED;
++        String level = "level1";
++        enemy = new Enemy(position, direction, size, speed, color, window, level);
++    }
++
++    @Test
++    public void testEnemyCreation() {
++        assertNotNull(enemy, "Enemy should be created");
++    }
++
++    @Test
++    public void testEnemyUpdate() {
++        PVector initialPosition = enemy.getPosition().copy();
++        enemy.update();
++        PVector expectedPosition = initialPosition.add(enemy.getDirection().copy().mult(enemy.getSpeed()));
++        assertEquals(expectedPosition, enemy.getPosition(), "Enemy position should be updated");
++    }
++
++    @Test
++    public void testEnemyStats() {
++        assertNotNull(enemy.getEnemyStat(), "Enemy stats should be set");
++    }
++}
+Index: datapirates/src/test/java/GifManagerTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/datapirates/src/test/java/GifManagerTest.java b/datapirates/src/test/java/GifManagerTest.java
+new file mode 100644
+--- /dev/null	(date 1681090156105)
++++ b/datapirates/src/test/java/GifManagerTest.java	(date 1681090156105)
+@@ -0,0 +1,28 @@
++import org.example.Main.Window;
++import org.example.spriteClasses.GifManager;
++import org.junit.jupiter.api.BeforeEach;
++import org.junit.jupiter.api.Test;
++
++import static org.junit.Assert.assertNotNull;
++
++public class GifManagerTest {
++    private Window scene;
++    private GifManager gifManager;
++
++    private String fileNames;
++
++    private int numberOfSprites;
++
++    @BeforeEach
++    void setup() {
++        scene = new Window();
++        fileNames = "test\\frame";
++        numberOfSprites = 5;
++        gifManager = new GifManager(fileNames, numberOfSprites, scene);
++    }
++
++    @Test
++    void testGifManagerCreation() {
++        assertNotNull(gifManager);
++    }
++}
+Index: datapirates/src/test/java/MusicManagerTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/datapirates/src/test/java/MusicManagerTest.java b/datapirates/src/test/java/MusicManagerTest.java
+new file mode 100644
+--- /dev/null	(date 1681090156114)
++++ b/datapirates/src/test/java/MusicManagerTest.java	(date 1681090156114)
+@@ -0,0 +1,29 @@
++import org.example.music.MusicManager;
++import org.junit.jupiter.api.BeforeEach;
++import org.junit.jupiter.api.Test;
++
++import static org.junit.jupiter.api.Assertions.*;
++
++public class MusicManagerTest {
++
++    private MusicManager musicManager;
++
++    @BeforeEach
++    public void setUp() {
++        musicManager = MusicManager.getInstance();
++    }
++
++    @Test
++    public void testPlayBackgroundMusic() {
++        musicManager.play(0); // Play music for worldID 0
++        assertTrue(musicManager.isPlaying(), "Background music should be playing");
++    }
++
++    @Test
++    public void testStopMusic() {
++        musicManager.play(0); // Play music for worldID 0
++        musicManager.stop();
++        assertFalse(musicManager.isPlaying(), "Music should be stopped");
++    }
++
++}
+\ No newline at end of file
+Index: datapirates/src/test/java/PreloaderTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/datapirates/src/test/java/PreloaderTest.java b/datapirates/src/test/java/PreloaderTest.java
+new file mode 100644
+--- /dev/null	(date 1681090156056)
++++ b/datapirates/src/test/java/PreloaderTest.java	(date 1681090156056)
+@@ -0,0 +1,39 @@
++import org.example.Main.Preloader;
++import org.example.Main.Window;
++import org.junit.Before;
++import org.junit.Test;
++
++import static org.junit.Assert.assertFalse;
++import static org.junit.Assert.assertTrue;
++
++public class PreloaderTest {
++    private Window scene;
++
++    private Preloader preloader;
++
++    @Before
++    public void setup() {
++        scene = new Window();
++        preloader = new Preloader(scene);
++    }
++
++    @Test
++    void testIsFinished() {
++        assertFalse(preloader.isFinished());
++
++        while (!preloader.isFinished()) {
++            // wait for the preloader to finish
++            try {
++                Thread.sleep(100);
++            } catch (InterruptedException e) {
++                e.printStackTrace();
++            }
++        }
++        assertTrue(preloader.isFinished());
++    }
++
++    @Test
++    void testIsNotFinished() {
++        assertFalse(preloader.isFinished());
++    }
++}
+Index: datapirates/src/test/java/MenuTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/datapirates/src/test/java/MenuTest.java b/datapirates/src/test/java/MenuTest.java
+new file mode 100644
+--- /dev/null	(date 1681090156066)
++++ b/datapirates/src/test/java/MenuTest.java	(date 1681090156066)
+@@ -0,0 +1,27 @@
++import org.example.Main.Window;
++import org.example.gui.Menu;
++import org.junit.jupiter.api.BeforeEach;
++import org.junit.jupiter.api.Test;
++
++import static org.junit.Assert.assertNotNull;
++
++public class MenuTest {
++    private Menu menu;
++    private Window scene;
++
++    @BeforeEach
++    void setup() {
++        menu = new Menu(scene);
++        scene = new Window();
++    }
++
++    @Test
++    void testDrawAtSafe() {
++        menu.drawAtSafe();
++    }
++
++    @Test
++    void testMenuCreation() {
++        assertNotNull(menu);
++    }
++}
